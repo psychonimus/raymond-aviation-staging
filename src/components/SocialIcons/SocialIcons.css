@@ -1,0 +1,40 @@
+/* From Uiverse.io by MarcLazz */ 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  transition: all 0.45s;
+}
+
+.button:hover {
+  transform: rotate(360deg);
+  transform-origin: center center;
+  background-color: #ffff;
+  color: var(--primary);
+}
+
+.button:hover .btn-svg {
+ 
+}
+
+.button:hover .btn-svg path {
+  fill: var(--primary) !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,173 @@
+.ac-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'secondary bold', sans-serif;
+    background-color: transparent;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease, transform 0.4s ease;
+  }
+
+.ac-navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.ac-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.00);
+    /* backdrop-filter: blur(10px); */
+    padding: 15px 40px;
+}
+
+  .ac-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .ac-nav-left select {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    font-family: 'secondary bold', sans-serif;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='rgba(255,255,255,0.7)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+  }
+
+  .ac-nav-left select option {
+    background: #2a1f1a;
+    color: white;
+  }
+
+  .ac-nav-search {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.85);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .ac-nav-services {
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .ac-nav-services:hover {
+    color: #c9a96e;
+  }
+
+  .ac-nav-brand {
+    
+    
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.95);
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ac-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .ac-nav-contact {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  .ac-nav-contact:hover {
+    color: #c9a96e;
+  }
+
+  .ac-nav-region {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .ac-nav-region select {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='rgba(255,255,255,0.7)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+  }
+
+  .ac-nav-region select option {
+    background: #2a1f1a;
+    color: white;
+  }
+
+  .ac-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .ac-hamburger img{
+    filter: invert(1);
+  }
+
+  .ac-hamburger:hover {
+    border-color: rgba(255,255,255,0.8);
+  }
+
+  .ac-hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: rgba(255,255,255,0.85);
+  }

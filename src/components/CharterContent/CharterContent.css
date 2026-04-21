@@ -1,0 +1,296 @@
+:root {
+    --gold: #c9a96e;
+    --gold-light: #e8c98a;
+    --dark: #0d0d0d;
+    --dark-2: #141414;
+    --dark-3: #1c1c1c;
+    --text: #e8e8e8;
+    --text-muted: #888;
+    --border: rgba(201, 169, 110, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--dark);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.charters-section {
+    min-height: 100vh;
+    background: var(--dark);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle noise texture */
+.charters-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── LEFT IMAGE PANEL ── */
+.image-panel {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* filter: brightness(0.55) saturate(0.8); */
+}
+
+/* ── SWIPER CUSTOMIZATION ── */
+.charter-swiper .swiper-pagination {
+    bottom: 2.5rem !important;
+    left: 2.5rem !important;
+    text-align: left;
+    width: auto !important;
+}
+
+.charter-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    margin: 0 6px !important;
+}
+
+.charter-swiper .swiper-pagination-bullet-active {
+    background: var(--gold);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.charter-swiper .swiper-pagination-bullet:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+
+
+/* Gold accent line on right edge */
+.image-panel::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    font-family: 'primary bold', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    writing-mode: horizontal-tb;
+}
+
+/* ── RIGHT CONTENT PANEL ── */
+.content-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5rem;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark) 100%);
+}
+@media(max-width : 1300px){
+    .content-panel{
+        padding: 2rem;
+    }
+}
+@media(max-width : 900px){
+    .content-panel{
+        padding: 1rem;
+    }
+}
+
+
+
+/* ── TABS ── */
+.tab-nav {
+    display: flex;
+    gap: 0;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 0;
+    margin-right: 2.5rem;
+    font-family: 'secondary bold', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    position: relative;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--gold);
+    transition: width 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.tab-btn.active {
+    color: var(--gold-light);
+}
+
+.tab-btn.active::after {
+    width: 100%;
+}
+
+.tab-btn:hover {
+    color: var(--text);
+}
+
+/* ── CONTENT ── */
+.content-inner {
+    max-width: 520px;
+}
+
+.content-heading {
+    font-family: 'primary bold', serif;
+    font-size: clamp(2.4rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.content-heading span {
+    color: var(--gold);
+}
+
+.content-body p {
+    font-family: 'secondary regular', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9;
+    color: rgba(232, 232, 232, 0.65);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.03em;
+}
+
+/* ── STATS ROW ── */
+.stats-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.stat-value {
+    font-family: 'primary bold', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: 'secondary regular', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    /* letter-spacing: 0.2em; */
+    /* text-transform: uppercase; */
+    color: var(--text-muted);
+}
+
+/* ── DECORATIVE ── */
+.deco-number {
+    position: absolute;
+    bottom: 4rem;
+    right: 5rem;
+    font-family: 'secondary bold', serif;
+    font-size: 7rem;
+    font-weight: 700;
+    color: rgba(201, 169, 110, 0.05);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    .charters-section {
+        flex-direction: column;
+    }
+
+    .image-panel {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .content-panel {
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+
+    .image-panel::after {
+        display: none;
+    }
+
+    .tab-btn {
+        font-size: 0.62rem;
+        margin-right: 1.5rem;
+    }
+
+    .stats-row {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .stats-row {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}

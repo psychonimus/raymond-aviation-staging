@@ -1,0 +1,102 @@
+.flow-btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          overflow: hidden;
+          border-radius: 100px;
+          border: 1.5px solid #280A0B40;
+          background: transparent;
+          padding: 12px 32px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #280A0B;
+          cursor: pointer;
+          transition: border 600ms cubic-bezier(0.23,1,0.32,1),
+                      color 600ms cubic-bezier(0.23,1,0.32,1),
+                      scale 600ms cubic-bezier(0.23,1,0.32,1),
+                      border-radius 600ms cubic-bezier(0.23,1,0.32,1),
+                      transform 100ms ease;
+            width: fit-content;
+        }
+
+        .flow-btn:hover {
+          border-color: transparent;
+          color: #fff;
+          border-radius: 100px;
+          scale: 1.1;
+        }
+
+        .flow-btn:active {
+          transform: scale(0.95);
+        }
+
+        /* Left arrow */
+        .flow-btn .arr-left {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          left: -25%;
+          stroke: #fff;
+          fill: none;
+          z-index: 9;
+          transition: left 800ms cubic-bezier(0.34,1.56,0.64,1),
+                      stroke 800ms cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        .flow-btn:hover .arr-left {
+          left: 16px;
+          stroke: #fff;
+        }
+
+        /* Text */
+        .flow-btn .btn-text {
+          position: relative;
+          z-index: 1;
+          transform: translateX(-12px);
+          transition: transform 800ms ease-out;
+        }
+
+        .flow-btn:hover .btn-text {
+          transform: translateX(12px);
+        }
+
+        /* Circle */
+        .flow-btn .circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 16px;
+          height: 16px;
+          background: #D3A95B;
+          border-radius: 50%;
+          opacity: 0;
+          transition: width 800ms cubic-bezier(0.19,1,0.22,1),
+                      height 800ms cubic-bezier(0.19,1,0.22,1),
+                      opacity 800ms cubic-bezier(0.19,1,0.22,1);
+        }
+
+        .flow-btn:hover .circle {
+          width: 220px;
+          height: 220px;
+          opacity: 1;
+        }
+
+        /* Right arrow */
+        .flow-btn .arr-right {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          right: 16px;
+          stroke: #280A0B;
+          fill: none;
+          z-index: 9;
+          transition: right 800ms cubic-bezier(0.34,1.56,0.64,1),
+                      stroke 800ms cubic-bezier(0.34,1.56,0.64,1);
+        }
+
+        .flow-btn:hover .arr-right {
+          right: -25%;
+          stroke: white;
+        }

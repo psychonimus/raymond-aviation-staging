@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'primary regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Regular'), url('/assets/fonts/TrajanPro-Regular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'primary bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Bold'), url('/assets/fonts/TrajanPro-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'secondary regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'secondary semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'secondary bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+
+
+:root {
+  /* Brand Primary and Secondary Colors */
+  --primary: #D3A95B;
+  /* Bright Red – Now primary for headings, buttons, emphasis */
+  --secondary: #5f0f40;
+  /* Deep Purple – Now used for accents or secondary highlights */
+  --accent: #f48120;
+  /* Orange – For calls-to-action, icons, or UI elements */
+  --highlight: #ffcb04;
+  /* Yellow – Use sparingly for alerts or highlights */
+
+  /* Neutral & Utility Colors */
+  --para: #666666;
+  --text-color: #5f0f40;
+  /* Dark Purple – Strong body text color for contrast */
+  --muted-text: #5f6363;
+  /* Cool Gray – For secondary or less prominent text */
+  --background: #ffffff;
+  /* Standard background */
+  --gradient-brand: linear-gradient(90deg, rgba(255, 203, 4, 1) 0%, rgba(249, 166, 18, 1) 25%, rgba(237, 25, 58, 1) 75%, rgba(95, 15, 64, 1) 100%);
+
+  /* Semantic Aliases */
+  --error: #ed193a;
+  /* Matches primary, used for error messages */
+  --warning: #ffcb04;
+  /* Yellow – Warning indicators */
+  --info: #f48120;
+  /* Orange – Informational UI elements */
+  --disabled: #5f6363;
+  /* Gray – Disabled text or UI elements */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: secondary regular, Helvetica, sans-serif;
+  line-height: 1.6;
+  /* position: relative; */
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.skel-grid {
+  margin-top: 1.5rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  gap: 1rem;
+}
+
+.skel-top{
+  margin-left: auto; 
+
+margin-right: auto; 
+
+max-width: 80rem; 
+
+padding-left: 1rem; 
+
+padding-right: 1rem; 
+
+padding-top: 1.5rem; 
+
+padding-bottom: 1.5rem;
+}

@@ -1,0 +1,36 @@
+.slide-in,
+.slide-out {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.slide-in {
+  top: 0;
+}
+
+.slide-out {
+  top: 0;
+}
+
+.curve-top {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100vw;
+  height: 101px; /* 1px overlap to prevent seams */
+  fill: #FCF6BA;
+}
+
+.curve-bottom {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100vw;
+  height: 101px; /* 1px overlap */
+  fill: #FCF6BA;
+}

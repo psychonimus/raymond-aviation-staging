@@ -1,0 +1,26 @@
+.charter-on-demand-about-title{
+    font-family: 'primary bold', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: #280A0B;
+    margin-bottom: 20px;
+}
+
+.charter-on-demand-about-description{
+    font-family: 'secondary regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #280A0B;
+    line-height: 1.6;
+}
+
+.charter-on-demand-about-tagline{
+    font-family: 'secondary bold', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #280A0B;
+    margin-top: 20px;
+    /* border-left : 3px solid var(--primary); */
+    text-transform: uppercase;
+    /* padding-left: 10px; */
+}

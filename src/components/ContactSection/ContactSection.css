@@ -1,0 +1,286 @@
+:root {
+          
+          --gold-light: #dfc28f;
+          --dark-overlay: rgba(10, 12, 16, 0.72);
+          --glass-bg: rgba(255, 255, 255, 0.04);
+          --glass-border: rgba(201, 169, 110, 0.22);
+          --input-bg: rgba(255, 255, 255, 0.06);
+          --input-border: rgba(201, 169, 110, 0.3);
+          
+        }
+
+.contact-section{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+@media(max-width : 1550px){
+    .contact-section{
+        height: 120vh;
+    }
+}
+
+
+
+/* ── video background ── */
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.55) saturate(0.8);
+}
+
+/* ── overlay gradient ── */
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, rgba(5, 8, 12, 0.55) 0%, transparent 35%, transparent 65%, rgba(5, 8, 12, 0.7) 100%),
+        linear-gradient(to right, rgba(5, 8, 12, 0.45) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.contact-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+/* ── Heading ── */
+
+
+.contact-title em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-light);
+}
+
+.title-divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    width: 220px;
+    margin: 0.6rem auto 0.6rem;
+    opacity: 0.7;
+}
+
+/* ── Left copy ── */
+.copy-label {
+    font-size: 1rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-family: 'secondary bold', sans-serif;
+}
+
+.contact-hero-title{
+    font-family: 'primary bold', sans-serif;
+    font-size: 4rem;
+    margin-bottom : 3rem;
+}
+
+@media(max-width : 1550px){
+    .contact-hero-title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+.copy-body {
+    font-size: 1rem;
+    
+    color: #fff;
+    font-weight: 300;
+    opacity: 0.88;
+    font-family: 'secondary medium', sans-serif;
+}
+
+/* ── Mid contact info ── */
+.contact-info-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 110, 0.22);
+    border-radius: 2px;
+    padding: 1rem 1.4rem;
+    backdrop-filter: blur(6px);
+}
+
+.info-label {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    font-family: 'secondary bold', sans-serif;
+}
+
+.info-body {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'secondary medium', sans-serif;
+}
+
+.info-phone {
+    font-family: 'secondary medium', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #dfc28f;
+    letter-spacing: 0.06em;
+}
+
+
+/* ── Form ── */
+.form-glass {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(201, 169, 110, 0.22);
+    border-radius: 2px;
+    padding: 2rem 1.8rem;
+    backdrop-filter: blur(14px);
+}
+
+.form-field-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    display: block;
+    font-family: 'secondary regular', sans-serif;
+    
+}
+@media(max-width : 1250px){
+    .form-field-label{
+        display: none !important;
+    }
+}
+
+.form-ctrl {
+    background: var(--input-bg) !important;
+    border: 1px solid var(--input-border) !important;
+    border-radius: 1px !important;
+    color: #fff !important;
+    font-family: 'Jost', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+    padding: 0.65rem 0.9rem !important;
+    transition: border-color 0.25s, background 0.25s !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-ctrl::placeholder {
+    color: #fff !important;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+.phone-wrapper select{
+    color: #fff !important;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+
+.form-ctrl:focus {
+    border-color: #fff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 1px rgba(201, 169, 110, 0.18) !important;
+}
+
+.phone-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.country-select {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.phone-input {
+    flex: 1;
+}
+
+textarea.form-ctrl {
+    resize: none;
+    min-height: 100px;
+}
+
+/* ── Submit ── */
+.submit-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.75rem 2.4rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.35s;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); 
+    z-index: 0;
+}
+
+.submit-btn:hover::before {
+    transform: translateX(0);
+}
+
+.submit-btn:hover {
+    color: #0a0c10;
+}
+
+.submit-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Responsive tweaks ── */
+@media (max-width: 991px) {
+    .vert-rule {
+        display: none !important;
+    }
+
+    .contact-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-title {
+        font-size: 2.4rem;
+    }
+
+    .title-divider {
+        width: 140px;
+    }
+
+    .form-glass {
+        padding: 1.4rem 1.1rem;
+    }
+}
+
+.country-select option{
+    background-color: #fff !important;
+    color: #000 !important;
+}

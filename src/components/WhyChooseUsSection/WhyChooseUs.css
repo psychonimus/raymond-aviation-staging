@@ -1,0 +1,223 @@
+.acc-section {
+    background: #f5f0e8;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+
+
+  /* ── LEFT PANEL ── */
+  .acc-left {
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+  @media(min-width : 768px){
+    .acc-left{
+      padding-right: 5rem !important;
+    }
+  }
+
+  
+
+  .acc-list {
+    list-style: none;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* ── ACCORDION ITEM ── */
+  .acc-item {
+    border-top: 1px solid rgba(42, 34, 23, 0.18);
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .acc-item:last-child {
+    border-bottom: 1px solid rgba(42, 34, 23, 0.18);
+  }
+
+  .acc-trigger {
+    position: relative;
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    
+    padding: 22px 0;
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .acc-title {
+    font-family: 'secondary semibold', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a2217;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+  }
+
+  @media(max-width : 768px){
+    .acc-title{
+      font-size: 1rem !important;
+    }
+  }
+
+  @media(min-width : 1300px){
+    .acc-title{
+      font-size: 1.5rem;
+    }
+  }
+
+  .acc-trigger:hover .acc-title { color: #6b5a3e; }
+
+  .acc-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    color: #2a2217;
+    transition: color 0.3s ease;
+  }
+
+  .acc-trigger:hover .acc-icon { color: #6b5a3e; }
+
+  .acc-icon::before,
+  .acc-icon::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.35s ease;
+  }
+
+  .acc-icon::before {
+    width: 18px; height: 1.5px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .acc-icon::after {
+    width: 1.5px; height: 18px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .acc-item.is-open .acc-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  /* ── BODY ── */
+  .acc-body { overflow: hidden; height: 0; }
+
+  .acc-body-inner { padding: 12px 0 40px 0; }
+
+  .acc-body-text {
+   
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #2a2217;
+    font-family: 'secondary regular', sans-serif;
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  /* ── HOVER underline ── */
+  .acc-trigger-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: #6b5a3e;
+    transition: width 0.45s cubic-bezier(0.76, 0, 0.24, 1);
+    pointer-events: none;
+  }
+
+  .acc-trigger:hover .acc-trigger-line { width: 100%; }
+
+  
+
+  /* ── SHARED image wrapper ── */
+  .acc-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .acc-image-slide {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .acc-image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.08);
+  }
+
+  .acc-curtain {
+    position: absolute;
+    inset: 0;
+    background: #f5f0e8;
+    z-index: 2;
+    transform-origin: bottom;
+  }
+
+  /* ─────────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────────── */
+
+  /* ── Mobile image banner (< md) ── */
+  .acc-image-mobile {
+    width: 100%;
+    height: 56vw;
+    min-height: 220px;
+    max-height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── md+ ── */
+  @media (min-width: 768px) {
+    .acc-left { padding: 48px 48px 64px 48px; }
+    /* .acc-row  { min-height: 100vh; } */
+  }
+
+  /* ── lg+ ── */
+  @media (min-width: 992px) {
+    .acc-left { padding:28px 64px 64px 64px; }
+  }
+
+  /* ── < md ── */
+  @media (max-width: 767.98px) {
+    .acc-section { min-height: unset; }
+    /* .acc-row     { min-height: unset; } */
+    .acc-left    { padding: 32px 20px 28px 20px; }
+
+    .acc-eyebrow { margin-bottom: 28px; }
+
+    .acc-title   { font-size: clamp(22px, 7vw, 30px); }
+
+    .acc-body-text {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    .acc-trigger { padding: 18px 0; }
+  }
+
+  /* ── sm ── */
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    .acc-left        { padding: 36px 32px 56px 32px; }
+    .acc-image-mobile { height: 50vw; }
+  }
