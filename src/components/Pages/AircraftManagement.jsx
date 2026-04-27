@@ -10,25 +10,25 @@ const AircraftManagement = () => {
     <>
         <HeroBanner
             headlineUp="Aircraft Management"
-            headlineDown="Your Aircraft Management Simplified"
-            bgImage="./assets/images/aircraft-management-banner.webp"
+            headlineDown=""
+            bgImage="./assets/images/aircraft-management-banner.jpg"
         />
 
         <section className="charter-on-demand-about bg-white py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">
+                        {/* <div className="col-md-3">
                             <div className="charter-on-demand-about-image">
                                 <img src="./assets/images/raymond-aviation-logo.svg" style={{ width: "200px" }} alt="Charter On-Demand" />
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="col-md-9">
+                        <div className="col-md-12">
                             <div className="charter-on-demand-about-content">
-                                <h2 className="charter-on-demand-about-title">Your Asset, Our Expertise, Seamless Performance.</h2>
+                                <h2 className="charter-on-demand-about-title" style={{color:"var(--primary)"}}>Your Asset, Our Expertise, Seamless Performance.</h2>
                                 <p className="charter-on-demand-about-description">Professional aircraft management for the modern owner. We handle the complexities of crew, compliance, and maintenance so you can focus on the journey. We manage the details, you enjoy the flight. Owners place their aircraft under professional management for operations, scheduling, crew, compliance, and revenue optimization.</p>
                                 <h5 className="charter-on-demand-about-tagline">Your aircraft, perfectly operated. Every day. In every detail.</h5>
-                                <p className="charter-on-demand-about-description mt-3">Owning a private aircraft is one thing. Operating one safely, efficiently, and in full regulatory compliance is another matter entirely. Raymond Aviation's Aircraft Management Division has been providing institutional-grade aircraft management to India's private aircraft owners since 1996, removing the complexity of ownership while maximising the value and availability of your asset.
+                                <p className="charter-on-demand-about-description mt-3">Owning a private aircraft is one thing. Operating it safely, efficiently, and in full regulatory compliance is another matter entirely. Raymond Aviation’s Aircraft Management Division is equipped to deliver institutional-grade aircraft management to India’s private aircraft owners, removing the complexity of ownership while maximising the value and availability of your asset.
                                 </p>
 
                                 <h5 className="charter-on-demand-about-tagline mt-3">What Does Aircraft Management Include?</h5>
@@ -41,7 +41,12 @@ const AircraftManagement = () => {
             </section>
 
             <AircraftMaintenanceContent />
-            <Footer />
+            <Footer 
+              FooterHeader="MAXIMIZE YOUR AIRCRAFT’S POTENTIAL"
+              FooterTaglineOne="Crew Management"
+              FooterTaglineTwo="Maintenance Oversight"
+              FooterTaglineThree="Charter Revenue"
+            />
         
     </>
   )

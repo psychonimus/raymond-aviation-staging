@@ -18,8 +18,18 @@ const ContactSection = () => {
         email: "",
         countryCode: "+91",
         phone: "",
+        service: "Charter on Demand",
         message: "",
     });
+
+    const services = [
+        "Charter on Demand",
+        "Jet Card Program",
+        "Fractional Ownership",
+        "Aircraft Acquisition & Sales",
+        "Aircraft Management",
+        "Helipad Infrastructure"
+    ];
 
     const countryCodes = [
         { code: "+1", country: "US" },
@@ -118,11 +128,11 @@ const ContactSection = () => {
                 <div className="contact-inner">
                     {/* Title */}
                     <div className="text-center " ref={titleRef}>
-                        <h1 className="hero-title contact-hero-title text-white" >
+                        <h1 className="hero-title contact-hero-title text-white " >
                             Contact our Team
                         </h1>
                     </div>
-                    <div className="title-divider mx-auto" ref={dividerRef} />
+                    <div className="title-divider mx-auto mb-5" ref={dividerRef} />
 
                     {/* Three-column layout */}
                     <div className="container px-0">
@@ -142,7 +152,7 @@ const ContactSection = () => {
                                 <div className="contact-info-card">
                                     <p className="info-label">Contact our team</p>
                                     <p className="info-body">
-                                        Please reach out to us through the contact form our contact us at{" "}
+                                        Please reach out to us through the contact form our contact us at{" "} <br />
                                         <span className="info-phone">+31 85 026 1636</span> and let us elevate your
                                         travel experience.
                                     </p>
@@ -216,6 +226,25 @@ const ContactSection = () => {
                                                     required
                                                 />
                                             </div>
+                                        </div>
+
+                                        {/* Service Dropdown */}
+                                        <div className="mb-3">
+                                            <label className="form-field-label">Interested Service</label>
+                                            <select
+                                                className="form-select form-ctrl"
+                                                value={formData.service}
+                                                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                                                onFocus={handleInputFocus}
+                                                onBlur={handleInputBlur}
+                                                required
+                                            >
+                                                {services.map((service) => (
+                                                    <option key={service} value={service}>
+                                                        {service}
+                                                    </option>
+                                                ))}
+                                            </select>
                                         </div>
 
                                         {/* Message */}

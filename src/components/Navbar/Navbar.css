@@ -18,10 +18,36 @@
 }
 
 .ac-navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.00);
-    /* backdrop-filter: blur(10px); */
+    background-color: #ffffff;
+    backdrop-filter: blur(10px);
     padding: 15px 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
+
+.ac-navbar.scrolled .ac-nav-left,
+.ac-navbar.scrolled .ac-nav-right,
+.ac-navbar.scrolled .ac-nav-contact,
+.ac-navbar.scrolled .ac-nav-services,
+.ac-navbar.scrolled .ac-nav-left select,
+.ac-navbar.scrolled .ac-nav-region select {
+    color: #000000;
+}
+
+.ac-navbar.scrolled .ac-nav-left select,
+.ac-navbar.scrolled .ac-nav-region select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='rgba(0,0,0,0.7)'/%3E%3C/svg%3E");
+}
+
+.ac-navbar.scrolled .ac-hamburger img {
+    filter: none;
+}
+
+.ac-navbar.scrolled .ac-hamburger span {
+    background: #000000;
+}
+
+
 
   .ac-nav-left {
     display: flex;
@@ -159,6 +185,7 @@
   }
   .ac-hamburger img{
     filter: invert(1);
+    transition: filter 0.4s ease;
   }
 
   .ac-hamburger:hover {

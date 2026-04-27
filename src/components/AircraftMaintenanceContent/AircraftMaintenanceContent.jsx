@@ -6,41 +6,60 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const tabs = [
     {
         id: "private",
+        label: "Regulatory Compliance",
+        image: "./assets/images/regulatory-compliance-1.jpg",
+        heading: "DGCA & Regulatory Compliance",
+        body: [
+            "",
+
+        ],
+        
+        listHeading2: "",
+        list2: [
+            "NSOP (Non-Scheduled Operator Permit) maintained in good standing",
+            "DGCA inspections, audits, & correspondence managed",
+            "Operations, safety, & maintenance manuals prepared, approved, & maintained by the operator",
+            "Annual safety review with owner briefing on findings & improvements",
+            
+        ],
+        
+
+    },
+    {
+        id: "private-1",
         label: "Crew Management",
-        image: "./assets/images/crew-management.webp",
+        image: "./assets/images/crew-management.jpg",
         heading: "Crew Management",
         body: [
             "",
 
         ],
-        listHeading: "Recruitment & Selection",
+        listHeading: "Recruitment & Training",
         list: [
-            "Sourcing and screening of qualified captains and first officers to DGCA and internationally recognised standards",
-            "Psychometric and skill assessment in addition to licence verification",
-            "Crew compatibility evaluation for owner preferences and aircraft type",
             
-        ],
-        listHeading2: "Training & Currency",
-        list2: [
-            "Recurrent simulator training at DGCA-approved Type Rating Organisations (TROs)",
-            "Line checks, proficiency checks, and route familiarisation",
+            "Sourcing and screening of qualified captains and first officers to DGCA-recognised standards, with crew compatibility aligned with type of aircraft",
+            "Recurrent simulator training, line checks, proficiency checks, and route familiarisation",
+            
             "Emergency procedures and Crew Resource Management (CRM) training",
             "Medical fitness monitoring and scheduling"
         ],
+        listHeading2: "",
+        list2: [
+            
+        ],
         listHeading3: "Rostering & Standby",
         list3: [
-            "Crew scheduling to ensure availability aligned with owner's travel patterns",
+            "Crew scheduling aligned with owner's travel patterns",
             "Standby crew arrangements for unplanned demand",
-            "Fatigue risk management compliant with DGCA CAR requirements",
+            "Fatigue risk management",
             
         ],
         listHeading4: "Flight Operations Management",
         list4: [
-            "24/7 flight operations centre monitoring all departures and arrivals",
-            "Flight planning, NOTAM review, and weather briefings for every sector",
+            "24/7 flight operations centre monitoring",
+            "Flight planning, NOTAM review, and weather briefings",
             "Slot coordination, permit filing, and ATC liaison",
-            "Weight and balance, fuel optimisation, and performance calculations",
-            "International routing support — overflight permits, diplomatic clearances"
+            "Overflight permits, diplomatic clearances"
         ],
 
     },
@@ -53,32 +72,33 @@ const tabs = [
             "",
 
         ],
-        listHeading: "Scheduled Maintenance",
+        listHeading: "Scheduled/Unscheduled Maintenance & AOG Support",
         list: [
-            "Full management of manufacturer-mandated maintenance intervals",
-            "Coordination with approved MRO facilities across India and internationally",
-            "Technical log management, component tracking, and airworthiness directives compliance"
+            "Full management of OEM-mandated maintenance intervals",
+            "Coordination with approved MRO facilities",
+            "Technical log management, component tracking, and airworthiness directives compliance",
+            "24/7 AOG response team for unexpected technical issues",
+            "Global spares sourcing and MRO network for international AOG recovery"
         ],
         listHeading2: "Airworthiness Management",
         list2: [
-            "Maintenance of Certificate of Airworthiness (CoA), annual renewal and surveillance",
+            "Maintenance of Certificate of Airworthiness (CoA), renewal and surveillance",
             "Continuing Airworthiness Management Organisation (CAMO) functions",
-            "Liaison with DGCA for all airworthiness and technical regulatory matters"
+            "Liaison with DGCA for airworthiness and technical regulatory matters"
             
         ],
-        listHeading3: "Unscheduled Maintenance & AOG Support",
+        listHeading3: "",
         list3: [
-            "24/7 AOG response team for unexpected technical issues",
-            "Global spares sourcing and MRO network for international AOG recovery"
+            
             
         ],
         listHeading4: "Financial Management & Reporting",
         list4: [
-            "Transparent monthly management accounts with full cost breakdown",
-            "Owner portal access for real-time flight logs and expenditure tracking",
+            "Transparent monthly accounts with cost breakdowns",
+            
             "Annual budget planning and actual-vs-budget performance review",
-            "Insurance renewal management and claims coordination",
-            "Fuel procurement optimisation — leveraging volume contracts"
+            "Insurance renewal management and claims coordination"
+            
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
     },
@@ -88,7 +108,7 @@ const tabs = [
         image: "./assets/images/charter-revenue.webp",
         heading: "Charter Revenue Generation",
         body: [
-            "Where the owner consents, Raymond Aviation actively places managed aircraft on the charter market during owner-unutilised periods, generating revenue that offsets the cost of management and ownership. This service is optional and operates under a transparent revenue-share agreement.",
+            "With owner consent, Raymond Aviation can place managed aircraft on the charter market during unutilised periods to generate revenue and offset ownership and management costs. This optional service operates under a transparent revenue-share agreement.",
 
         ],
         listHeading: "",
@@ -97,14 +117,7 @@ const tabs = [
             "Client vetting and approval before each third-party use",
             "Charter revenue credited directly against owner management fees"
         ],
-        listHeading2: "DGCA & Regulatory Compliance",
-        list2: [
-            "Maintenance of NSOP (Non-Scheduled Operator Permit) in good standing",
-            "Management of all DGCA inspections, audits, and correspondence",
-            "Safety Management System (SMS) implementation and maintenance",
-            "Annual Safety Review with owner briefing on findings and improvements",
-            
-        ],
+        
         },
 ];
 
@@ -228,7 +241,7 @@ export default function JetCardContent() {
                         <div className="content-body">
                             {tab.body.map((para, pi) => (
                                 <div key={pi}>
-                                    <p>{para}</p>
+                                    <p >{para}</p>
                                     {tab.listHeading && <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>}
                                     {tab.list && <ul className="text-white">
                                         {tab.list.map((item, li) => (

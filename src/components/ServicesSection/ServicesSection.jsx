@@ -56,12 +56,12 @@ const services = [
   },
   {
     id: "06",
-    title: "Empty Leg Flights",
-    path: "/empty-leg-flights",
+    title: "Helipad Infrastructure",
+    path: "/helipad-infrastructure",
     description:
       "Luxury at the Speed of Opportunity. Experience the world of private aviation for up to 75% less.",
     image:
-      "./assets/images/empty-leg-flights.webp",
+      "./assets/images/helipad-infra-cover.jpg",
   },
   // {
   //   id: "07",
@@ -174,12 +174,11 @@ export default function ServicesSection() {
       <section className="services-section" ref={sectionRef}>
         <div className="services-header">
           <div className="text-center">
-            <p className="hero-eyebrow">What We Offer</p>
-            <h2 className="hero-title" style={{color:"var(--primary)"}}>
+            <p className="hero-eyebrow services-label">What We Offer</p>
+            <h2 className="hero-title services-title" style={{color:"var(--primary)"}}>
               Our Services
             </h2>
           </div>
-
         </div>
 
         <div className="parent">

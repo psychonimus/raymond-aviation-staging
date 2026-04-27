@@ -196,56 +196,16 @@ export default function PilatusSection() {
                                 With over three decades of excellence, Raymond Aviation stands as a pioneer in India&apos;s private air travel sector. One of the first corporate houses to launch non-scheduled charter services in 1996, we have consistently delivered premium flight experiences to a global clientele.
                             </p> */}
                             <p className="hero-body" ref={bodyRef} style={{ opacity: 0 }}>
-                                Our extensive operational history spans the entire spectrum of aviation, from single and twin-engine helicopters to turboprops and long-range heavy jets. This deep-rooted expertise allows us to anticipate the unique needs of the Indian high flyer, blending luxury and comfort with an unwavering commitment to safety and reliability. At Raymond Aviation, we don&apos;t just provide a flight; we offer a legacy of trust and value for those who demand the best in the skies.
+                                With a strong legacy across helicopters, turboprops, and long-range jets, Raymond Aviation brings deep expertise in private flying. As one of the first corporate groups to introduce non-scheduled air charter services in India in 1996, we have set benchmarks in safety, reliability, and service excellence.   <br/><br/>
+
+                                Beyond charter, we offer a comprehensive aviation ecosystem, including aircraft management and maintenance, fractional ownership, jet card programs, aircraft sales and acquisition advisory, and helipad infrastructure, covering design and consultancy to construction and management.<br/><br/>
+
+                                We are members of Helicopter Association International (HAI), USA, National Business Aviation Association (NBAA), USA, and Business Aircraft Operators Association (BAOA), India, and have been recognized with safety awards from HAI and NBAA.
+
+                                Rooted in a legacy of trust, we continue to deliver precision, performance, and value for those who expect the highest standards.
                             </p>
 
-                            <h4>Key Highlights</h4>
 
-                            <div ref={ctaRef} style={{ opacity: 0 }}>
-                                <div className="highlight-parent">
-
-                                    <div className="highlight-card">
-                                        <div className="highlight-icon">
-                                            <img src="/assets/images/experience.svg" alt="" />
-                                        </div>
-                                        <div className="highlight-text">
-                                            <p className="highlight-title">30+ Years of Excellence</p>
-                                            <p className="highlight-desc">Proven experience with trusted performance and industry leadership.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="highlight-card">
-                                        <div className="highlight-icon">
-                                            <img src="/assets/images/experience.svg" alt="" />
-                                        </div>
-                                        <div className="highlight-text">
-                                            <p className="highlight-title">Diverse Fleet Experience</p>
-                                            <p className="highlight-desc">Expertise across helicopters and long-range jets.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="highlight-card">
-                                        <div className="highlight-icon">
-                                            <img src="/assets/images/experience.svg" alt="" />
-                                        </div>
-                                        <div className="highlight-text">
-                                            <p className="highlight-title">Tailored Service</p>
-                                            <p className="highlight-desc">Personalized solutions for elite Indian and global travellers.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="highlight-card">
-                                        <div className="highlight-icon">
-                                            <img src="/assets/images/experience.svg" alt="" />
-                                        </div>
-                                        <div className="highlight-text">
-                                            <p className="highlight-title">Unmatched Safety Standards</p>
-                                            <p className="highlight-desc">Built on reliability and rigorous safety practices.</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -263,22 +223,80 @@ export default function PilatusSection() {
                                 style={{ width: "100%", height: "100%" }}
                             >
                                 <SwiperSlide>
-                                    <img className="jet-image" src="/assets/images/about-img.webp" alt="Raymond Aviation aircraft interior" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                    <img className="jet-image" src="/assets/images/raymond-about-1.JPG" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className="jet-image" src="/assets/images/interior.webp" alt="Aircraft interior" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                    <img className="jet-image" src="/assets/images/raymond-about-3.jpg" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className="jet-image" src="/assets/images/vip-charter.webp" alt="VIP Charter" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                    <img className="jet-image" src="/assets/images/interior.webp" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className="jet-image" src="/assets/images/charter-on-demand.webp" alt="Charter Experience" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                    <img className="jet-image" src="/assets/images/raymond-about-2.png" alt="Raymond Aviation aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className="jet-image" src="/assets/images/luxury-yatch-interior.jpg" alt="VIP Charter" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className="jet-image" src="/assets/images/luxury-yatch.jpg" alt="Charter Experience" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img className="jet-image" src="/assets/images/luxury-chopper.jpg" alt="Charter Experience" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
                     </div>
 
                 </section>
+
+                <div className="highlights-section" ref={ctaRef} style={{ opacity: 0 }}>
+                    <div className="container-fluid">
+                        <h4 className="highlights-heading">Key Highlights</h4>
+                        <div className="highlight-parent">
+
+                            <div className="highlight-card">
+                                <div className="highlight-icon">
+                                    <img src="/assets/images/experience.svg" alt="" />
+                                </div>
+                                <div className="highlight-text">
+                                    <p className="highlight-title">30+ Years of Excellence</p>
+                                    <p className="highlight-desc">Proven experience with trusted performance and industry leadership.</p>
+                                </div>
+                            </div>
+
+                            <div className="highlight-card">
+                                <div className="highlight-icon">
+                                    <img src="/assets/images/experience.svg" alt="" />
+                                </div>
+                                <div className="highlight-text">
+                                    <p className="highlight-title">Diverse Fleet Experience</p>
+                                    <p className="highlight-desc">Expertise across helicopters and long-range jets.</p>
+                                </div>
+                            </div>
+
+                            <div className="highlight-card">
+                                <div className="highlight-icon">
+                                    <img src="/assets/images/experience.svg" alt="" />
+                                </div>
+                                <div className="highlight-text">
+                                    <p className="highlight-title">Tailored Service</p>
+                                    <p className="highlight-desc">Personalized solutions for elite Indian and global travellers.</p>
+                                </div>
+                            </div>
+
+                            <div className="highlight-card">
+                                <div className="highlight-icon">
+                                    <img src="/assets/images/experience.svg" alt="" />
+                                </div>
+                                <div className="highlight-text">
+                                    <p className="highlight-title">Unmatched Safety Standards</p>
+                                    <p className="highlight-desc">Built on reliability and rigorous safety practices.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

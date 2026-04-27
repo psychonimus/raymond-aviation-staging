@@ -15,7 +15,7 @@ const tabs = [
   {
     id: "private",
     label: "Charter",
-    images: ["./assets/images/charter-1.jpg", "./assets/images/charter-2.jpg", "./assets/images/charter-3.jpg", "./assets/images/charter-4.jpg"],
+    images: ["./assets/images/charter-6.JPG", "./assets/images/charter-2.jpg", "./assets/images/charter-5.JPG", "./assets/images/charter-4.jpg"],
     heading: "Charter",
     body: [
       "Raymond Aviation offers a range of tailored charter solutions across aircraft, helicopters, and yachts, designed for business travel, leisure journeys, special events, and VVIP movements. Each experience is crafted to provide the flexibility to choose the right mode of travel, while ensuring efficiency, comfort, and seamless execution.",
@@ -26,7 +26,7 @@ const tabs = [
   {
     id: "group",
     label: "Air Ambulance",
-    images: ["./assets/images/air-ambulence.webp", "./assets/images/air-ambulance.webp", "./assets/images/charter-maintenance.webp"],
+    images: ["./assets/images/air-ambulance-1.jpg", "./assets/images/air-ambulance-2.jpg", "./assets/images/air-ambulance-3.jpg"],
     heading: "Air Ambulance",
     body: [
       "When health demands urgent response, time becomes the most critical factor. Raymond Aviation provides air ambulance services, configured for patient care, staffed with qualified medical crew, and cleared for priority departure at the shortest possible notice.",
@@ -37,7 +37,7 @@ const tabs = [
   {
     id: "group2",
     label: "Empty Leg",
-    images: ["./assets/images/empty-leg-flight.webp", "./assets/images/empty-leg-flight-2.webp", "./assets/images/empty-leg-3.webp"],
+    images: ["./assets/images/empty-leg-flights-2.jpg", "./assets/images/empty-leg-2.jpg", "./assets/images/empty-leg-3.jpg"],
     heading: "Empty Leg Charter",
     body: [
       "An empty leg is one of best kept secrets. When an aircraft completes a one-way journey, it must reposition to its base or its next assignment - empty. Raymond Aviation transforms these sectors into value, enabling operators to unlock additional revenue while offering clients access to private charter at significantly reduced rates.",

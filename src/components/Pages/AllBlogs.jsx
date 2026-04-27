@@ -122,7 +122,12 @@ const AllBlogs = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer 
+        FooterHeader="INSIGHTS THAT MOVE AVIATION FORWARD"
+        FooterTaglineOne="Trends"
+        FooterTaglineTwo="Expertise"
+        FooterTaglineThree="Industry Perspectives"
+      />
     </>
   );
 };

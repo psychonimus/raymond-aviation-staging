@@ -7,7 +7,7 @@ const tabs = [
     {
         id: "private",
         label: "Key Benefits of the Jet Card",
-        image: "./assets/images/key-card.webp",
+        image: "./assets/images/key-card.jpg",
         heading: "Key Benefits of the Jet Card",
         body: [
             "",
@@ -30,15 +30,17 @@ const tabs = [
     {
         id: "group",
         label: "Jet Card vs. Spot Charter ",
-        image: "./assets/images/jetcard-spotcharter.webp",
+        image: "./assets/images/key-card-2.jpg",
         heading: "Jet Card vs. Spot Charter ",
         body: [
             "Spot charter pricing fluctuates significantly by season, route, and availability. During peak periods, festive seasons, year-end, special events, summer holidays, charter rates can increase by 40–60% above base. Jet Card holders are insulated from this price surge.",
 
         ],
-        listHeading: "One payment. One rate. One less thing to manage.",
+        listHeading: "",
         list: [
-            
+            "One payment",
+            "One rate",
+            "One less thing to manage",
         ],
         listHeading2: "",
         list2: [

@@ -10,7 +10,12 @@ const Services = () => {
     <>
     {/* <ServiceHero /> */}
     <ServicesSection />
-    <Footer />
+    <Footer 
+      FooterHeader="END-TO-END PRIVATE AVIATION"
+      FooterTaglineOne="Charter Ownership"
+      FooterTaglineTwo="Advisory"
+      FooterTaglineThree="Operations"
+    />
     </>
   )
 }

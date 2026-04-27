@@ -47,7 +47,7 @@
     font-size: clamp(2.4rem, 1vw, 3.8rem);
 
     color: #2E110F;
-    letter-spacing: 0.05em;
+    /* letter-spacing: 0.05em; */
     text-transform: uppercase;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -58,7 +58,6 @@
     font-weight: 600;
     font-size: 1rem;
     color: var(--muted-text);
-    max-width: 440px;
     
     margin: 0 auto 36px;
 }

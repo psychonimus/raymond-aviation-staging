@@ -27,7 +27,7 @@ export default function HeroBanner({ headlineUp, headlineDown, bgImage, bgImages
                             muted
                             loop
                             playsInline
-                            className="ac-hero-bg HeroBanner-bg-slide"
+                            className="HeroBanner-bg-slide"
                             style={{ objectFit: "cover", width: "100%", height: "100%", position: "absolute", top: 0, left: 0 }}
                         >
                             <source src={bgVideo} type="video/webm" />
@@ -43,12 +43,13 @@ export default function HeroBanner({ headlineUp, headlineDown, bgImage, bgImages
                         >
                             {images.map((img, idx) => (
                                 <SwiperSlide key={idx}>
-                                    <div className="ac-hero-bg HeroBanner-bg-slide" style={{ backgroundImage: `url("${img}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
+                                    <div className="HeroBanner-bg-slide" style={{ backgroundImage: `url("${img}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     )}
                 </div>
+                <div className="hero-overlay" />
                 <div className="ac-hero-content">
 
                     <div className="container-fluid d-flex align-items-end justify-content-between h-100 pb-5">

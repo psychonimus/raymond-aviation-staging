@@ -189,7 +189,7 @@ body {
 
 .content-heading {
     font-family: 'primary bold', serif;
-    font-size: clamp(2.4rem, 3.5vw, 3.2rem);
+    font-size: clamp(2.4rem, 1.5vw, 3.2rem);
     font-weight: 300;
     color: #fff;
     line-height: 1.1;
@@ -204,11 +204,32 @@ body {
 .content-body p {
     font-family: 'secondary regular', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.9;
+    font-weight: 300;
+    /* line-height: 1.9; */
     color: rgba(232, 232, 232, 0.65);
     margin-bottom: 1.2rem;
-    letter-spacing: 0.03em;
+    /* letter-spacing: 0.03em; */
+}
+
+.content-body h5{
+    font-family: 'secondary regular', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.1;
+    margin-top: 2rem;
+    /* letter-spacing: -0.01em; */
+}
+@media(max-width : 576px){
+    .content-body h5{
+        font-size: 1.2rem;
+    }
+}
+
+.content-body li{
+    font-family: 'secondary regular', serif;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 /* ── STATS ROW ── */

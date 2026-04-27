@@ -6,7 +6,12 @@ const Contact = () => {
   return (
     <>
         <ContactSection />
-        <Footer />
+        <Footer 
+          FooterHeader="CONNECT WITH OUR AVIATION EXPERTS"
+          FooterTaglineOne="Personalized Assistance"
+          FooterTaglineTwo="Trusted Advice"
+          FooterTaglineThree="Quick Turnaround"
+        />
     </>
   )
 }

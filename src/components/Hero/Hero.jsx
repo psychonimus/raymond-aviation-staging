@@ -31,7 +31,7 @@ const icons = {
         <img src="../assets/images/plane-design.svg" alt="" style={{ width: "50px" }} />
     ),
     partnership: (
-        <img src="../assets/images/empty-leg.svg" alt="" style={{ width: "50px" }} />
+        <img src="../assets/images/helipad-infra.svg" alt="" style={{ width: "50px" }} />
     ),
 };
 
@@ -41,7 +41,7 @@ const services = [
     { icon: "design", title: "Jet Card \n Programs", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/jet-card-program" },
     { icon: "mgmt1", title: "Aircraft \n Management", desc: "Comprehensive aircraft management ensuring safety, compliance, and operational excellence.", path: "/aircraft-management" },
     { icon: "mgmt2", title: "Aircraft sales \n & Acquisitions", desc: "Premium crew management and operational support for private and corporate fleet owners.", path: "/aircraft-sales-and-aquisition" },
-    { icon: "partnership", title: "Helipad \n Infrastructure", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/empty-leg-flights" },
+    { icon: "partnership", title: "Helipad \n Infrastructure", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/helipad-infrastructure" },
 ];
 
 

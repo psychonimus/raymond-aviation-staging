@@ -4,7 +4,7 @@ import { FlowButton } from "../FlowButton/FlowButton";
 import { FlowButtonDark } from "../FlowButton/FlowButtonDark";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
-const RaymondAviationFooter = () => {
+const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo, FooterTaglineThree}) => {
   const footerRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -100,11 +100,11 @@ const RaymondAviationFooter = () => {
             </div> */}
 
             <h2 ref={titleRef} className="ra-title">
-              OWN YOUR FLIGHT EXPERIENCE
+              {FooterHeader}
             </h2>
 
             <p ref={taglineRef} className="ra-tagline">
-              Fractional Ownership <span style={{color:"var(--primary)", fontWeight:"600"}}>|</span> Guaranteed Hours <span style={{color:"var(--primary)", fontWeight:"600"}}>|</span> Flexible Access  
+              {FooterTaglineOne} <span style={{color:"var(--primary)", fontWeight:"600"}}>|</span> {FooterTaglineTwo} <span style={{color:"var(--primary)", fontWeight:"600"}}>|</span> {FooterTaglineThree}  
             </p>
 
             <div className="d-flex justify-content-center" ref={btnRef}>

@@ -11,7 +11,7 @@ const JetCardProgram = () => {
         <HeroBanner
             headlineUp="Jet Card Program"
             headlineDown=""
-            bgImage="./assets/images/jet-card-program-bg.webp"
+            bgImage="./assets/images/jet-card-program-bg.jpg"
         />
 
         <section className="charter-on-demand-about bg-white py-5">
@@ -72,7 +72,12 @@ const JetCardProgram = () => {
             </section>
 
             <JetCardContent />
-            <Footer />
+            <Footer 
+              FooterHeader="FLY WITH PREDICTABILITY"
+              FooterTaglineOne="Prepaid Hours"
+              FooterTaglineTwo="Fixed Rates"
+              FooterTaglineThree="Flexible Access"
+            />
         
     </>
   )

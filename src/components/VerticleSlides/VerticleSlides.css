@@ -1,0 +1,124 @@
+
+
+  /* stage */
+  .vb-stage {
+    height: 1200vh;
+    position: relative;
+  }
+  .vb-layers {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* svg layers */
+  .vb-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vb-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  /* text */
+  .vb-texts {
+    padding: 3vw;
+    position: relative;
+    z-index: 10;
+  }
+  .vb-txt {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    clip-path: inset(100% 0 0 0);
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  .vb-txt h2 {
+    margin-top: 10vh;
+    font-family: 'primary bold', serif;
+    font-size: 4rem;
+    /* letter-spacing: -0.025em; */
+    line-height: 1;
+    white-space: pre-line;
+  }
+  .vb-txt h3 {
+    margin-top: 1vw;
+    text-transform: none;
+    width: 40%;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.24em; */
+  }
+  .vb-txt p {
+    display: block;
+    font-size: clamp(1.1rem, 0.8vw, 1.2rem);
+    width: 70%;
+    margin-top: 30px;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .vb-features {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 40%;
+    text-transform: none;
+  }
+
+  .vb-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'secondary regular', sans-serif;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .vb-feature-icon {
+    width: 18px;
+    height: 18px;
+    color: #D3A95B; /* var(--primary) fallback */
+    flex-shrink: 0;
+  }
+  @media (max-width: 1024px) { .vb-txt span { width: 35%; } }
+  @media (max-width: 599px)  { .vb-txt span { width: 50%; } }
+
+  /* progress bar */
+  .vb-progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 20;
+  }
+  .vb-segment {
+    flex: 1;
+    height: 2px;
+    background: rgba(255,255,255,0.2);
+    overflow: hidden;
+    position: relative;
+  }
+  .vb-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+  }

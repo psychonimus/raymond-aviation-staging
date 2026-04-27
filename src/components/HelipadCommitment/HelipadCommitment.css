@@ -1,0 +1,240 @@
+.helipad-commitment-wrapper {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.section-title {
+    font-family: 'primary bold', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Commitment Grid --- */
+.commitment-subtitle {
+    max-width: 700px;
+    font-family: 'secondary regular', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.commitment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.commitment-item-card {
+    position: relative;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2.5rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.commitment-item-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+    transform: translateY(-10px);
+}
+
+.commitment-card-bg-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(211, 169, 91, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transform: translate(-25%, -25%);
+}
+
+.commitment-item-card:hover .commitment-card-bg-glow {
+    opacity: 1;
+}
+
+.commitment-card-number {
+    font-family: 'primary bold', serif;
+    font-size: 3rem;
+    color: rgba(211, 169, 91, 0.4);
+    margin-bottom: 1rem;
+    line-height: 1;
+    display: block;
+    transition: color 0.5s ease;
+}
+
+.commitment-item-card:hover .commitment-card-number {
+    color: var(--primary);
+}
+
+.commitment-card-title {
+    font-family: 'primary bold', serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.commitment-card-desc {
+    font-family: 'secondary regular', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    /* Explicitly resetting conflicting styles from global scope */
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}
+
+/* --- Promise Section --- */
+.promise-section {
+    position: relative;
+    /* background-image: url('/assets/images/helipad-infra-cover.jpg'); */
+    background-size: cover;
+    background-position: center 0%;
+    background-attachment: scroll; /* Changed to scroll for GSAP parallax control */
+    margin: 5rem 0;
+}
+
+.promise-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.7) 60%, #000 100%);
+}
+
+.promise-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.promise-eyebrow {
+    font-family: 'secondary bold', sans-serif;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.promise-text {
+    font-family: 'primary regular', serif;
+    font-size: clamp(1.8rem, 2vw, 3.5rem);
+    line-height: 1.2;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+.promise-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+    margin: 0 auto 2.5rem;
+}
+
+.promise-footer-text {
+    font-family: 'secondary regular', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    padding: 8rem 0;
+}
+
+.cta-content {
+    background: linear-gradient(135deg, rgba(211, 169, 91, 0.1) 0%, rgba(0,0,0,0) 100%);
+    border: 1px solid rgba(211, 169, 91, 0.2);
+    padding: 5rem;
+    border-radius: 4px;
+}
+
+.cta-title {
+    font-family: 'primary bold', serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-desc {
+    font-family: 'secondary regular', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 2.5rem;
+    background: var(--primary);
+    color: #000;
+    text-decoration: none;
+    font-family: 'secondary bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+    border: 1px solid var(--primary);
+}
+
+.btn-premium:hover {
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn-arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.4s ease;
+}
+
+.btn-premium:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+    .cta-content {
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+    .cta-desc {
+        margin: 0 auto 2.5rem;
+    }
+    .cta-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .promise-text {
+        font-size: 1.5rem;
+    }
+    .cta-title {
+        font-size: 1.8rem;
+    }
+}

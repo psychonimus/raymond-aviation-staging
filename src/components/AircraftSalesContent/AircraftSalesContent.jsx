@@ -7,41 +7,45 @@ const tabs = [
     {
         id: "private",
         label: "Aircraft Sales- Representation for Sellers",
-        image: "./assets/images/aircraft-sales.webp",
-        heading: "",
+        image: "./assets/images/aircraft-sales.jpg",
+        heading: "Aircraft Sales",
         body: [
             "When you are ready to divest your aircraft, the margin between a good outcome and a great one depends entirely on preparation, positioning, and the quality of your buyer pipeline. Raymond Aviation manages every dimension of your aircraft sale.",
 
         ],
-        listHeading: "Independent Valuation",
+        listHeading: "",
         list: [
-            "Market-benchmarked aircraft appraisal using international databases (IMI, Vref, AVAC) and proprietary Indian market intelligence"
+            "Independent Valuation",
+            "Pre-Sale Preparation",
+            "Qualified Buyer Identification",
+            "Negotiation Management",
+            "Closing Coordination"
         ],
-        listHeading2: "Pre-Sale Preparation",
+        listHeading2: "",
         list2: [
-            "Maintenance record organisation, cosmetic and systems review, and DGCA documentation audit to maximise aircraft presentation"
+            
         ],
-        listHeading3: "Qualified Buyer Identification",
+        listHeading3: "",
         list3: [
-            "Access to our network of pre-qualified Indian and international buyers, including confidential off-market transactions"
+            
         ],
-        listHeading4: "Negotiation Management",
+        listHeading4: "",
         list4: [
-            "Full representation in price, terms, and delivery condition negotiations"
+           
         ],
-        listHeading5: "Closing Coordination",
+        listHeading5: "",
         list5: [
-            "Legal documentation, DGCA deregistration, title transfer, and sale completion"
+           
         ],
 
     },
     {
         id: "group",
         label: "Aircraft Acquisition, Representation for Buyers",
-        image: "./assets/images/aircraft-owner.webp",
-        heading: "",
+        image: "./assets/images/aircraft-acquisition.jpg",
+        heading: "Aircraft Acquisition",
         body: [
-            "Acquiring a private aircraft without expert guidance exposes you to risks that are both financial and regulatory. Raymond Aviation acts as your dedicated acquisition advisor, protecting your interests at every step.",
+            "Acquiring an aircraft without expert guidance exposes you to risks that are both financial and regulatory. Raymond Aviation acts as your dedicated acquisition advisor, protecting your interests at every step.",
 
         ],
         listHeading: "Mission Profile Analysis",
@@ -50,13 +54,13 @@ const tabs = [
         ],
         listHeading2: "Global Sourcing",
         list2: [
-            "Access to listed and off-market aircraft worldwide; relationships with dealers, lessors, and private sellers across the globe"
+            "Access to listed and off-market aircraft worldwide; relationships with dealers, lessors, and sellers across the globe"
         ],
         listHeading3: "Pre-Purchase Inspection (PPI)",
         list3: [
-            "Coordinating independent technical inspection of airframe, engines, avionics, and interior, with experienced test pilots and engineers"
+            "Coordinating independent technical inspection of airframe, engines, avionics, and interior"
         ],
-        listHeading4: "Lien & Title Search",
+        listHeading4: "Lien & Title Search(to be discussed)",
         list4: [
             "Clearance verification under DGCA, FAA, Cape Town Convention, and other applicable registries"
         ],
@@ -65,6 +69,38 @@ const tabs = [
             "End-to-end management of DGCA import permission, customs clearance, GST structuring, and VT registration"
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
+    },
+
+    {
+        id: "private3",
+        label: "Inventory on offers",
+        image: "./assets/images/aircraft-sales.jpg",
+        heading: "Inventory on Offers",
+        body: [
+            "We maintain an active inventory of aircraft available for sale, offering clients access to a curated selection across categories. Each opportunity is supported by rigorous evaluation, transparent pricing, and end-to-end advisory through the acquisition process.",
+
+        ],
+        listHeading: "",
+        list: [
+
+        ],
+        listHeading2: "",
+        list2: [
+
+        ],
+        listHeading3: "",
+        list3: [
+
+        ],
+        listHeading4: "",
+        list4: [
+            
+        ],
+        listHeading5: "",
+        list5: [
+           
+        ],
+
     },
 ];
 

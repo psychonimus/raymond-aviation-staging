@@ -7,7 +7,7 @@ const tabs = [
     {
         id: "private",
         label: "Guaranteed Availability",
-        image: "./assets/images/availability.webp",
+        image: "./assets/images/gaurenteed-availability.jpg",
         heading: "Guaranteed Availability",
         body: [
             "Every fractional owner holds a right to the aircraft for guaranteed contractual hours. Raymond Aviation maintains fleet capacity and scheduling discipline to ensure your aircraft is ready, staffed, and fuelled for your departure.",
@@ -30,7 +30,7 @@ const tabs = [
     {
         id: "group",
         label: "Fractional Cost",
-        image: "https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=900&q=80",
+        image: "./assets/images/ownership-cost.jpg",
         heading: "Fractional Cost",
         body: [
             "",

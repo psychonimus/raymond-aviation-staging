@@ -7,7 +7,15 @@ import FractionalOwnershipContent from '../FractionalOwnershipContent/Fractional
 const FractionalOwnership = () => {
     return (
         <>
-            <HeroBanner headlineUp="Fractional" headlineDown="Ownership" bgImage="/assets/images/fractional-ownership-bg.webp" />
+            <HeroBanner 
+                headlineUp="Fractional Ownership" 
+                // headlineDown="Ownership" 
+                bgImages={[
+                    "/assets/images/fractional-banner-1.jpg",
+                    "/assets/images/fractional-banner-2.jpg",
+                    "/assets/images/fractional-banner-3.jpg",
+                ]} 
+            />
 
             <section className="charter-on-demand-about bg-white py-5">
                 <div className="container">
@@ -27,7 +35,7 @@ const FractionalOwnership = () => {
                                 </p>
 
                                 <h5 className="charter-on-demand-about-tagline mt-3">What is Fractional Ownership?</h5>
-                                <p className="charter-on-demand-about-description mt-3">Fractional ownership means purchasing a defined share in a professionally operated aircraft. Your share corresponds to a guaranteed number of flight hours per year — typically ranging from 50 to 400 hours annually, depending on the share size you acquire. All operations, maintenance, crew management, scheduling, and regulatory compliance are handled entirely by Raymond Aviation.</p>
+                                <p className="charter-on-demand-about-description mt-3">Fractional ownership means purchasing a defined share in a professionally operated aircraft. Your share corresponds to a guaranteed number of flight hours per year — typically ranging from 150 to 400 hours annually, depending on the share size you acquire. All operations, maintenance, crew management, scheduling, and regulatory compliance are handled entirely by Raymond Aviation.</p>
                                 <p className="charter-on-demand-about-description mt-3">The result: you enjoy all the operational benefits of owning a private aircraft — without the full purchase price, without the complexity, and without the administrative burden that comes with it.</p>
                             </div>
                         </div>
@@ -38,7 +46,12 @@ const FractionalOwnership = () => {
 
             <FractionalOwnershipContent />
 
-            <Footer />
+            <Footer 
+              FooterHeader="OWN YOUR FLIGHT EXPERIENCE"
+              FooterTaglineOne="Fractional Ownership"
+              FooterTaglineTwo="Guaranteed Hours"
+              FooterTaglineThree="Flexible Access"
+            />
         </>
     )
 }

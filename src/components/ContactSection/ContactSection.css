@@ -71,13 +71,13 @@
 
 /* ── Left copy ── */
 .copy-label {
-    font-size: 1rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    /* letter-spacing: 0.22em; */
+    /* text-transform: uppercase; */
     color: var(--primary);
     margin-bottom: 0.75rem;
     font-weight: 500;
-    font-family: 'secondary bold', sans-serif;
+    font-family: 'primary bold', sans-serif;
 }
 
 .contact-hero-title{
@@ -98,7 +98,7 @@
     color: #fff;
     font-weight: 300;
     opacity: 0.88;
-    font-family: 'secondary medium', sans-serif;
+    font-family: 'secondary regular', sans-serif;
 }
 
 /* ── Mid contact info ── */
@@ -117,14 +117,16 @@
     color: var(--primary);
     margin-bottom: 0.6rem;
     font-weight: 500;
-    font-family: 'secondary bold', sans-serif;
+    font-family: 'primary bold', sans-serif;
 }
 
 .info-body {
     font-size: 1rem;
+    
     color: #fff;
     font-weight: 300;
-    font-family: 'secondary medium', sans-serif;
+    opacity: 0.88;
+    font-family: 'secondary regular', sans-serif;
 }
 
 .info-phone {
@@ -280,7 +282,7 @@ textarea.form-ctrl {
     }
 }
 
-.country-select option{
-    background-color: #fff !important;
-    color: #000 !important;
-}
+.form-ctrl option {
+    background-color: #111 !important;
+    color: #fff !important;
+}

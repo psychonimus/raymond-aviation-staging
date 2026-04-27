@@ -25,6 +25,15 @@
 }
 
 /* ── Sky gradient background (Overlay) ── */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ── Sky gradient background (Keep for fallback/additional texture) ── */
 .ac-hero-bg {
     position: absolute;
     inset: 0;
@@ -37,7 +46,7 @@
             transparent 50%,
             rgba(46, 22, 16, 0.2) 80%,
             rgba(26, 15, 12, 0.6) 100%);
-    z-index: 0;
+    z-index: 1;
 }
 
 /* Cloud texture overlay */
