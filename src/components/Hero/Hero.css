@@ -1,4 +1,12 @@
 /* ── Video Background ── */
+.ac-hero-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* background-color: red; */
+}
+
 .ac-hero-video {
     position: absolute;
     top: 0%;
@@ -6,9 +14,10 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    
     object-fit: cover;
 }
+
+
 
 /* ── Sky gradient background (Overlay) ── */
 .ac-hero-bg {
@@ -65,6 +74,11 @@
     height: 100vh;
     overflow-y: auto;
 }
+@media(max-width : 576px){
+    .ac-hero-content{
+        height: 90vh;
+    }
+}
 
 /* ── Headline ── */
 .ac-hero-text {
@@ -89,7 +103,7 @@
 }
 
 .ac-hero-headline {
-    font-family: Primary bold, serif;
+    font-family: "primary bold", serif;
     font-size: clamp(2rem, 4vw, 4rem);
     font-weight: 400;
     color: rgba(255, 248, 235, 0.97);
@@ -104,7 +118,7 @@
 
 @media(max-width: 768px){
     .ac-hero-overline {
-        margin-top: 3rem;
+        margin-top: 13rem !important;
     }
     .ac-hero-headline {
         font-size: clamp(2vw, 5vw, 2.5rem) !important;
@@ -227,7 +241,7 @@
 
 @media (max-width: 768px) {
     .ac-hero-text {
-        margin-top: 80px;
+        margin-top: 8rem;
     }
     .ac-services {
         margin-top: 20px;
@@ -261,7 +275,7 @@
 
 @media (max-width: 576px) {
     .ac-hero-headline {
-        font-size: 24px;
+        font-size: 1.8rem !important;
     }
     .ac-services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -292,7 +306,7 @@
         padding-top: 10px;
     }
     .ac-hero-text {
-        margin-top: 60px;
+        margin-top: 8rem;
     }
 }
 

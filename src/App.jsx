@@ -21,6 +21,9 @@ import AircraftSalesAndAquisition from './components/Pages/AircraftSalesAndAquis
 import EmptyLegFligts from './components/Pages/EmptyLegFligts.jsx'
 import HelipadInfrastructure from './components/Pages/HelipadInfrastructure.jsx'
 import AllBlogs from './components/Pages/AllBlogs.jsx'
+import TheFutureOfPrivateAviationPage from './components/Pages/TheFutureOfPrivateAviationPage.jsx'
+import MaximizingEfficiencyPage from './components/Pages/MaximizingEfficiencyPage.jsx'
+import NavigatingAircraftAcquisitionPage from './components/Pages/NavigatingAircraftAcquisitionPage.jsx'
 
 const HomePage = lazy(() => import("./components/Pages/Home.jsx"));
 
@@ -70,6 +73,9 @@ const MainApp = () => {
             <Route path="/empty-leg-flights" element={<PageTransition><EmptyLegFligts /></PageTransition>} />
             <Route path="/helipad-infrastructure" element={<PageTransition><HelipadInfrastructure /></PageTransition>} />
             <Route path="/blogs" element={<PageTransition><AllBlogs /></PageTransition>} />
+            <Route path="/blogs/the-future-of-private-aviation" element={<PageTransition><TheFutureOfPrivateAviationPage /></PageTransition>} />
+            <Route path="/blogs/maximizing-efficiency" element={<PageTransition><MaximizingEfficiencyPage /></PageTransition>} />
+            <Route path="/blogs/navigating-aircraft-acquisition" element={<PageTransition><NavigatingAircraftAcquisitionPage /></PageTransition>} />
           </Routes>
         </AnimatePresence>
       </Suspense>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '../Footer/Footer';
@@ -58,6 +59,7 @@ const AllBlogs = () => {
   const pageRef = useRef(null);
   const titleRef = useRef(null);
   const cardsRef = useRef([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -114,7 +116,14 @@ const AllBlogs = () => {
                   <p className="blog-item-desc">{blog.description}</p>
                   
                   <div>
-                    <FlowButtonDark text='Read Full Blog' ></FlowButtonDark>
+                    <FlowButtonDark 
+                      text='Read Full Blog' 
+                      onClick={() => {
+                        if (blog.id === 1) navigate('/blogs/the-future-of-private-aviation');
+                        if (blog.id === 2) navigate('/blogs/maximizing-efficiency');
+                        if (blog.id === 3) navigate('/blogs/navigating-aircraft-acquisition');
+                      }}
+                    />
                   </div>
                 </div>
               </article>

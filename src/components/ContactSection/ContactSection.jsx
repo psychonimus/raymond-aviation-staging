@@ -24,10 +24,10 @@ const ContactSection = () => {
 
     const services = [
         "Charter on Demand",
-        "Jet Card Program",
         "Fractional Ownership",
-        "Aircraft Acquisition & Sales",
+        "Jet Card Program",
         "Aircraft Management",
+        "Aircraft Sales & Acquisition",
         "Helipad Infrastructure"
     ];
 
@@ -128,18 +128,18 @@ const ContactSection = () => {
                 <div className="contact-inner">
                     {/* Title */}
                     <div className="text-center " ref={titleRef}>
-                        <h1 className="hero-title contact-hero-title text-white " >
+                        <h1 className="hero-title contact-hero-title text-white mt-4 mt-md-0" >
                             Contact our Team
                         </h1>
                     </div>
-                    <div className="title-divider mx-auto mb-5" ref={dividerRef} />
+                    <div className="title-divider mx-auto mb-3 mb-mt-5" ref={dividerRef} />
 
                     {/* Three-column layout */}
                     <div className="container px-0">
                         <div className="row g-0 align-items-start justify-content-center">
 
                             {/* Left — copy */}
-                            <div className="col-md-6 px-3 mb-4 mb-lg-0" ref={leftColRef}>
+                            <div className="col-md-6 px-3 mb-4 mb-lg-0 mt-4" ref={leftColRef}>
                                 <p className="copy-label">More sustainable flying at your service</p>
                                 <p className="copy-body">
                                     We are committed to providing an unparalleled flying experience

@@ -227,9 +227,9 @@ export default function LuxuryAccordion() {
     <section className="acc-section">
 
       {/* ── MOBILE IMAGE BANNER — visible only below md ── */}
-      <div className="acc-image-mobile d-md-none">
+      {/* <div className="acc-image-mobile d-md-none">
         <ImagePanel refsMap={mobileRefs.current} />
-      </div>
+      </div> */}
 
       {/* ── BOOTSTRAP GRID ── */}
       <div className="container-fluid">

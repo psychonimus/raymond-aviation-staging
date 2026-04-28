@@ -114,19 +114,21 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    
+
     padding: 5rem;
     position: relative;
     z-index: 1;
     background: linear-gradient(135deg, var(--dark-2) 0%, var(--dark) 100%);
 }
-@media(max-width : 1300px){
-    .content-panel{
+
+@media(max-width : 1300px) {
+    .content-panel {
         padding: 2rem;
     }
 }
-@media(max-width : 900px){
-    .content-panel{
+
+@media(max-width : 900px) {
+    .content-panel {
         padding: 1rem;
     }
 }
@@ -140,7 +142,11 @@ body {
     margin-bottom: 3.5rem;
     border-bottom: 1px solid var(--border);
     position: relative;
+    
 }
+
+
+
 
 .tab-btn {
     background: none;
@@ -157,6 +163,31 @@ body {
     position: relative;
     transition: color 0.3s ease;
     text-align: left;
+    
+}
+
+@media(max-width : 576px){
+    .tab-btn{
+        width: 100px;
+    }
+    .tab-nav{
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--gold) transparent;
+    }
+    .tab-nav::-webkit-scrollbar {
+    height: 1px;
+}
+
+.tab-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tab-nav::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 2px;
+    height: 1px;
+}
 }
 
 .tab-btn::after {
@@ -211,7 +242,7 @@ body {
     /* letter-spacing: 0.03em; */
 }
 
-.content-body h5{
+.content-body h5 {
     font-family: 'secondary regular', serif;
     font-size: 1.4rem;
     font-weight: 400;
@@ -220,13 +251,14 @@ body {
     margin-top: 2rem;
     /* letter-spacing: -0.01em; */
 }
-@media(max-width : 576px){
-    .content-body h5{
+
+@media(max-width : 576px) {
+    .content-body h5 {
         font-size: 1.2rem;
     }
 }
 
-.content-body li{
+.content-body li {
     font-family: 'secondary regular', serif;
     font-size: 1rem;
     margin-bottom: 5px;
@@ -299,10 +331,20 @@ body {
         display: none;
     }
 
+    .tab-nav {
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        margin-bottom: 2rem;
+        display: flex;
+    }
+
+
     .tab-btn {
         font-size: 0.62rem;
         margin-right: 1.5rem;
+        flex-shrink: 0;
     }
+
 
     .stats-row {
         gap: 2rem;

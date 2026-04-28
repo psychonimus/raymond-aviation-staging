@@ -44,7 +44,7 @@
 
 .ra-title {
     font-family: 'primary bold', serif;
-    font-size: clamp(2.4rem, 1vw, 3.8rem);
+    font-size: clamp(2rem, 1vw, 3.8rem);
 
     color: #2E110F;
     /* letter-spacing: 0.05em; */

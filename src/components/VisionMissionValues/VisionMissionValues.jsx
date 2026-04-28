@@ -107,7 +107,8 @@ const VisionMissionValues = () => {
 
     return (
         <section ref={sectionRef} className="vmv-section">
-            <div className="vmv-container">
+            <div className="vmv-container container-fluid">
+                <h4 className="highlights-heading ms-mt-4">Vision & Mission</h4>
                 {/* <div ref={headerRef} className="vmv-header">
                     <span className="vmv-eyebrow">Our North Star</span>
                     <h2 className="vmv-title">
@@ -123,8 +124,8 @@ const VisionMissionValues = () => {
                     <div className="vmv-card">
                         {/* <span className="vmv-card-number">01</span> */}
                         <div>
-                            <span className="vmv-card-label">Our Vision</span>
-                            <h3 className="vmv-card-title">Shaping the Future <br />of Private Aviation</h3>
+                            <span className="vmv-card-label ">Our Vision</span>
+                            <h3 className="vmv-card-title mt-3">Shaping the Future <br />of Private Aviation</h3>
                         </div>
                         <p className="vmv-card-text">
                             To be the benchmark for excellence in private aviation, combining precision, safety, and bespoke service for a global clientele.
@@ -135,7 +136,7 @@ const VisionMissionValues = () => {
                         {/* <span className="vmv-card-number">02</span> */}
                         <div>
                             <span className="vmv-card-label">Our Mission</span>
-                            <h3 className="vmv-card-title">Crafting <br />Exceptional Journeys.</h3>
+                            <h3 className="vmv-card-title mt-3">Crafting <br />Exceptional Journeys.</h3>
                         </div>
                         <p className="vmv-card-text">
                             To deliver uncompromising air travel experiences through operational excellence, a world-class fleet, and a legacy of trust built over decades.
@@ -145,7 +146,7 @@ const VisionMissionValues = () => {
 
                 <div ref={valuesRef} className="values-container">
                     <div className="values-title-group">
-                        <h2 className="values-main-title">Core Values</h2>
+                        <h4 className="highlights-heading ms-mt-4">Our Values</h4>
                         {/* <span className="vmv-eyebrow">How we fly</span> */}
                     </div>
 

@@ -19,9 +19,9 @@ const tabs = [
             "Browse current available empty legs through our charter desk",
             "Existing Jet Card holders receive first notification and priority booking rights",
             "Booking can be confirmed within two hours of inquiry on most sectors",
-            
+
         ],
-        
+
 
     },
     {
@@ -164,18 +164,18 @@ export default function EmptyLegFlightsContent() {
                             {tab.body.map((para, pi) => (
                                 <div>
                                     <p key={pi}>{para}</p>
-                                    <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>
+                                    <h5 style={{ color: "var(--primary)" }}>{tab.listHeading}</h5>
                                     <ul className="text-white">
                                         {tab.list.map((item, li) => (
                                             <li key={li}>{item}</li>
                                         ))}
                                     </ul>
-                                    
+
                                 </div>
                             ))}
                         </div>
 
-                        
+
 
                         {/* Stats */}
                         {/* <div className="stats-row">

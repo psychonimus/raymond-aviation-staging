@@ -165,7 +165,7 @@ export default function PilatusSection() {
 
     return (
         <>
-            <div className="pilatus-wrapper">
+            <div className="pilatus-wrapper ">
 
                 {/* HERO */}
                 <section className="pilatus-hero" ref={sectionRef}>
@@ -211,7 +211,7 @@ export default function PilatusSection() {
 
                     {/* ── RIGHT (IMAGE) ── */}
                     <div className="hero-right">
-                        <div className="image-container" ref={imageRef}>
+                        <div className="image-container " ref={imageRef}>
                             <Swiper
                                 modules={[Autoplay, EffectFade, Pagination]}
                                 effect="fade"

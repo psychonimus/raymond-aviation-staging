@@ -1,19 +1,18 @@
 /* VisionMissionValues.css */
 .vmv-section {
-    
-    background-color: #ffffff;
+    background-color: #000;
     overflow: hidden;
-    color: #280A0B;
+    color: #fff;
+    padding: 100px 0;
 }
 
 .vmv-container {
-    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 60px;
 }
 
 .vmv-header {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -24,7 +23,7 @@
     font-size: 14px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #280A0B;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -48,22 +47,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .vmv-card {
-    background: #f9f9f9;
+    background: #0a0a0a;
     padding: 60px;
     border-radius: 4px;
     position: relative;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, border-color 0.4s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid #1a1a1a;
 }
 
 .vmv-card:hover {
     transform: translateY(-10px);
+    border-color: var(--primary);
 }
 
 .vmv-card-number {
@@ -81,27 +82,28 @@
     font-size: 13px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #D3A95B;
-    margin-bottom: 30px;
+    color: var(--primary);
+    
 }
 
 .vmv-card-title {
     font-family: 'primary bold', sans-serif;
     font-size: clamp(24px, 2.5vw, 36px);
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .vmv-card-text {
     font-family: 'secondary regular', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #b5b5b5;
     max-width: 90%;
 }
 
 /* Values Section */
 .values-container {
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .values-title-group {
@@ -109,7 +111,7 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 60px;
-    border-bottom: 1px solid rgba(40, 10, 11, 0.1);
+    border-bottom: 1px solid rgba(211, 169, 91, 0.2);
     padding-bottom: 30px;
 }
 
@@ -133,6 +135,7 @@
     width: 40px;
     height: 40px;
     margin-bottom: 24px;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(13%) saturate(1148%) hue-rotate(345deg) brightness(89%) contrast(92%);
 }
 
 .value-icon img {
@@ -145,18 +148,21 @@
     font-family: 'primary bold', sans-serif;
     font-size: 20px;
     margin-bottom: 12px;
-    color: #280A0B;
+    color: var(--primary);
 }
 
 .value-desc {
     font-family: 'secondary regular', sans-serif;
     font-size: 15px;
-    color: #717171;
+    color: #b5b5b5;
     line-height: 1.5;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .vmv-container {
+        padding: 0 40px;
+    }
     .vmv-grid {
         grid-template-columns: 1fr;
     }
@@ -167,17 +173,25 @@
 
 @media (max-width: 768px) {
     .vmv-section {
-        padding: 80px 0;
+        padding: 60px 0;
+    }
+    .vmv-container {
+        padding: 0 24px;
     }
     .vmv-card {
-        padding: 40px;
+        padding: 20px;
     }
     .values-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .values-title-group {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+    }
+}
+@media(max-width : 576px){
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }

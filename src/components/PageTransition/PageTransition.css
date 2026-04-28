@@ -34,3 +34,10 @@
   height: 101px; /* 1px overlap */
   fill: #FCF6BA;
 }
+
+@media print {
+  .slide-in,
+  .slide-out {
+    display: none !important;
+  }
+}

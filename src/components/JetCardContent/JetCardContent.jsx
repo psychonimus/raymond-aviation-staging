@@ -23,7 +23,7 @@ const tabs = [
         ],
         listHeading2: "",
         list2: [
-            
+
         ],
 
     },
@@ -44,7 +44,7 @@ const tabs = [
         ],
         listHeading2: "",
         list2: [
-            
+
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
     },
@@ -171,13 +171,13 @@ export default function JetCardContent() {
                             {tab.body.map((para, pi) => (
                                 <div>
                                     <p key={pi}>{para}</p>
-                                    <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>
+                                    <h5 style={{ color: "var(--primary)" }}>{tab.listHeading}</h5>
                                     <ul className="text-white">
                                         {tab.list.map((item, li) => (
                                             <li key={li}>{item}</li>
                                         ))}
                                     </ul>
-                                    <h5 style={{color : "var(--primary)"}}>{tab.listHeading2}</h5>
+                                    <h5 style={{ color: "var(--primary)" }}>{tab.listHeading2}</h5>
                                     <ul className="text-white">
                                         {tab.list2.map((item, li) => (
                                             <li key={li}>{item}</li>

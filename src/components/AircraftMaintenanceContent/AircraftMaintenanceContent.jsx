@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../CharterContent/CharterContent.css";
 
 
 const tabs = [
@@ -13,16 +14,16 @@ const tabs = [
             "",
 
         ],
-        
+
         listHeading2: "",
         list2: [
             "NSOP (Non-Scheduled Operator Permit) maintained in good standing",
             "DGCA inspections, audits, & correspondence managed",
             "Operations, safety, & maintenance manuals prepared, approved, & maintained by the operator",
             "Annual safety review with owner briefing on findings & improvements",
-            
+
         ],
-        
+
 
     },
     {
@@ -36,23 +37,23 @@ const tabs = [
         ],
         listHeading: "Recruitment & Training",
         list: [
-            
+
             "Sourcing and screening of qualified captains and first officers to DGCA-recognised standards, with crew compatibility aligned with type of aircraft",
             "Recurrent simulator training, line checks, proficiency checks, and route familiarisation",
-            
+
             "Emergency procedures and Crew Resource Management (CRM) training",
             "Medical fitness monitoring and scheduling"
         ],
         listHeading2: "",
         list2: [
-            
+
         ],
         listHeading3: "Rostering & Standby",
         list3: [
             "Crew scheduling aligned with owner's travel patterns",
             "Standby crew arrangements for unplanned demand",
             "Fatigue risk management",
-            
+
         ],
         listHeading4: "Flight Operations Management",
         list4: [
@@ -85,20 +86,20 @@ const tabs = [
             "Maintenance of Certificate of Airworthiness (CoA), renewal and surveillance",
             "Continuing Airworthiness Management Organisation (CAMO) functions",
             "Liaison with DGCA for airworthiness and technical regulatory matters"
-            
+
         ],
         listHeading3: "",
         list3: [
-            
-            
+
+
         ],
         listHeading4: "Financial Management & Reporting",
         list4: [
             "Transparent monthly accounts with cost breakdowns",
-            
+
             "Annual budget planning and actual-vs-budget performance review",
             "Insurance renewal management and claims coordination"
-            
+
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
     },
@@ -117,8 +118,8 @@ const tabs = [
             "Client vetting and approval before each third-party use",
             "Charter revenue credited directly against owner management fees"
         ],
-        
-        },
+
+    },
 ];
 
 export default function JetCardContent() {
@@ -242,25 +243,25 @@ export default function JetCardContent() {
                             {tab.body.map((para, pi) => (
                                 <div key={pi}>
                                     <p >{para}</p>
-                                    {tab.listHeading && <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>}
+                                    {tab.listHeading && <h5 style={{ color: "var(--primary)" }}>{tab.listHeading}</h5>}
                                     {tab.list && <ul className="text-white">
                                         {tab.list.map((item, li) => (
                                             <li key={li}>{item}</li>
                                         ))}
                                     </ul>}
-                                    {tab.listHeading2 && <h5 style={{color : "var(--primary)"}}>{tab.listHeading2}</h5>}
+                                    {tab.listHeading2 && <h5 style={{ color: "var(--primary)" }}>{tab.listHeading2}</h5>}
                                     {tab.list2 && <ul className="text-white">
                                         {tab.list2.map((item, li) => (
                                             <li key={li}>{item}</li>
                                         ))}
                                     </ul>}
-                                    {tab.listHeading3 && <h5 style={{color : "var(--primary)"}}>{tab.listHeading3}</h5>}
+                                    {tab.listHeading3 && <h5 style={{ color: "var(--primary)" }}>{tab.listHeading3}</h5>}
                                     {tab.list3 && <ul className="text-white">
                                         {tab.list3.map((item, li) => (
                                             <li key={li}>{item}</li>
                                         ))}
                                     </ul>}
-                                    {tab.listHeading4 && <h5 style={{color : "var(--primary)"}}>{tab.listHeading4}</h5>}
+                                    {tab.listHeading4 && <h5 style={{ color: "var(--primary)" }}>{tab.listHeading4}</h5>}
                                     {tab.list4 && <ul className="text-white">
                                         {tab.list4.map((item, li) => (
                                             <li key={li}>{item}</li>

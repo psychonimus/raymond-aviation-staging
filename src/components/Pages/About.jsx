@@ -10,12 +10,9 @@ import Testimonials from '../Testimonials/Testimonials'
 const About = () => {
   return (
     <>
-        {/* <AboutHero /> */}
-        <div>
-          <AboutSection />
-          <VisionMissionValues />
-          <Testimonials />
-        </div>
+        <AboutSection />
+        <VisionMissionValues />
+        <Testimonials />
 
         
         <Footer 
