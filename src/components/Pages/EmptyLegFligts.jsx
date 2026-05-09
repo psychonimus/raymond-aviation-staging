@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import EmptyLegFlightsContent from '../EmptyLegFlightsContent/EmptyLegFlightsContent'
@@ -7,10 +8,15 @@ import EmptyLegFlightsContent from '../EmptyLegFlightsContent/EmptyLegFlightsCon
 const EmptyLegFligts = () => {
     return (
         <>
+            <Helmet>
+                <title>Empty Leg Flight Deals | Raymond Aviation</title>
+                <meta name="description" content="Find exclusive deals on empty leg flights. Experience private jet travel at a fraction of the cost with our last-minute opportunities." />
+            </Helmet>
             <HeroBanner
                 headlineUp="Empty Leg Flights"
                 headlineDown="Private Aviation, Simplified"
                 bgImage="./assets/images/empty-leg-banner.webp"
+                
             />
 
             <section className="charter-on-demand-about bg-white py-5">

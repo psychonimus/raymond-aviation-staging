@@ -96,6 +96,15 @@ const Menu = ({ isOpen, toggleMenu }) => {
                                 <div className="menu-link-bg" />
                             </Link>
                         </li>
+                        <li className="menu-list-item">
+                            <Link to="/inventory" className="menu-link w-inline-block">
+                                <div className="menu-link-heading">
+                                    <span className="menu-link-text">Inventory</span>
+                                    <span className="menu-link-text is--hover">Inventory</span>
+                                </div>
+                                <div className="menu-link-bg" />
+                            </Link>
+                        </li>
                         <li className="menu-list-item"> 
                             <Link to="/blogs" className="menu-link w-inline-block">
                                 <div className="menu-link-heading">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import WhyChooseUs from '../WhyChooseUsSection/WhyChooseUs'
 import ContactSection from '../ContactSection/ContactSection'
 import HeroBanner from '../Herobanner/HeroBanner'
@@ -8,10 +9,15 @@ import Footer from '../Footer/Footer'
 const JetCardProgram = () => {
   return (
     <>
+        <Helmet>
+            <title>Jet Card Program | Raymond Aviation</title>
+            <meta name="description" content="The Raymond Aviation Jet Card offers a smarter way to fly. Enjoy fixed hourly rates, guaranteed availability, and premium service." />
+        </Helmet>
         <HeroBanner
             headlineUp="Jet Card Program"
             headlineDown=""
             bgImage="./assets/images/jet-card-program-bg.jpg"
+            btnTxt="Enquire Now"
         />
 
         <section className="charter-on-demand-about bg-white py-5">
@@ -77,6 +83,7 @@ const JetCardProgram = () => {
               FooterTaglineOne="Prepaid Hours"
               FooterTaglineTwo="Fixed Rates"
               FooterTaglineThree="Flexible Access"
+              btnTxt="Enquire Now"
             />
         
     </>

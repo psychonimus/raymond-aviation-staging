@@ -251,7 +251,7 @@ export default function PilatusSection() {
 
                 <div className="highlights-section" ref={ctaRef} style={{ opacity: 0 }}>
                     <div className="container-fluid">
-                        <h4 className="highlights-heading">Key Highlights</h4>
+                        <h4 className="highlights-heading mb-4">Key Highlights</h4>
                         <div className="highlight-parent">
 
                             <div className="highlight-card">

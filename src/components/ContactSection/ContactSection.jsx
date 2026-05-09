@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { gsap } from "gsap";
 import './ContactSection.css'
 import { FlowButton } from "../FlowButton/FlowButton";
+import { Phone, Mail } from "lucide-react";
 
 
 const ContactSection = () => {
@@ -140,22 +141,31 @@ const ContactSection = () => {
 
                             {/* Left — copy */}
                             <div className="col-md-6 px-3 mb-4 mb-lg-0 mt-4" ref={leftColRef}>
-                                <p className="copy-label">More sustainable flying at your service</p>
+                                {/* <p className="copy-label">More sustainable flying at your service</p>
                                 <p className="copy-body">
                                     We are committed to providing an unparalleled flying experience
                                     that harmonizes comfort and more sustainable flying. Our dedicated team is here
                                     to assist with any inquiries, ensuring your journey with us is as smooth and
                                     enjoyable as possible. Whether you're looking to book a flight, have questions
                                     about our services, or need personalized assistance.
-                                </p>
+                                </p> */}
 
                                 <div className="contact-info-card">
                                     <p className="info-label">Contact our team</p>
-                                    <p className="info-body">
-                                        Please reach out to us through the contact form our contact us at{" "} <br />
-                                        <span className="info-phone">+31 85 026 1636</span> and let us elevate your
-                                        travel experience.
-                                    </p>
+                                    <div className="contact-details mt-3">
+                                        <div className="contact-item d-flex align-items-center mb-3">
+                                            <div className="contact-icon-box me-3">
+                                                <Phone size={20} />
+                                            </div>
+                                            <span className="info-phone">+31 85 026 1636</span>
+                                        </div>
+                                        <div className="contact-item d-flex align-items-center">
+                                            <div className="contact-icon-box me-3">
+                                                <Mail size={20} />
+                                            </div>
+                                            <span className="info-email">charter@raymond.in</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

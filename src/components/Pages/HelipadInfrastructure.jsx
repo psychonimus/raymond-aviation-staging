@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import HelipadInfrastructureContent from '../HelipadInfrastructureContent/HelipadInfrastructureContent'
@@ -9,8 +10,13 @@ import HelipadCommitment from '../HelipadCommitment/HelipadCommitment'
 const HelipadInfrastructure = () => {
   return (
     <>
+        <Helmet>
+            <title>Helipad Infrastructure & Consulting | Raymond Aviation</title>
+            <meta name="description" content="Specialized consulting and infrastructure services for helipad development, licensing, and management." />
+        </Helmet>
         <HeroBanner
             headlineUp="Helipad Infrastructure"
+            btnTxt="Enquire Now"
             headlineDown=""
            bgImages={[
                     "/assets/images/helipad-banner-1.jpg",
@@ -27,13 +33,15 @@ const HelipadInfrastructure = () => {
                     <div className="col-md-12">
                         <div className="charter-on-demand-about-content">
                             <h2 className="charter-on-demand-about-title" style={{color:"var(--primary)"}}>Helipad Consultancy, Design, Construction & Management</h2>
+                            <p className="charter-on-demand-about-description mt-3">
+                                Raymond Aviation offers a comprehensive, single-window solution for helipad development, from the first drawing board to the final commissioning flight. Clients benefit from unified accountability, seamless coordination, and the peace of mind that comes with engaging a 100-year-old institution.    
+                            </p>
+
                             <p className="charter-on-demand-about-description">
-                                Raymond Limited has been awarded the prestigious tender for the construction of a helipad on the Coastal Road in Worli, Mumbai, by the Mumbai Metropolitan Region Development Authority (MMRDA). This landmark project underscores Raymond's deep-rooted capability in delivering world-class aviation infrastructure in complex urban environments.(to be discussed)
+                                Raymond Limited has been awarded the prestigious tender for the construction of a helipad on the Coastal Road in Worli, Mumbai, by the Mumbai Metropolitan Region Development Authority (MMRDA). This landmark project underscores Raymond's deep-rooted capability in delivering world-class aviation infrastructure in complex urban environments.
                             </p>
                             {/* <h5 className="charter-on-demand-about-tagline">We do not build helipads. We build confidence — in the air, on the ground, and in every authority that will ever inspect your facility.</h5> */}
-                            <p className="charter-on-demand-about-description mt-3">
-                                Raymond Aviation offers a comprehensive, single-window solution for helipad development — from the first drawing board to the final commissioning flight. Clients benefit from unified accountability, seamless coordination, and the peace of mind that comes with engaging a 100-year-old institution.    
-                            </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -51,6 +59,7 @@ const HelipadInfrastructure = () => {
           FooterTaglineOne="Design"
           FooterTaglineTwo="Consultancy"
           FooterTaglineThree="Construction & Management"
+          btnTxt="Enquire Now"
         />
     </>
   )

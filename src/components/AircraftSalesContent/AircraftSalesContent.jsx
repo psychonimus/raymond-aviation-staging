@@ -1,13 +1,23 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
 
 const tabs = [
     {
         id: "private",
-        label: "Aircraft Sales- Representation for Sellers",
-        image: "./assets/images/aircraft-sales.jpg",
+        label: "Aircraft Sales",
+        // image: "./assets/images/aircraft-sales.jpg",
+        images: ["./assets/images/aircraft-sales.jpg", "./assets/images/helicopter-acqusition-1.jpg"],
         heading: "Aircraft Sales",
         body: [
             "When you are ready to divest your aircraft, the margin between a good outcome and a great one depends entirely on preparation, positioning, and the quality of your buyer pipeline. Raymond Aviation manages every dimension of your aircraft sale.",
@@ -41,32 +51,37 @@ const tabs = [
     },
     {
         id: "group",
-        label: "Aircraft Acquisition, Representation for Buyers",
-        image: "./assets/images/aircraft-acquisition.jpg",
+        label: "Aircraft Acquisition",
+
+        images: ["./assets/images/aircraft-acquisition.jpg"],
         heading: "Aircraft Acquisition",
         body: [
             "Acquiring an aircraft without expert guidance exposes you to risks that are both financial and regulatory. Raymond Aviation acts as your dedicated acquisition advisor, protecting your interests at every step.",
 
         ],
-        listHeading: "Mission Profile Analysis",
+        listHeading: "",
         list: [
-            "Defining the right aircraft category, range, cabin size, and operational specification based on your actual travel patterns"
+            "Recomending the right aircraft based on your travel patterns.",
+            "Providing access to listed and off-market aircraft worldwide.",
+            "Coordinating independent technical evaluation of aircraft.",
+            "Verifying lien and title search on selected aircraft.",
+            "Managing aircraft import and custom clearence followed by compliances for aircraft registration."
         ],
-        listHeading2: "Global Sourcing",
+        listHeading2: "",
         list2: [
-            "Access to listed and off-market aircraft worldwide; relationships with dealers, lessors, and sellers across the globe"
+            
         ],
-        listHeading3: "Pre-Purchase Inspection (PPI)",
+        listHeading3: "",
         list3: [
-            "Coordinating independent technical inspection of airframe, engines, avionics, and interior"
+            
         ],
-        listHeading4: "Lien & Title Search(to be discussed)",
+        listHeading4: "",
         list4: [
-            "Clearance verification under DGCA, FAA, Cape Town Convention, and other applicable registries"
+            
         ],
-        listHeading5: "Import & Registration Management",
+        listHeading5: "",
         list5: [
-            "End-to-end management of DGCA import permission, customs clearance, GST structuring, and VT registration"
+            
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
     },
@@ -74,7 +89,7 @@ const tabs = [
     {
         id: "private3",
         label: "Inventory on offers",
-        image: "./assets/images/aircraft-sales.jpg",
+        image: "./assets/images/aircraft-inventory.jpg",
         heading: "Inventory on Offers",
         body: [
             "We maintain an active inventory of aircraft available for sale, offering clients access to a curated selection across categories. Each opportunity is supported by rigorous evaluation, transparent pricing, and end-to-end advisory through the acquisition process.",
@@ -107,7 +122,7 @@ const tabs = [
 export default function AircraftSalesContent() {
     const [active, setActive] = useState(0);
     const [animating, setAnimating] = useState(false);
-    const imageRef = useRef(null);
+    const imagePanelRef = useRef(null);
     const contentRef = useRef(null);
     const statsRef = useRef([]);
     const prevActive = useRef(0);
@@ -116,12 +131,12 @@ export default function AircraftSalesContent() {
         if (idx === active || animating) return;
         setAnimating(true);
 
-        const imgEl = imageRef.current;
+        const imgPanelEl = imagePanelRef.current;
         const contentEl = contentRef.current;
 
         // Outgoing animation
         gsap.timeline()
-            .to(imgEl, { scale: 1.08, opacity: 0, duration: 0.45, ease: "power2.in" })
+            .to(imgPanelEl, { scale: 1.08, opacity: 0, duration: 0.45, ease: "power2.in" })
             .to(contentEl, { y: 18, opacity: 0, duration: 0.3, ease: "power2.in" }, "<")
             .add(() => {
                 prevActive.current = active;
@@ -132,15 +147,15 @@ export default function AircraftSalesContent() {
     useEffect(() => {
         if (!animating) return;
 
-        const imgEl = imageRef.current;
+        const imgPanelEl = imagePanelRef.current;
         const contentEl = contentRef.current;
 
         // Incoming animation
-        gsap.set(imgEl, { scale: 1.08, opacity: 0 });
+        gsap.set(imgPanelEl, { scale: 1.08, opacity: 0 });
         gsap.set(contentEl, { y: 18, opacity: 0 });
 
         gsap.timeline({ onComplete: () => setAnimating(false) })
-            .to(imgEl, { scale: 1, opacity: 1, duration: 0.55, ease: "power3.out" })
+            .to(imgPanelEl, { scale: 1, opacity: 1, duration: 0.55, ease: "power3.out" })
             .to(contentEl, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, "-=0.3")
             .fromTo(
                 statsRef.current,
@@ -152,7 +167,7 @@ export default function AircraftSalesContent() {
 
     // Mount animation
     useEffect(() => {
-        const imgEl = imageRef.current;
+        const imgPanelEl = imagePanelRef.current;
         const contentEl = contentRef.current;
 
         gsap.registerPlugin(ScrollTrigger);
@@ -164,7 +179,7 @@ export default function AircraftSalesContent() {
             }
         });
 
-        tl.fromTo(imgEl,
+        tl.fromTo(imgPanelEl,
             { x: -40, opacity: 0 },
             { x: 0, opacity: 1, duration: 0.9, ease: "power3.out" }
         )
@@ -187,11 +202,28 @@ export default function AircraftSalesContent() {
 
 
             <section className="charters-section">
-                {/* LEFT: Image */}
-                <div className="image-panel">
-                    <img ref={imageRef} src={tab.image} alt={tab.heading} />
+                {/* LEFT: Image Carousel */}
+                <div className="image-panel" ref={imagePanelRef}>
+                    <Swiper
+                        key={active}
+                        modules={[Autoplay, EffectFade, Pagination]}
+                        effect="fade"
+                        pagination={{ clickable: true }}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        loop={true}
+                        className="charter-swiper"
+                        style={{ width: '100%', height: '100%' }}
+                    >
+                        {(tab.images || (Array.isArray(tab.image) ? tab.image : [tab.image])).map((img, index) => (
+                            <SwiperSlide key={index}>
+                                <img src={img} alt={`${tab.heading} ${index + 1}`} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                     <div className="image-overlay" />
-                    {/* <div className="image-label">BBAC Aviation</div> */}
                 </div>
 
                 {/* RIGHT: Content */}
@@ -223,8 +255,15 @@ export default function AircraftSalesContent() {
 
                         <div className="content-body">
                             {tab.body.map((para, pi) => (
-                                <div>
-                                    <p key={pi}>{para}</p>
+                                <div key={pi}>
+                                    <p>{para}</p>
+                                    {tab.id === "private3" && (
+                                        <div className="mt-4">
+                                            <Link to="/inventory" className="enquire-btn" style={{ display: 'inline-block', width: 'auto', padding: '12px 30px' }}>
+                                                View All Inventory
+                                            </Link>
+                                        </div>
+                                    )}
                                     <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>
                                     <ul className="text-white">
                                         {tab.list.map((item, li) => (

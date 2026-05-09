@@ -28,9 +28,9 @@ const tabs = [
     },
     {
         id: "private-1",
-        label: "Crew Management",
-        image: "./assets/images/crew-management.jpg",
-        heading: "Crew Management",
+        label: "Crew & Operations Management",
+        image: "./assets/images/aircraft-crew-2.jpg",
+        heading: "Crew & Operations Management",
         body: [
             "",
 
@@ -38,11 +38,9 @@ const tabs = [
         listHeading: "Recruitment & Training",
         list: [
 
-            "Sourcing and screening of qualified captains and first officers to DGCA-recognised standards, with crew compatibility aligned with type of aircraft",
-            "Recurrent simulator training, line checks, proficiency checks, and route familiarisation",
-
-            "Emergency procedures and Crew Resource Management (CRM) training",
-            "Medical fitness monitoring and scheduling"
+            "Sourcing and screening of qualified crew to DGCA-recognised standards, aligned with type of aircraft",
+            "Mandatory training & checks to ensure crew readiness across all operational requirements",
+            "Monitoring medical fitness and scheduling pre-flight medical checks"
         ],
         listHeading2: "",
         list2: [
@@ -75,7 +73,7 @@ const tabs = [
         ],
         listHeading: "Scheduled/Unscheduled Maintenance & AOG Support",
         list: [
-            "Full management of OEM-mandated maintenance intervals",
+            "Full management of OEM-mandated maintenance support",
             "Coordination with approved MRO facilities",
             "Technical log management, component tracking, and airworthiness directives compliance",
             "24/7 AOG response team for unexpected technical issues",

@@ -3,8 +3,9 @@ import "./Footer.css";
 import { FlowButton } from "../FlowButton/FlowButton";
 import { FlowButtonDark } from "../FlowButton/FlowButtonDark";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import { Link } from "react-router-dom";
 
-const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo, FooterTaglineThree}) => {
+const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo, FooterTaglineThree, btnTxt}) => {
   const footerRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -108,7 +109,7 @@ const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo
             </p>
 
             <div className="d-flex justify-content-center" ref={btnRef}>
-              <FlowButtonDark text="Enquire Now"/>
+              <FlowButtonDark text={btnTxt}/>
             </div>
 
             {/* <div ref={socialsRef} className="ra-socials">
@@ -145,7 +146,7 @@ const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo
               <div className="col-12 col-sm-6">
                 <ul className="ra-legal-links">
                   <li><a href="#">Terms &amp; Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>

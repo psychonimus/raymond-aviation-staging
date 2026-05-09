@@ -30,12 +30,12 @@ const tabs = [
             },
             {
                 title: "Regulatory Approvals",
-                desc: "Approvals across DGCA, AAI, Municipal and environmental/coastal/defence authorities.(Wherever applicable)",
+                desc: "Assistance in approvals (wherever applicable) across DGCA, AAI, Municipal and environmental/coastal/defence authorities.",
                 image: "/assets/images/helipad-banner-3.jpg"
             },
             {
                 title: "Construction & Project Management",
-                desc: "Turnkey delivery of civil works and structural systems, lighting, fuel facilities, and passenger Lounge",
+                desc: "Turnkey delivery of civil works and structural systems, lighting, fire fighting and passenger Lounge",
                 image: "/assets/images/helipad-banner-4.jpg"
             },
             {
@@ -71,7 +71,7 @@ const tabs = [
                 image: "./assets/images/coastal-helipad.jpg"
             },
             {
-                title: "Floating / Offshore Deck Helipad",
+                title: "Floating / Offshore Helipad",
                 desc: "Stabilized decks for marine and offshore platforms.",
                 image: "./assets/images/offshore-helipad-2.jpg"
             },
@@ -88,13 +88,13 @@ const tabs = [
             {
                 title: "Licensed / DGCA Certified Helipad",
                 desc: "Formal licensing and aerodrome compliance.",
-                image: "./assets/images/dgca-helipad.jpg"
+                image: "./assets/images/heliport.png"
             },
             
             {
                 title: "Hospital / HEMS Helipad",
                 desc: "Emergency designs for rapid patient transfer.",
-                image: "./assets/images/hospital-helipad.jpg"
+                image: "./assets/images/hospital-helipad-2.jpg"
             },
 
         ]

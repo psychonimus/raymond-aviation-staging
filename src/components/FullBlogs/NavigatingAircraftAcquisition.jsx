@@ -45,7 +45,7 @@ const NavigatingAircraftAcquisition = () => {
     <div className="blog-post-container" ref={containerRef}>
       <header className="blog-post-hero">
         <img 
-          src="/assets/images/aircraft-sales.webp" 
+          src="/assets/images/aircraft-blog-3.jpg" 
           alt="Navigating Aircraft Acquisition" 
           className="blog-post-hero-image"
           ref={heroRef}

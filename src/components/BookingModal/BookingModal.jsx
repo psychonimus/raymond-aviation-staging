@@ -37,7 +37,17 @@ const BookingModal = () => {
         returnTime: ''
     });
 
-    const charterTypes = ['Private Jet', 'Helicopter', 'Air Ambulance', 'Cargo Charter', 'Group Charter'];
+    const charterTypes = ['Private Jet', 'Helicopter', 'Air Ambulance(Helicopter)', 'Air Ambulance(Charter)', 'Yatch', 'Cargo Charter', 'Group Charter'];
+    const destinations = [
+        'Mumbai, IN (BOM)',
+        'Delhi, IN (DEL)',
+        'Dubai, UAE (DXB)',
+        'London, UK (LHR)',
+        'New York, USA (JFK)',
+        'Singapore, SG (SIN)',
+        'Paris, FR (CDG)',
+        'Other'
+    ];
     const services = [
         "Charter on Demand",
         "Jet Card Program",
@@ -132,16 +142,16 @@ const BookingModal = () => {
                                     <div className="form-grid">
                                         {/* Common Top Fields */}
                                         <div className="form-group span-2">
-                                            <label><User size={14} /> Full Name</label>
+                                            <label><User size={14} /> Full Name <span className="required-star">*</span></label>
                                             <input type="text" name="name" placeholder="Name" required value={formData.name} onChange={handleChange} />
                                         </div>
                                         <div className="form-group span-1">
-                                            <label><Mail size={14} /> Email</label>
+                                            <label><Mail size={14} /> Email <span className="required-star">*</span></label>
                                             <input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleChange} />
                                         </div>
 
                                         <div className="form-group span-1">
-                                            <label><Phone size={14} /> Phone</label>
+                                            <label><Phone size={14} /> Phone <span className="required-star">*</span></label>
                                             <input type="tel" name="phone" placeholder="Phone" required value={formData.phone} onChange={handleChange} />
                                         </div>
                                         <div className="form-group span-1">
@@ -165,14 +175,34 @@ const BookingModal = () => {
                                         {/* Trip Specific Fields */}
                                         {tripType === 'oneWay' && (
                                             <>
-                                                <div className="form-group">
-                                                    <label><MapPin size={14} /> From</label>
-                                                    <input type="text" placeholder="Origin" required value={segments[0].from} onChange={(e) => handleSegmentChange(0, 'from', e.target.value)} />
-                                                </div>
-                                                <div className="form-group">
-                                                    <label><MapPin size={14} /> To</label>
-                                                    <input type="text" placeholder="Destination" required value={segments[0].to} onChange={(e) => handleSegmentChange(0, 'to', e.target.value)} />
-                                                </div>
+                                                {formData.charterType === 'Private Jet' && (
+                                                    <>
+                                                        <div className="form-group">
+                                                            <label><MapPin size={14} /> From</label>
+                                                            <select 
+                                                                className="form-select-custom" 
+                                                                required 
+                                                                value={segments[0].from} 
+                                                                onChange={(e) => handleSegmentChange(0, 'from', e.target.value)}
+                                                            >
+                                                                <option value="" disabled>Select Origin</option>
+                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                            </select>
+                                                        </div>
+                                                        <div className="form-group">
+                                                            <label><MapPin size={14} /> To</label>
+                                                            <select 
+                                                                className="form-select-custom" 
+                                                                required 
+                                                                value={segments[0].to} 
+                                                                onChange={(e) => handleSegmentChange(0, 'to', e.target.value)}
+                                                            >
+                                                                <option value="" disabled>Select Destination</option>
+                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                            </select>
+                                                        </div>
+                                                    </>
+                                                )}
                                                 <div className="form-group">
                                                     <label><Calendar size={14} /> Date</label>
                                                     <input type="date" required value={segments[0].date} onChange={(e) => handleSegmentChange(0, 'date', e.target.value)} />
@@ -182,14 +212,34 @@ const BookingModal = () => {
 
                                         {tripType === 'roundTrip' && (
                                             <>
-                                                <div className="form-group">
-                                                    <label><MapPin size={14} /> From</label>
-                                                    <input type="text" placeholder="Origin" required value={roundTrip.from} onChange={(e) => handleRoundTripChange('from', e.target.value)} />
-                                                </div>
-                                                <div className="form-group">
-                                                    <label><MapPin size={14} /> To</label>
-                                                    <input type="text" placeholder="Destination" required value={roundTrip.to} onChange={(e) => handleRoundTripChange('to', e.target.value)} />
-                                                </div>
+                                                {formData.charterType === 'Private Jet' && (
+                                                    <>
+                                                        <div className="form-group">
+                                                            <label><MapPin size={14} /> From</label>
+                                                            <select 
+                                                                className="form-select-custom" 
+                                                                required 
+                                                                value={roundTrip.from} 
+                                                                onChange={(e) => handleRoundTripChange('from', e.target.value)}
+                                                            >
+                                                                <option value="" disabled>Select Origin</option>
+                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                            </select>
+                                                        </div>
+                                                        <div className="form-group">
+                                                            <label><MapPin size={14} /> To</label>
+                                                            <select 
+                                                                className="form-select-custom" 
+                                                                required 
+                                                                value={roundTrip.to} 
+                                                                onChange={(e) => handleRoundTripChange('to', e.target.value)}
+                                                            >
+                                                                <option value="" disabled>Select Destination</option>
+                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                            </select>
+                                                        </div>
+                                                    </>
+                                                )}
                                                 <div className="form-group">
                                                     <label><Calendar size={14} /> Departure Date</label>
                                                     <input type="date" required value={roundTrip.departureDate} onChange={(e) => handleRoundTripChange('departureDate', e.target.value)} />
@@ -216,8 +266,28 @@ const BookingModal = () => {
                                                             )}
                                                         </div>
                                                         <div className="leg-grid">
-                                                            <input type="text" placeholder="From" required value={seg.from} onChange={(e) => handleSegmentChange(idx, 'from', e.target.value)} />
-                                                            <input type="text" placeholder="To" required value={seg.to} onChange={(e) => handleSegmentChange(idx, 'to', e.target.value)} />
+                                                            {formData.charterType === 'Private Jet' ? (
+                                                                <>
+                                                                    <select 
+                                                                        className="form-select-custom" 
+                                                                        required 
+                                                                        value={seg.from} 
+                                                                        onChange={(e) => handleSegmentChange(idx, 'from', e.target.value)}
+                                                                    >
+                                                                        <option value="" disabled>Origin</option>
+                                                                        {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                                    </select>
+                                                                    <select 
+                                                                        className="form-select-custom" 
+                                                                        required 
+                                                                        value={seg.to} 
+                                                                        onChange={(e) => handleSegmentChange(idx, 'to', e.target.value)}
+                                                                    >
+                                                                        <option value="" disabled>Destination</option>
+                                                                        {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
+                                                                    </select>
+                                                                </>
+                                                            ) : null}
                                                             <div className="d-flex gap-2">
                                                                 <input type="date" required value={seg.date} onChange={(e) => handleSegmentChange(idx, 'date', e.target.value)} />
                                                                 <input type="time" required value={seg.time} onChange={(e) => handleSegmentChange(idx, 'time', e.target.value)} />
@@ -244,15 +314,15 @@ const BookingModal = () => {
                             <form onSubmit={handleSubmit} className="booking-form">
                                 <div className="form-grid">
                                     <div className="form-group span-3">
-                                        <label><User size={14} /> Full Name</label>
+                                        <label><User size={14} /> Full Name <span className="required-star">*</span></label>
                                         <input type="text" name="name" placeholder="John Doe" required value={formData.name} onChange={handleChange} />
                                     </div>
                                     <div className="form-group span-3">
-                                        <label><Mail size={14} /> Email</label>
+                                        <label><Mail size={14} /> Email <span className="required-star">*</span></label>
                                         <input type="email" name="email" placeholder="john@example.com" required value={formData.email} onChange={handleChange} />
                                     </div>
                                     <div className="form-group span-3">
-                                        <label><Phone size={14} /> Phone</label>
+                                        <label><Phone size={14} /> Phone <span className="required-star">*</span></label>
                                         <input type="tel" name="phone" placeholder="+1 234..." required value={formData.phone} onChange={handleChange} />
                                     </div>
                                     <div className="form-group span-3">

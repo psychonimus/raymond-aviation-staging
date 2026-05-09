@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -30,28 +31,28 @@ const dummyBlogs = [
     title: 'Navigating Aircraft Acquisition: A Comprehensive Buyers Guide',
     date: 'March 10, 2026',
     description: 'Purchasing a private jet is a significant investment. Read our expert tips on selecting the right aircraft that matches your travel needs and financial goals. We cover pre-owned versus new, maintenance considerations, and financing options.',
-    image: '/assets/images/aircraft-sales.webp'
+    image: '/assets/images/aircraft-blog-3.jpg'
   },
   {
     id: 4,
-    title: 'Seamless Integrations: Combining Yacht and Jet Charters',
+    title: 'The Third Way: Why Raymond Aviation’s Jet Card is the Smartest Option for 25–100 Hour Flyers',
     date: 'February 21, 2026',
-    description: 'Experience the pinnacle of luxury by coordinating your private jet itinerary with an exclusive yacht charter for an unforgettable and seamless journey.',
-    image: '/assets/images/cod-yatch.webp'
+    description: 'Ditch the long-term contracts and spot-charter surprises. Welcome to guaranteed access, fixed rates, and seamless flight.',
+    image: '/assets/images/banner-blog-5.png'
   },
   {
     id: 5,
-    title: 'Demystifying the Jet Card Program',
+    title: 'The Power of Ownership, Without the Weight: Fractional Ownership Explained',
     date: 'February 05, 2026',
-    description: 'Learn why a Jet Card might be the most flexible and cost-effective solution for frequent flyers who want guaranteed availability without full ownership.',
-    image: '/assets/images/charter-on-demand-banner.webp'
+    description: 'Why own just one jet when you can access a global fleet at a fraction of the cost?',
+    image: '/assets/images/banner-blog-4.png'
   },
   {
     id: 6,
     title: 'Empty Leg Flights: What You Need to Know',
     date: 'January 18, 2026',
     description: 'Unlock incredible value in private aviation by taking advantage of empty leg flights. Understand the pros, cons, and how to find the best deals.',
-    image: '/assets/images/aircraft-sales.webp'
+    image: '/assets/images/banner-blog-6.jpg'
   }
 ];
 
@@ -93,6 +94,10 @@ const AllBlogs = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Aviation Insights & News | Raymond Aviation Blog</title>
+        <meta name="description" content="Stay updated with the latest trends, news, and insights from the world of private aviation on the Raymond Aviation blog." />
+      </Helmet>
       <div className="all-blogs-page" ref={pageRef}>
         <div className="all-blogs-container">
           <div className="all-blogs-header" ref={titleRef}>
@@ -122,6 +127,9 @@ const AllBlogs = () => {
                         if (blog.id === 1) navigate('/blogs/the-future-of-private-aviation');
                         if (blog.id === 2) navigate('/blogs/maximizing-efficiency');
                         if (blog.id === 3) navigate('/blogs/navigating-aircraft-acquisition');
+                        if (blog.id === 4) navigate('/blogs/the-third-way-jet-card');
+                        if (blog.id === 5) navigate('/blogs/power-of-ownership');
+                        if (blog.id === 6) navigate('/blogs/empty-leg-flights');
                       }}
                     />
                   </div>
@@ -136,6 +144,7 @@ const AllBlogs = () => {
         FooterTaglineOne="Trends"
         FooterTaglineTwo="Expertise"
         FooterTaglineThree="Industry Perspectives"
+        btnTxt="Enquire Now"
       />
     </>
   );

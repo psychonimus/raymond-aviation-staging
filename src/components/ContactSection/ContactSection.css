@@ -129,12 +129,19 @@
     font-family: 'secondary regular', sans-serif;
 }
 
-.info-phone {
+.info-phone, .info-email {
     font-family: 'secondary medium', serif;
     font-size: 1.15rem;
     font-weight: 600;
     color: #dfc28f;
     letter-spacing: 0.06em;
+}
+
+.contact-icon-box {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

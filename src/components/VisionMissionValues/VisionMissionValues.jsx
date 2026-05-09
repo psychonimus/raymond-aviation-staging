@@ -85,21 +85,25 @@ const VisionMissionValues = () => {
     const values = [
         {
             name: "Integrity First",
+            displayName: <>Integrity <br /> First</>,
             desc: "Driven by transparency, discretion, and integrity, we build lasting relationships.",
             icon: "/assets/images/accountability.svg"
         },
         {
             name: "Operational Excellence",
+            displayName: <>Operational <br /> Excellence</>,
             desc: "We uphold precision and reliability with consistently high standards.",
             icon: "/assets/images/regulatory-compliance.svg"
         },
         {
             name: "Client-Centric Thinking",
+            displayName: <>Client-Centric <br /> Thinking</>,
             desc: "Tailored solutions that ensure seamless experiences across every touchpoint.",
             icon: "/assets/images/no-compromise.svg"
         },
         {
             name: "Progress with Purpose",
+            displayName: <>Progress with <br /> Purpose</>,
             desc: "We combine modern solutions with the strength of a trusted legacy.",
             icon: "/assets/images/aviation-experience.svg"
         }
@@ -125,21 +129,23 @@ const VisionMissionValues = () => {
                         {/* <span className="vmv-card-number">01</span> */}
                         <div>
                             <span className="vmv-card-label ">Our Vision</span>
-                            <h3 className="vmv-card-title mt-3">Shaping the Future <br />of Private Aviation</h3>
+                            <h3 className="vmv-card-title mt-3">Redefining Luxury Travel, End-to-End
+</h3>
                         </div>
                         <p className="vmv-card-text">
-                            To be the benchmark for excellence in private aviation, combining precision, safety, and bespoke service for a global clientele.
-                        </p>
+                            To be the ultimate one-stop solution for exceptional travel experience, empowering clients to own, access, manage, and experience curated journey seamlessly, with unmatched expertise, trust, and innovation.
+                             </p>
                     </div>
 
                     <div className="vmv-card">
                         {/* <span className="vmv-card-number">02</span> */}
                         <div>
                             <span className="vmv-card-label">Our Mission</span>
-                            <h3 className="vmv-card-title mt-3">Crafting <br />Exceptional Journeys.</h3>
+                            <h3 className="vmv-card-title mt-3">Delivering Complete travel Solutions.
+</h3>
                         </div>
                         <p className="vmv-card-text">
-                            To deliver uncompromising air travel experiences through operational excellence, a world-class fleet, and a legacy of trust built over decades.
+                            To provide an integrated & personalised travel ecosystem, from ownership and acquisition to management and access, ensuring seamless experiences and exceptional service at every stage.
                         </p>
                     </div>
                 </div>
@@ -156,7 +162,7 @@ const VisionMissionValues = () => {
                                 <div className="value-icon">
                                     <img src={val.icon} alt={val.name} />
                                 </div>
-                                <h4 className="value-name">{val.name}</h4>
+                                <h4 className="value-name">{val.displayName}</h4>
                                 <p className="value-desc">{val.desc}</p>
                             </div>
                         ))}

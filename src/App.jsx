@@ -24,6 +24,12 @@ import AllBlogs from './components/Pages/AllBlogs.jsx'
 import TheFutureOfPrivateAviationPage from './components/Pages/TheFutureOfPrivateAviationPage.jsx'
 import MaximizingEfficiencyPage from './components/Pages/MaximizingEfficiencyPage.jsx'
 import NavigatingAircraftAcquisitionPage from './components/Pages/NavigatingAircraftAcquisitionPage.jsx'
+import TheThirdWayJetCardPage from './components/Pages/TheThirdWayJetCardPage.jsx'
+import EmptyLegFlightsPage from './components/Pages/EmptyLegFlightsPage.jsx'
+import InventoryListing from './components/Pages/InventoryListing.jsx'
+import InventoryDetail from './components/Pages/InventoryDetail.jsx'
+import PowerOfOwnershipPage from './components/Pages/PowerOfOwnership.jsx'
+import PrivacyPolicy from './components/Pages/PrivacyPolicy.jsx'
 
 const HomePage = lazy(() => import("./components/Pages/Home.jsx"));
 
@@ -76,6 +82,12 @@ const MainApp = () => {
             <Route path="/blogs/the-future-of-private-aviation" element={<PageTransition><TheFutureOfPrivateAviationPage /></PageTransition>} />
             <Route path="/blogs/maximizing-efficiency" element={<PageTransition><MaximizingEfficiencyPage /></PageTransition>} />
             <Route path="/blogs/navigating-aircraft-acquisition" element={<PageTransition><NavigatingAircraftAcquisitionPage /></PageTransition>} />
+            <Route path="/blogs/the-third-way-jet-card" element={<PageTransition><TheThirdWayJetCardPage /></PageTransition>} />
+            <Route path="/blogs/empty-leg-flights" element={<PageTransition><EmptyLegFlightsPage /></PageTransition>} />
+            <Route path="/blogs/power-of-ownership" element={<PageTransition><PowerOfOwnershipPage /></PageTransition>} />
+            <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+            <Route path="/inventory" element={<PageTransition><InventoryListing /></PageTransition>} />
+            <Route path="/inventory/:id" element={<PageTransition><InventoryDetail /></PageTransition>} />
           </Routes>
         </AnimatePresence>
       </Suspense>

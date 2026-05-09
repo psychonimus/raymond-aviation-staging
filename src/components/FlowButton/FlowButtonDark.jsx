@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import './FlowButtonDark.css'
 import { useModal } from '../../context/ModalContext';
 
-export function FlowButtonDark({ text = "Modern Button", onClick }) {
+export function FlowButtonDark({ text , onClick }) {
     const { openBookingModal } = useModal();
 
     const handleClick = (e) => {
