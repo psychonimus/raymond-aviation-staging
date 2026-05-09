@@ -175,7 +175,7 @@ export default function ServicesSection() {
         <div className="services-header">
           <div className="text-center">
             <p className="hero-eyebrow services-label">What We Offer</p>
-            <h2 className="hero-title services-title" style={{color:"var(--primary)"}}>
+            <h2 className="hero-title services-title" style={{ color: "var(--primary)" }}>
               Our Services
             </h2>
           </div>
@@ -199,18 +199,18 @@ export default function ServicesSection() {
 
               <Link to={service.path}>
                 <div
-                className="card-bg"
-                style={{ backgroundImage: `url(${service.image})` }}
-              />
-              <div className="card-gradient" />
-              <div className="card-overlay" />
+                  className="card-bg"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
+                <div className="card-gradient" />
+                <div className="card-overlay" />
 
-              <div className="card-content">
-                <div className="card-number">{service.id}</div>
-                <h3 className="card-title">{service.title}</h3>
-                <div className="card-divider" />
-                <p className="card-desc">{service.description}</p>
-              </div>
+                <div className="card-content">
+                  <div className="card-number">{service.id}</div>
+                  <h3 className="card-title">{service.title}</h3>
+                  <div className="card-divider" />
+                  <p className="card-desc">{service.description}</p>
+                </div>
               </Link>
             </div>
 

@@ -86,7 +86,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-content {
+.list-card-content {
     padding: 24px;
     flex-grow: 1;
     display: flex;
@@ -114,7 +114,7 @@
     border-radius: 4px;
 }
 
-.card-content h3 {
+.list-card-content h3 {
     font-family: 'primary bold';
     font-size: 1.6rem;
     color: var(--secondary);

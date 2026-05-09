@@ -20,6 +20,7 @@ const Services = () => {
       FooterTaglineOne="Charter Ownership"
       FooterTaglineTwo="Advisory"
       FooterTaglineThree="Operations"
+      btnTxt="Enquire Now"
     />
     </>
   )

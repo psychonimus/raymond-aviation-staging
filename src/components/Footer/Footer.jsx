@@ -145,8 +145,8 @@ const RaymondAviationFooter = ({FooterHeader, FooterTaglineOne, FooterTaglineTwo
               </div>
               <div className="col-12 col-sm-6">
                 <ul className="ra-legal-links">
-                  <li><a href="#">Terms &amp; Conditions</a></li>
-                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                  {/* <li><a href="#">Terms &amp; Conditions</a></li> */}
+                  <li><Link to="/privacy-policy">Terms &amp; Conditions</Link></li>
                 </ul>
               </div>
             </div>

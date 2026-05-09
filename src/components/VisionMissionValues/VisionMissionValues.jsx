@@ -141,7 +141,7 @@ const VisionMissionValues = () => {
                         {/* <span className="vmv-card-number">02</span> */}
                         <div>
                             <span className="vmv-card-label">Our Mission</span>
-                            <h3 className="vmv-card-title mt-3">Delivering Complete travel Solutions.
+                            <h3 className="vmv-card-title mt-3">Delivering Complete travel Solutions
 </h3>
                         </div>
                         <p className="vmv-card-text">

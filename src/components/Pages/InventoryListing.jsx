@@ -36,8 +36,8 @@ const InventoryListing = () => {
                 <meta name="description" content="Browse our current inventory of premium aircraft available for sale. Find your next asset with Raymond Aviation." />
             </Helmet>
             <HeroBanner
-                headlineUp="Aircraft & Asset"
-                headlineDown="Inventory"
+                headlineUp="Inventory On Offers"
+                headlineDown=""
                 bgImage="./assets/images/inventory-banner.jpg"
                 btnTxt="Enquire Now"
             />
@@ -61,7 +61,7 @@ const InventoryListing = () => {
                                     <div className="category-badge">{item.category}</div>
                                     <img src={item.image} alt={item.name} />
                                 </div>
-                                <div className="card-content">
+                                <div className="list-card-content">
                                     <div className="card-specs">
                                         <span>Year: {item.year}</span>
                                         {item.details.hours && <span>Hours: {item.details.hours}</span>}

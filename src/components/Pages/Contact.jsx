@@ -16,6 +16,7 @@ const Contact = () => {
           FooterTaglineOne="Personalized Assistance"
           FooterTaglineTwo="Trusted Advice"
           FooterTaglineThree="Quick Turnaround"
+          btnTxt="Enquire Now"
         />
     </>
   )
