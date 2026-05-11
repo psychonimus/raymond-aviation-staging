@@ -5,11 +5,12 @@
 }
 
 .legal-hero {
-    background: linear-gradient(135deg, var(--secondary) 0%, #1a1a1a 100%);
+    background: #111111;
     color: #fff;
     padding: 120px 0 80px;
     text-align: center;
     margin-bottom: 60px;
+    opacity: 1 !important;
 }
 
 .legal-hero h1 {
@@ -17,6 +18,9 @@
     font-size: 3.5rem;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    color: var(--primary);
+    opacity: 1 !important;
+    
 }
 
 .legal-hero p {
@@ -51,7 +55,7 @@
 
 .legal-section h2 {
     font-family: 'primary bold', serif;
-    color: #5f0f40 !important; /* Use deep purple for contrast */
+    color: var(--primary);
     font-size: 1.6rem;
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -79,7 +83,7 @@
 }
 
 .legal-contact-box {
-    background: var(--secondary);
+    background: #111111;
     color: #fff;
     padding: 40px;
     border-radius: 12px;
@@ -95,6 +99,7 @@
 .legal-contact-box p {
     color: rgba(255,255,255,0.8);
     margin-bottom: 10px;
+    font-family: 'secondary regular', sans-serif;
 }
 
 @media (max-width: 768px) {

@@ -30,8 +30,8 @@ const PrivacyPolicy = () => {
 
             <header className="legal-hero">
                 <div className="container">
-                    <h1>Privacy Policy & Terms</h1>
-                    <p>Last updated: May 09, 2026</p>
+                    <h1 style={{opacity : "1"}}>Privacy Policy & Terms</h1>
+                    {/* <p>Last updated: May 09, 2026</p> */}
                 </div>
             </header>
 
@@ -176,11 +176,19 @@ const PrivacyPolicy = () => {
                     <p>For any queries regarding these Terms, you may contact:</p>
                     <p><strong>Raymond Aviation</strong></p>
                     <p>Mumbai, Maharashtra, India</p>
-                    <p>Email: aviation@raymond.in</p>
+                    <p>Email: charter@raymond.in</p>
                 </div>
             </main>
 
-            <Footer />
+            <Footer
+
+            FooterHeader="REVIEW OUR TERMS & CONDITIONS"
+            FooterTaglineOne="Transparency"
+            FooterTaglineTwo="Fair Policies"
+            FooterTaglineThree="Secure Services"
+            btnTxt="Book a Consultation"
+            
+            />
         </div>
     );
 };
