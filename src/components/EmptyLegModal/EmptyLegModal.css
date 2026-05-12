@@ -1,0 +1,230 @@
+.booking-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.booking-modal-content {
+    position: relative;
+    background: #111;
+    border: 1px solid rgba(211, 169, 91, 0.3);
+    width: 100%;
+    max-width: 600px;
+    max-height: 95vh;
+    border-radius: 16px;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    z-index: 10001;
+}
+
+.booking-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.booking-modal-content::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.modal-header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-family: 'primary bold', serif;
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.modal-header p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Empty Leg Specific Header */
+.empty-leg-details-summary {
+    background: rgba(211, 169, 91, 0.05);
+    border: 1px solid rgba(211, 169, 91, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.detail-item svg {
+    color: var(--primary);
+}
+
+.detail-item span {
+    font-weight: 500;
+}
+
+.booking-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.span-3 {
+    grid-column: span 3 !important;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.form-group label svg {
+    color: var(--primary);
+}
+
+.required-star {
+    color: #ff4d4d;
+    margin-left: 2px;
+}
+
+.form-group input, 
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(211, 169, 91, 0.1);
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #555;
+}
+
+.modal-submit-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    border: none;
+    border-radius: 12px;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(211, 169, 91, 0.4);
+}
+
+.modal-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .booking-modal-content {
+        padding: 30px 20px;
+        width: 95%;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .detail-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .booking-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+}

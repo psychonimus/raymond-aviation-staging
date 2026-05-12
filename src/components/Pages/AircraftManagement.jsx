@@ -16,7 +16,7 @@ const AircraftManagement = () => {
         <HeroBanner
             headlineUp="Aircraft Management"
             headlineDown=""
-            bgImage="./assets/images/aircraft-management-banner.jpg"
+            bgImage="./assets/images/aircraft-management-banner-new.jpg"
             btnTxt="Enquire Now"
         />
 

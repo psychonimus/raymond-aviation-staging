@@ -13,7 +13,7 @@ import { FlowButton } from "../FlowButton/FlowButton";
 
 
 
-export default function HeroBanner({ headlineUp, headlineDown, bgImage, bgImages, bgVideo, btnTxt }) {
+export default function HeroBanner({ headlineUp, headlineDown, bgImage, bgImages, bgVideo, btnTxt, onClick }) {
     const images = bgImages || (bgImage ? [bgImage] : []);
 
     return (
@@ -57,7 +57,7 @@ export default function HeroBanner({ headlineUp, headlineDown, bgImage, bgImages
                         <div className="ac-hero-text ">
                             {/* <p className="ac-hero-overline">Our Expert Services</p> */}
                             <h1 className="HeroBanner-hero-headline mt-2 text-start">{headlineUp} <br /> {headlineDown}</h1>
-                            <FlowButton text={btnTxt} />
+                            <FlowButton text={btnTxt} onClick={onClick} />
                         </div>
                         <div>
                             {/* Services */}

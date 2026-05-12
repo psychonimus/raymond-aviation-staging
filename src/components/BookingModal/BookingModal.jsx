@@ -37,7 +37,7 @@ const BookingModal = () => {
         returnTime: ''
     });
 
-    const charterTypes = ['Private Jet', 'Helicopter', 'Air Ambulance(Helicopter)', 'Air Ambulance(Charter)', 'Yatch', 'Cargo Charter', 'Group Charter'];
+    const charterTypes = ['Aircraft', 'Helicopter', 'Air Ambulance', 'Yatch', 'Cargo Charter', 'Group Charter'];
     const destinations = [
         'Mumbai, IN (BOM)',
         'Delhi, IN (DEL)',

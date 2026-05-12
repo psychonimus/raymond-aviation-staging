@@ -11,6 +11,7 @@ import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton.jsx'
 import Skeleton from "@mui/material/Skeleton";
 import { ModalProvider } from './context/ModalContext.jsx';
 import BookingModal from './components/BookingModal/BookingModal.jsx';
+import EmptyLegModal from './components/EmptyLegModal/EmptyLegModal.jsx';
 import About from './components/Pages/About.jsx'
 import Services from './components/Pages/Services.jsx'
 import CharterOnDemand from './components/Pages/CharterOnDemand.jsx'
@@ -93,6 +94,7 @@ const MainApp = () => {
       </Suspense>
       <WhatsAppButton />
       <BookingModal />
+      <EmptyLegModal />
     </SmoothScroll>
   )
 }

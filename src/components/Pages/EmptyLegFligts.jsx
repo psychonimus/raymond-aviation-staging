@@ -3,9 +3,13 @@ import { Helmet } from 'react-helmet-async'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import EmptyLegFlightsContent from '../EmptyLegFlightsContent/EmptyLegFlightsContent'
+import EmptyLegList from '../EmptyLegList/EmptyLegList'
+import { useModal } from '../../context/ModalContext'
 
 
 const EmptyLegFligts = () => {
+    const { openEmptyLegModal } = useModal();
+
     return (
         <>
             <Helmet>
@@ -14,12 +18,13 @@ const EmptyLegFligts = () => {
             </Helmet>
             <HeroBanner
                 headlineUp="Empty Leg Flights"
-                headlineDown="Private Aviation, Simplified"
+                headlineDown=""
                 bgImage="./assets/images/empty-leg-banner.webp"
-                
+                btnTxt="Enquire Now"
+                onClick={() => openEmptyLegModal()}
             />
 
-            <section className="charter-on-demand-about bg-white py-5">
+            {/* <section className="charter-on-demand-about bg-white py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
@@ -56,11 +61,18 @@ const EmptyLegFligts = () => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
-            <EmptyLegFlightsContent />
+            {/* <EmptyLegFlightsContent /> */}
+            <EmptyLegList />
 
-            <Footer />
+            <Footer
+             FooterHeader="JOIN OUR INNER CIRCLE"
+          FooterTaglineOne="Empty Leg Flights"
+          FooterTaglineTwo="Exclusive Access"
+          FooterTaglineThree="Exceptional Value"
+          btnTxt="Sign Up Now"
+            />
         </>
     )
 }

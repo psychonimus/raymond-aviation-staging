@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,7 +27,7 @@ const tabs = [
   {
     id: "group",
     label: "Air Ambulance",
-    images: ["./assets/images/air-ambulance-1.jpg", "./assets/images/air-ambulance-2.jpg", "./assets/images/air-ambulance-3.jpg"],
+    images: ["./assets/images/air-ambulance-1.jpg", "./assets/images/air-ambulance-charter.png", "./assets/images/air-ambulance-3.jpg", "./assets/images/air-ambulance-charter-2.png"],
     heading: "Air Ambulance",
     body: [
       "When health demands urgent response, time becomes the most critical factor. Raymond Aviation provides air ambulance services, configured for patient care, staffed with qualified medical crew, and cleared for priority departure at the shortest possible notice.",
@@ -48,6 +49,7 @@ const tabs = [
 ];
 
 export default function CharterContent() {
+  const navigate = useNavigate();
   const [active, setActive] = useState(0);
   const [animating, setAnimating] = useState(false);
   const imagePanelRef = useRef(null);
@@ -199,6 +201,15 @@ export default function CharterContent() {
                 </div>
               ))}
             </div>
+
+            {tab.id === "group2" && (
+              <button 
+                className="view-flights-btn" 
+                onClick={() => navigate('/empty-leg-flights')}
+              >
+                View Empty Leg Flights
+              </button>
+            )}
           </div>
 
           {/* Decorative large number */}

@@ -16,7 +16,7 @@ const CharterOnDemand = () => {
         <HeroBanner 
             headlineUp="Charter" 
             headlineDown="On-Demand" 
-            bgVideo="/assets/videos/cod-bg-vid.mp4"
+            bgVideo="/assets/videos/cod-bg-vid.webm"
             btnTxt="Request Charter Quote"
         />
         <CharterOnDemandAbout/>

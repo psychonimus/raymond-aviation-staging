@@ -357,3 +357,32 @@ body {
         gap: 1.5rem;
     }
 }
+
+.view-flights-btn {
+    margin-top: 3rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 1rem 2rem;
+    font-family: 'secondary bold', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.view-flights-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+    box-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
+}
+
+@media (max-width: 900px) {
+    .view-flights-btn {
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+}

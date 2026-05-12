@@ -29,7 +29,7 @@ const tabs = [
     {
         id: "private-1",
         label: "Crew & Operations Management",
-        image: "./assets/images/aircraft-crew-2.jpg",
+        image: "./assets/images/Crew-management-new.png",
         heading: "Crew & Operations Management",
         body: [
             "",
