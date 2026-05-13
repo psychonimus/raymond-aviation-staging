@@ -25,8 +25,8 @@
     position: relative;
     background: #111;
     border: 1px solid rgba(211, 169, 91, 0.3);
-    width: 100%;
-    max-width: 750px;
+    width: 100% !important;
+    max-width: 840px !important;
     max-height: 95vh;
     border-radius: 16px;
     padding: 25px;
