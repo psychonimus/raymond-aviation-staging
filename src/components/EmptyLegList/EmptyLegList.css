@@ -149,6 +149,76 @@
     box-shadow: 0 10px 20px rgba(211, 169, 91, 0.2) !important;
 }
 
+/* Flight Info Styles */
+.el-flight-info {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+.el-route-display {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+}
+
+.el-location {
+    flex-shrink: 0 !important;
+}
+
+.el-city-code {
+    font-family: 'primary bold' !important;
+    font-size: 1.8rem !important;
+    color: var(--secondary) !important;
+    line-height: 1 !important;
+    letter-spacing: 1px !important;
+}
+
+.el-flight-path {
+    flex-grow: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    margin: 0 15px !important;
+}
+
+.el-path-line {
+    position: absolute !important;
+    width: 100% !important;
+    height: 0 !important;
+    border-top: 2px dashed rgba(0, 0, 0, 0.15) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1 !important;
+}
+
+.el-plane-icon {
+    color: var(--primary) !important;
+    z-index: 2 !important;
+    background: #ffffff !important;
+    padding: 0 15px !important;
+    position: relative !important;
+}
+
+.el-date-display {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    color: var(--para) !important;
+    font-family: 'secondary bold' !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.el-date-display svg {
+    margin-bottom: 2px !important;
+    color: var(--primary) !important;
+}
+
 @media (max-width: 992px) {
     .el-grid {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -160,15 +230,15 @@
     .el-list-section {
         padding: 60px 0;
     }
-    
+
     .el-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .el-section-header h2 {
         font-size: 2rem;
     }
-    
+
     .el-aircraft-name {
         font-size: 1.5rem;
     }

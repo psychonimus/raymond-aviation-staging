@@ -1,0 +1,149 @@
+.airport-autocomplete-container {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-icon-pin {
+    position: absolute;
+    left: 12px;
+    color: var(--primary) !important;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.autocomplete-input {
+    width: 100%;
+    padding-left: 36px !important; /* Make room for the icon */
+    background-image: none !important; /* Remove dropdown arrow from parent class */
+}
+
+/* Spinner indicator */
+.autocomplete-spinner {
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(211, 169, 91, 0.1);
+    border-top: 2px solid var(--primary);
+    border-radius: 50%;
+    animation: autocomplete-spin 0.6s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autocomplete-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dropdown styling */
+.autocomplete-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(211, 169, 91, 0.25);
+    border-radius: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 11000;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(211, 169, 91, 0.05);
+}
+
+.autocomplete-dropdown::-webkit-scrollbar {
+    width: 5px;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.dropdown-status-text {
+    padding: 15px;
+    color: #888;
+    font-size: 0.85rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background: rgba(211, 169, 91, 0.08);
+}
+
+.suggestion-main {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.suggestion-city {
+    color: #fff;
+}
+
+.suggestion-country {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.suggestion-code {
+    margin-left: auto;
+    background: rgba(211, 169, 91, 0.15);
+    color: var(--primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.suggestion-sub {
+    font-size: 0.75rem;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+.suggestion-item:hover .suggestion-city {
+    color: var(--primary);
+}
+
+.suggestion-item:hover .suggestion-code {
+    background: var(--primary);
+    color: #000;
+}

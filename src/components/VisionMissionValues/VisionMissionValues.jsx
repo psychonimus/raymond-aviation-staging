@@ -124,17 +124,17 @@ const VisionMissionValues = () => {
                     </h2>
                 </div> */}
 
-                <div ref={gridRef} className="vmv-grid">
-                    <div className="vmv-card">
+                <div ref={gridRef} className="vmv-grid px-4">
+                    <div className="vmv-card ">
                         {/* <span className="vmv-card-number">01</span> */}
                         <div>
                             <span className="vmv-card-label ">Our Vision</span>
                             <h3 className="vmv-card-title mt-3">Redefining Luxury Travel, End-to-End
-</h3>
+                            </h3>
                         </div>
                         <p className="vmv-card-text">
                             To be the ultimate one-stop solution for exceptional travel experience, empowering clients to own, access, manage, and experience curated journey seamlessly, with unmatched expertise, trust, and innovation.
-                             </p>
+                        </p>
                     </div>
 
                     <div className="vmv-card">
@@ -142,7 +142,7 @@ const VisionMissionValues = () => {
                         <div>
                             <span className="vmv-card-label">Our Mission</span>
                             <h3 className="vmv-card-title mt-3">Delivering Complete travel Solutions
-</h3>
+                            </h3>
                         </div>
                         <p className="vmv-card-text">
                             To provide an integrated & personalised travel ecosystem, from ownership and acquisition to management and access, ensuring seamless experiences and exceptional service at every stage.
@@ -150,7 +150,7 @@ const VisionMissionValues = () => {
                     </div>
                 </div>
 
-                <div ref={valuesRef} className="values-container">
+                <div ref={valuesRef} className="values-container px-4">
                     <div className="values-title-group">
                         <h4 className="highlights-heading ms-mt-4">Our Values</h4>
                         {/* <span className="vmv-eyebrow">How we fly</span> */}

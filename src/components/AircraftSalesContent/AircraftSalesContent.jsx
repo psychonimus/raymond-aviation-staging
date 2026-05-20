@@ -88,9 +88,9 @@ const tabs = [
 
     {
         id: "private3",
-        label: "Inventory on offers",
+        label: "Aircraft on Sale",
         image: "./assets/images/aircraft-inventory.jpg",
-        heading: "Inventory on Offers",
+        heading: "Aircraft on Sale",
         body: [
             "We maintain an active inventory of aircraft available for sale, offering clients access to a curated selection across categories. Each opportunity is supported by rigorous evaluation, transparent pricing, and end-to-end advisory through the acquisition process.",
 

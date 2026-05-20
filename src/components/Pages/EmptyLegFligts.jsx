@@ -16,13 +16,13 @@ const EmptyLegFligts = () => {
                 <title>Empty Leg Flight Deals | Raymond Aviation</title>
                 <meta name="description" content="Find exclusive deals on empty leg flights. Experience private jet travel at a fraction of the cost with our last-minute opportunities." />
             </Helmet>
-            <HeroBanner
+            {/* <HeroBanner
                 headlineUp="Empty Leg Flights"
                 headlineDown=""
                 bgImage="./assets/images/empty-leg-banner.webp"
                 btnTxt="Enquire Now"
                 onClick={() => openEmptyLegModal()}
-            />
+            /> */}
 
             {/* <section className="charter-on-demand-about bg-white py-5">
                 <div className="container">
@@ -64,7 +64,9 @@ const EmptyLegFligts = () => {
             </section> */}
 
             {/* <EmptyLegFlightsContent /> */}
-            <EmptyLegList />
+            <div className="mt-5">
+                <EmptyLegList />
+            </div>
 
             <Footer
              FooterHeader="JOIN OUR INNER CIRCLE"

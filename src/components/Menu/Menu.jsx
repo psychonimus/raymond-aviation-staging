@@ -5,6 +5,14 @@ import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
 import './Menu.css';
 import SocialIcons from '../SocialIcons/SocialIcons';
+import ContactIcons from '../SocialIcons/ContactIcons';
+
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa6";
+import { IoMdCall } from "react-icons/io";
+import { IoMdMailOpen } from "react-icons/io";
 
 gsap.registerPlugin(CustomEase);
 
@@ -96,7 +104,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                                 <div className="menu-link-bg" />
                             </Link>
                         </li>
-                        <li className="menu-list-item">
+                        {/* <li className="menu-list-item">
                             <Link to="/inventory" className="menu-link w-inline-block">
                                 <div className="menu-link-heading">
                                     <span className="menu-link-text">Inventory</span>
@@ -104,7 +112,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                                 </div>
                                 <div className="menu-link-bg" />
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="menu-list-item"> 
                             <Link to="/blogs" className="menu-link w-inline-block">
                                 <div className="menu-link-heading">
@@ -128,10 +136,28 @@ const Menu = ({ isOpen, toggleMenu }) => {
                     </ul>
                     <div className="menu-details">
                         <p data-menu-fade="" className="p-small">
+                            Contact
+                        </p>
+                        <ContactIcons
+                            icon1={<IoMdCall />}
+                            icon2={<IoMdMailOpen />}
+                        />
+                    </div>
+
+                    <div className="menu-details">
+                        <p data-menu-fade="" className="p-small">
                             Socials
                         </p>
-                        <SocialIcons />
+                        <SocialIcons 
+
+                        icon1 = {<FaLinkedinIn />}
+                        icon2 = {<FaFacebookF />}
+                        icon3 = {<RiInstagramFill />}
+                        icon4 = {<FaYoutube />}
+                        
+                        />
                     </div>
+                    
                 </div>
             </nav>
         </div>

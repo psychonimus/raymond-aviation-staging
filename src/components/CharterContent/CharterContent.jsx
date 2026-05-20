@@ -16,7 +16,7 @@ const tabs = [
   {
     id: "private",
     label: "Charter",
-    images: ["./assets/images/charter-6.JPG", "./assets/images/charter-2.jpg", "./assets/images/charter-5.JPG", "./assets/images/charter-4.jpg"],
+    images: ["./assets/images/charter-6.JPG", "./assets/images/helishare.jpg", "./assets/images/charter-2.jpg", "./assets/images/charter-5.JPG", "./assets/images/charter-4.jpg"],
     heading: "Charter",
     body: [
       "Raymond Aviation offers a range of tailored charter solutions across aircraft, helicopters, and yachts, designed for business travel, leisure journeys, special events, and VVIP movements. Each experience is crafted to provide the flexibility to choose the right mode of travel, while ensuring efficiency, comfort, and seamless execution.",
@@ -27,7 +27,7 @@ const tabs = [
   {
     id: "group",
     label: "Air Ambulance",
-    images: ["./assets/images/air-ambulance-1.jpg", "./assets/images/air-ambulance-charter.png", "./assets/images/air-ambulance-3.jpg", "./assets/images/air-ambulance-charter-2.png"],
+    images: ["./assets/images/air-ambulance-1.jpg", "./assets/images/air-ambulance-charter.png", "./assets/images/air-ambulance-heli-2.png", "./assets/images/air-ambulance-heli-3.png", "./assets/images/air-ambulance-charter-2.png"],
     heading: "Air Ambulance",
     body: [
       "When health demands urgent response, time becomes the most critical factor. Raymond Aviation provides air ambulance services, configured for patient care, staffed with qualified medical crew, and cleared for priority departure at the shortest possible notice.",

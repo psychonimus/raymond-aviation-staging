@@ -53,6 +53,55 @@ const tabs = [
         ],
         stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
     },
+
+    {
+        id: "group3",
+        label: "HeliShare",
+        image: "./assets/images/helishare-2.png",
+        heading: "HeliShare",
+        body: [
+            "HeliShare is about time and making the best use of it. Now, co-own a helicopter and turn what was once an elusive dream into a reality. Designed for those who value efficiency and convenience, HeliShare gives you access to premium helicopter ownership through a smart shared model.", 
+
+        ],
+
+        listHeading: "",
+        list: [
+            ,
+            
+
+        ],
+        listHeading2: "Terms",
+        list2: [
+            "Based on the Agusta Grand helicopter",
+
+            "3-year lock-in period for all shareholders",
+
+            "Helicopter sale at the end of 10 years",
+
+            "Shareholders pay one-time refundable acquisition cost",
+
+            "Fixed monthly cost for maintenance and operations",
+
+            "Variable cost based on actual utilization and flying hours",
+            "Maximum 4 shares per helicopter"
+        ],
+
+        listHeading3: "Benefits to Shareholders",
+        list3: [
+            "Enjoy all the benefits of helicopter ownership without managing the ownership ecosystem",
+
+			"No burden of managing operations or compliance requirements",
+
+			"Optimize the size of your investment depending on your travel requirements",
+
+			"Access premium helicopter travel at a fractional investment",
+
+			"Flexibility to sell your share post end of locking period"
+        ],
+
+        
+        stats: [{ label: "oxygen, and monitoring systems", value: "Aircraft equipped with medical stretchers" }, { label: "ground ambulances, and attending physicians", value: "Coordination with hospitals" }, { label: "Both domestic and international medical evacuations handled", value: "Domestic and International" }],
+    },
 ];
 
 export default function CharterContent() {
@@ -174,20 +223,40 @@ export default function CharterContent() {
 
                         <div className="content-body">
                             {tab.body.map((para, pi) => (
-                                <div>
-                                    <p key={pi}>{para}</p>
-                                    <h5 style={{ color: "var(--primary)" }}>{tab.listHeading}</h5>
-                                    <ul className="text-white">
-                                        {tab.list.map((item, li) => (
-                                            <li key={li}>{item}</li>
-                                        ))}
-                                    </ul>
-                                    <h5 style={{ color: "var(--primary)" }}>{tab.listHeading2}</h5>
-                                    <ul className="text-white">
-                                        {tab.list2.map((item, li) => (
-                                            <li key={li}>{item}</li>
-                                        ))}
-                                    </ul>
+                                <div key={pi}>
+                                    <p>{para}</p>
+                                    {tab.listHeading ? <h5 style={{ color: "var(--primary)" }}>{tab.listHeading}</h5> : null}
+                                    {tab.list && tab.list.length > 0 ? (
+                                        <ul className="text-white">
+                                            {tab.list.map((item, li) => (
+                                                <li key={li}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
+                                    {tab.listHeading2 ? <h5 style={{ color: "var(--primary)" }}>{tab.listHeading2}</h5> : null}
+                                    {tab.list2 && tab.list2.length > 0 ? (
+                                        <ul className="text-white">
+                                            {tab.list2.map((item, li) => (
+                                                <li key={li}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
+                                    {tab.listHeading3 ? <h5 style={{ color: "var(--primary)" }}>{tab.listHeading3}</h5> : null}
+                                    {tab.list3 && tab.list3.length > 0 ? (
+                                        <ul className="text-white">
+                                            {tab.list3.map((item, li) => (
+                                                <li key={li}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
+                                    {tab.listHeading4 ? <h5 style={{ color: "var(--primary)" }}>{tab.listHeading4}</h5> : null}
+                                    {tab.list4 && tab.list4.length > 0 ? (
+                                        <ul className="text-white">
+                                            {tab.list4.map((item, li) => (
+                                                <li key={li}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    ) : null}
                                 </div>
                             ))}
                         </div>

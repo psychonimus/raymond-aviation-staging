@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Hero.css";
 import { FlowButton } from "../FlowButton/FlowButton";
 import { Link } from "react-router-dom";
-
-
+import { Volume2, VolumeX } from "lucide-react";
 
 // Icon SVGs for services
 const icons = {
@@ -38,7 +37,7 @@ const icons = {
 const services = [
     { icon: "charter", title: "Charter \n On-Demand", desc: "Bespoke charter services and expert brokerage connecting clients to the finest aircraft worldwide.", path: "/charter-on-demand" },
     { icon: "sales", title: "Fractional \n Ownership", desc: "Expert guidance through every stage of aircraft acquisition and remarketing with full market access.", path: "/fractional-ownership" },
-    { icon: "design", title: "Jet Card \n Programs", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/jet-card-program" },
+    { icon: "design", title: "Jet Card \n Program", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/jet-card-program" },
     { icon: "mgmt1", title: "Aircraft \n Management", desc: "Comprehensive aircraft management ensuring safety, compliance, and operational excellence.", path: "/aircraft-management" },
     { icon: "mgmt2", title: "Aircraft sales \n & Acquisitions", desc: "Premium crew management and operational support for private and corporate fleet owners.", path: "/aircraft-sales-and-aquisition" },
     { icon: "partnership", title: "Helipad \n Infrastructure", desc: "Tailored interior design and completion management for the most discerning aviation clients.", path: "/helipad-infrastructure" },
@@ -47,19 +46,84 @@ const services = [
 
 
 export default function Hero() {
+    const [isMuted, setIsMuted] = useState(() => {
+        // Force muted if they have already navigated away and returned
+        return sessionStorage.getItem("hasNavigatedFromHome") === "true";
+    });
+    const [wasAutoMuted, setWasAutoMuted] = useState(false);
+    const videoRef = useRef(null);
+
+    // Track navigation to other pages
+    useEffect(() => {
+        return () => {
+            sessionStorage.setItem("hasNavigatedFromHome", "true");
+        };
+    }, []);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Sync the DOM element's muted state with React state
+        video.muted = isMuted;
+
+        if (!isMuted) {
+            // Attempt to play with sound
+            video.play().catch((error) => {
+                console.log("Autoplay with sound blocked. Falling back to muted autoplay.");
+                setIsMuted(true);
+                setWasAutoMuted(true);
+                video.muted = true;
+                video.play().catch((playError) => {
+                    console.error("Muted autoplay also failed:", playError);
+                });
+            });
+        } else {
+            // Video should be muted
+            video.play().catch((playError) => {
+                console.error("Playing muted video failed:", playError);
+            });
+        }
+    }, [isMuted]);
+
+    useEffect(() => {
+        if (!wasAutoMuted) return;
+
+        const handleUserInteraction = () => {
+            setIsMuted(false);
+            setWasAutoMuted(false);
+        };
+
+        window.addEventListener("click", handleUserInteraction, { once: true });
+        window.addEventListener("touchstart", handleUserInteraction, { once: true });
+
+        return () => {
+            window.removeEventListener("click", handleUserInteraction);
+            window.removeEventListener("touchstart", handleUserInteraction);
+        };
+    }, [wasAutoMuted]);
+
     return (
         <>
 
             <div className="ac-hero-wrapper">
                 <video
+                    ref={videoRef}
                     className="ac-hero-video"
                     autoPlay
-                    muted
+                    muted={isMuted}
                     loop
                     playsInline
                 >
-                    <source src="/assets/videos/bg-vid-2.webm" type="video/webm" />
+                    <source src="/assets/videos/bg-vid-audio.mp4" type="video/mp4" />
                 </video>
+                <button
+                    className="ac-mute-button"
+                    onClick={() => setIsMuted(!isMuted)}
+                    aria-label="Toggle Audio"
+                >
+                    {isMuted ? <VolumeX size={24} color="#fff" /> : <Volume2 size={24} color="#fff" />}
+                </button>
                 <div className="ac-hero-bg" />
                 <div className="ac-hero-content">
 

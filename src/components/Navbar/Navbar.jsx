@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import { IoPersonCircleSharp } from "react-icons/io5";
+import { HiHome } from "react-icons/hi2";
 
 export default function Navbar({ toggleMenu }) {
   const [lang, setLang] = useState("EN");
@@ -70,8 +71,8 @@ export default function Navbar({ toggleMenu }) {
 
         {/* Right */}
         <div className="ac-nav-right">
+          <Link to="/" className="ac-nav-services d-none d-md-block"><HiHome style={{width:"30px", height:"30px"}} /></Link>
           <Link to="/contact" className="ac-nav-contact d-none d-md-block">Contact Us</Link>
-          {/* <Link to="" className="ac-nav-services d-none d-md-block"><IoPersonCircleSharp style={{width:"40px", height:"40px"}} /></Link> */}
 
           <button onClick={toggleMenu} className="ac-hamburger" aria-label="Menu">
             <img src="../assets/images/menu-icon.svg" alt="" style={{width:"40px", height:"40px"}} />

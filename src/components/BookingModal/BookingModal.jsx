@@ -4,6 +4,7 @@ import { X, Send, Calendar, Clock, MapPin, Users, Phone, Mail, User, Plus, Trash
 import { useLocation } from 'react-router-dom';
 import './BookingModal.css';
 import { useModal } from '../../context/ModalContext';
+import AirportAutocomplete from './AirportAutocomplete';
 
 const BookingModal = () => {
     const { isBookingModalOpen, closeBookingModal } = useModal();
@@ -17,7 +18,7 @@ const BookingModal = () => {
         name: '',
         email: '',
         phone: '',
-        charterType: 'Private Jet',
+        charterType: 'Aircraft',
         passengers: '',
         time: '',
         description: '',
@@ -175,31 +176,25 @@ const BookingModal = () => {
                                         {/* Trip Specific Fields */}
                                         {tripType === 'oneWay' && (
                                             <>
-                                                {formData.charterType === 'Private Jet' && (
+                                                {formData.charterType === 'Aircraft' && (
                                                     <>
                                                         <div className="form-group">
                                                             <label><MapPin size={14} /> From</label>
-                                                            <select 
-                                                                className="form-select-custom" 
-                                                                required 
-                                                                value={segments[0].from} 
-                                                                onChange={(e) => handleSegmentChange(0, 'from', e.target.value)}
-                                                            >
-                                                                <option value="" disabled>Select Origin</option>
-                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                            </select>
+                                                            <AirportAutocomplete
+                                                                value={segments[0].from}
+                                                                onChange={(val) => handleSegmentChange(0, 'from', val)}
+                                                                placeholder="Select Origin Airport"
+                                                                required
+                                                            />
                                                         </div>
                                                         <div className="form-group">
                                                             <label><MapPin size={14} /> To</label>
-                                                            <select 
-                                                                className="form-select-custom" 
-                                                                required 
-                                                                value={segments[0].to} 
-                                                                onChange={(e) => handleSegmentChange(0, 'to', e.target.value)}
-                                                            >
-                                                                <option value="" disabled>Select Destination</option>
-                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                            </select>
+                                                            <AirportAutocomplete
+                                                                value={segments[0].to}
+                                                                onChange={(val) => handleSegmentChange(0, 'to', val)}
+                                                                placeholder="Select Destination Airport"
+                                                                required
+                                                            />
                                                         </div>
                                                     </>
                                                 )}
@@ -212,31 +207,25 @@ const BookingModal = () => {
 
                                         {tripType === 'roundTrip' && (
                                             <>
-                                                {formData.charterType === 'Private Jet' && (
+                                                {formData.charterType === 'Aircraft' && (
                                                     <>
                                                         <div className="form-group">
                                                             <label><MapPin size={14} /> From</label>
-                                                            <select 
-                                                                className="form-select-custom" 
-                                                                required 
-                                                                value={roundTrip.from} 
-                                                                onChange={(e) => handleRoundTripChange('from', e.target.value)}
-                                                            >
-                                                                <option value="" disabled>Select Origin</option>
-                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                            </select>
+                                                            <AirportAutocomplete
+                                                                value={roundTrip.from}
+                                                                onChange={(val) => handleRoundTripChange('from', val)}
+                                                                placeholder="Select Origin Airport"
+                                                                required
+                                                            />
                                                         </div>
                                                         <div className="form-group">
                                                             <label><MapPin size={14} /> To</label>
-                                                            <select 
-                                                                className="form-select-custom" 
-                                                                required 
-                                                                value={roundTrip.to} 
-                                                                onChange={(e) => handleRoundTripChange('to', e.target.value)}
-                                                            >
-                                                                <option value="" disabled>Select Destination</option>
-                                                                {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                            </select>
+                                                            <AirportAutocomplete
+                                                                value={roundTrip.to}
+                                                                onChange={(val) => handleRoundTripChange('to', val)}
+                                                                placeholder="Select Destination Airport"
+                                                                required
+                                                            />
                                                         </div>
                                                     </>
                                                 )}
@@ -266,28 +255,22 @@ const BookingModal = () => {
                                                             )}
                                                         </div>
                                                         <div className="leg-grid">
-                                                            {formData.charterType === 'Private Jet' ? (
-                                                                <>
-                                                                    <select 
-                                                                        className="form-select-custom" 
-                                                                        required 
-                                                                        value={seg.from} 
-                                                                        onChange={(e) => handleSegmentChange(idx, 'from', e.target.value)}
-                                                                    >
-                                                                        <option value="" disabled>Origin</option>
-                                                                        {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                                    </select>
-                                                                    <select 
-                                                                        className="form-select-custom" 
-                                                                        required 
-                                                                        value={seg.to} 
-                                                                        onChange={(e) => handleSegmentChange(idx, 'to', e.target.value)}
-                                                                    >
-                                                                        <option value="" disabled>Destination</option>
-                                                                        {destinations.map(dest => <option key={dest} value={dest}>{dest}</option>)}
-                                                                    </select>
-                                                                </>
-                                                            ) : null}
+                                                                    {formData.charterType === 'Aircraft' && (
+                                                                        <>
+                                                                            <AirportAutocomplete
+                                                                                value={seg.from}
+                                                                                onChange={(val) => handleSegmentChange(idx, 'from', val)}
+                                                                                placeholder="Origin Airport"
+                                                                                required
+                                                                            />
+                                                                            <AirportAutocomplete
+                                                                                value={seg.to}
+                                                                                onChange={(val) => handleSegmentChange(idx, 'to', val)}
+                                                                                placeholder="Destination Airport"
+                                                                                required
+                                                                            />
+                                                                        </>
+                                                                    )}
                                                             <div className="d-flex gap-2">
                                                                 <input type="date" required value={seg.date} onChange={(e) => handleSegmentChange(idx, 'date', e.target.value)} />
                                                                 <input type="time" required value={seg.time} onChange={(e) => handleSegmentChange(idx, 'time', e.target.value)} />
