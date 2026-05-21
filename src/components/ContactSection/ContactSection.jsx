@@ -157,13 +157,13 @@ const ContactSection = () => {
                                             <div className="contact-icon-box me-3">
                                                 <Phone size={20} />
                                             </div>
-                                            <span className="info-phone">+31 85 026 1636</span>
+                                            <span className="info-phone"><a href="tel:+91 9820570000" style={{textDecoration:"none", color:"#fff"}} >+91 9820570000</a></span>
                                         </div>
                                         <div className="contact-item d-flex align-items-center">
                                             <div className="contact-icon-box me-3">
                                                 <Mail size={20} />
                                             </div>
-                                            <span className="info-email">charter@raymond.in</span>
+                                            <span className="info-email"><a href="mailto:charter@raymond.in" style={{textDecoration:"none", color:"#fff"}}>charter@raymond.in</a></span>
                                         </div>
                                     </div>
                                 </div>

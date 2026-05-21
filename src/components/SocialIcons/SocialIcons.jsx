@@ -5,23 +5,26 @@ import { FaFacebookF } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 
-const SocialIcons = ({icon1, icon2, icon3, icon4}) => {
+const SocialIcons = () => {
     return (
         <>
             <>
                 
                 <div className="button-container">
                     <button className="button flex-center">
-                        {icon1}
+                        <FaLinkedinIn/>
                     </button>
                     <button className="button flex-center">
-                        {icon2}
+                        <FaFacebookF/>
+                        
                     </button>
                     <button className="button flex-center">
-                        {icon3}
+                        <RiInstagramFill/>
+                        
                     </button>
                     <button className="button flex-center">
-                        {icon4}
+                        <FaYoutube/>
+                        
                     </button>
                 </div>
             </>

@@ -12,10 +12,11 @@ const ContactIcons = ({icon1, icon2}) => {
                 
                 <div className="button-container">
                     <button className="button flex-center">
-                        {icon1}
+                        <a href="tel:+91 9820570000" style={{textDecoration:"none", color:"inherit"}} >{icon1}</a>
+                        
                     </button>
                     <button className="button flex-center">
-                        {icon2}
+                        <a href="mailto:charter@raymond.in" style={{textDecoration:"none", color:"inherit"}}>{icon2}</a> 
                     </button>
                     
                 </div>
