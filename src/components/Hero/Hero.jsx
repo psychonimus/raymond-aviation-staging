@@ -4,6 +4,66 @@ import { FlowButton } from "../FlowButton/FlowButton";
 import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
 
+// ── Sound Preference Popup ──
+function SoundPopup({ onChoice }) {
+    return (
+        <div className="ac-sound-overlay">
+            <div className="ac-sound-popup">
+                {/* Decorative top line */}
+                <div className="ac-sound-popup-line" />
+
+                {/* Logo / Brand mark */}
+                <div className="ac-sound-popup-brand">
+                    <img
+                        src="/assets/images/raymond-aviation-logo.svg"
+                        alt="Raymond Aviation"
+                        className="ac-sound-popup-logo"
+                        
+                    />
+                </div>
+
+                {/* Icon */}
+                <div className="ac-sound-popup-icon-wrap">
+                    <Volume2 size={32} color="#D3A95B" strokeWidth={1.4} />
+                </div>
+
+                {/* Heading */}
+                <h2 className="ac-sound-popup-title">Experience the Skies</h2>
+                <p className="ac-sound-popup-sub">
+                    This site features an immersive audio experience.<br />
+                    Would you like to enable sound?
+                </p>
+
+                {/* Divider */}
+                <div className="ac-sound-popup-divider" />
+
+                {/* Actions */}
+                <div className="ac-sound-popup-actions">
+                    <button
+                        className="ac-sound-btn ac-sound-btn--primary"
+                        onClick={() => onChoice(false)}
+                        aria-label="Enable sound"
+                    >
+                        <Volume2 size={16} strokeWidth={1.8} />
+                        <span>Enable Sound</span>
+                    </button>
+                    <button
+                        className="ac-sound-btn ac-sound-btn--ghost"
+                        onClick={() => onChoice(true)}
+                        aria-label="Stay muted"
+                    >
+                        <VolumeX size={16} strokeWidth={1.8} />
+                        <span>Stay Muted</span>
+                    </button>
+                </div>
+
+                {/* Bottom decorative line */}
+                <div className="ac-sound-popup-line ac-sound-popup-line--bottom" />
+            </div>
+        </div>
+    );
+}
+
 // Icon SVGs for services
 const icons = {
     charter: (
@@ -46,11 +106,28 @@ const services = [
 
 
 export default function Hero() {
+    // Show popup only on first visit per session
+    const [showSoundPopup, setShowSoundPopup] = useState(() => {
+        return sessionStorage.getItem("soundChoiceMade") !== "true";
+    });
+
     const [isMuted, setIsMuted] = useState(() => {
         // Force muted if they have already navigated away and returned
         return sessionStorage.getItem("hasNavigatedFromHome") === "true";
     });
     const [wasAutoMuted, setWasAutoMuted] = useState(false);
+
+    const handleSoundChoice = (muted) => {
+        // Reset video to beginning so it always starts fresh after the choice
+        const video = videoRef.current;
+        if (video) {
+            video.currentTime = 0;
+            video.muted = muted;
+        }
+        sessionStorage.setItem("soundChoiceMade", "true");
+        setIsMuted(muted);
+        setShowSoundPopup(false);
+    };
     const videoRef = useRef(null);
 
     // Track navigation to other pages
@@ -64,11 +141,17 @@ export default function Hero() {
         const video = videoRef.current;
         if (!video) return;
 
+        // Keep video fully paused while the popup is visible
+        if (showSoundPopup) {
+            video.pause();
+            return;
+        }
+
         // Sync the DOM element's muted state with React state
         video.muted = isMuted;
 
         if (!isMuted) {
-            // Attempt to play with sound
+            // Attempt to play with sound (user gesture from popup satisfies browser policy)
             video.play().catch((error) => {
                 console.log("Autoplay with sound blocked. Falling back to muted autoplay.");
                 setIsMuted(true);
@@ -79,12 +162,12 @@ export default function Hero() {
                 });
             });
         } else {
-            // Video should be muted
+            // Play muted
             video.play().catch((playError) => {
                 console.error("Playing muted video failed:", playError);
             });
         }
-    }, [isMuted]);
+    }, [isMuted, showSoundPopup]);
 
     useEffect(() => {
         if (!wasAutoMuted) return;
@@ -105,12 +188,13 @@ export default function Hero() {
 
     return (
         <>
+            {/* Sound Preference Popup */}
+            {showSoundPopup && <SoundPopup onChoice={handleSoundChoice} />}
 
             <div className="ac-hero-wrapper">
                 <video
                     ref={videoRef}
                     className="ac-hero-video"
-                    autoPlay
                     muted={isMuted}
                     loop
                     playsInline

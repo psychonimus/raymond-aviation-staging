@@ -38,7 +38,7 @@ const HelipadInfrastructure = () => {
                             </p>
 
                             <p className="charter-on-demand-about-description">
-                                Raymond Limited has been awarded the prestigious tender for the construction of a helipad on the Coastal Road in Worli, Mumbai, by the Mumbai Metropolitan Region Development Authority (MMRDA). This landmark project underscores Raymond's deep-rooted capability in delivering world-class aviation infrastructure in complex urban environments.
+                                Raymond Limited has been awarded the prestigious tender for the construction of a helipad on the Coastal Road in Worli, Mumbai, by the Brihanmumbai Municipal Corporation (BMC). This landmark project underscores Raymond's deep-rooted capability in delivering world-class aviation infrastructure in complex urban environments.
                             </p>
                             {/* <h5 className="charter-on-demand-about-tagline">We do not build helipads. We build confidence — in the air, on the ground, and in every authority that will ever inspect your facility.</h5> */}
                             

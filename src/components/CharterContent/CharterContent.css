@@ -371,6 +371,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: fit-content;
+    border-radius: 50px;
 }
 
 .view-flights-btn:hover {

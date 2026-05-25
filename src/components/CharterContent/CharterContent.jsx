@@ -38,7 +38,7 @@ const tabs = [
   {
     id: "group2",
     label: "Empty Leg",
-    images: ["./assets/images/empty-leg-flights-2.jpg", "./assets/images/empty-leg-2.jpg", "./assets/images/empty-leg-3.jpg"],
+    images: ["./assets/images/empty-leg-flights-2.jpg", "./assets/images/empty-leg-2.jpg"],
     heading: "Empty Leg Charter",
     body: [
       "An empty leg is one of best kept secrets. When an aircraft completes a one-way journey, it must reposition to its base or its next assignment - empty. Raymond Aviation transforms these sectors into value, enabling operators to unlock additional revenue while offering clients access to private charter at significantly reduced rates.",
