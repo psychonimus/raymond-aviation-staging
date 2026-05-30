@@ -35,18 +35,18 @@ const JetCardProgram = () => {
                                 <p className="charter-on-demand-about-description">Unlock guaranteed access to a global fleet with a single card. No long-term contracts, no hidden fees, just pure, seamless flight at your fingertips. For those having committed flying requirement from 25 to 100 hours per year, the Jet Card provides a "third way" that bridges the gap between on-demand chartering and full ownership. A prepaid block of flight hours loaded onto a card, offering private jet access with transparent, all-inclusive hourly pricing, ideal for moderate flyers.</p>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/prepaid-commitement.svg" className='me-2' style={{width:"45px"}} alt="" /> Prepaid commitment</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/prepaid-commitement.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >Prepaid commitment</span></h5>
                                     </div>
                                     <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/aircraft-type.svg" className='me-2' style={{width:"45px"}} alt="" /> Flexibility in aircraft type</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/aircraft-type.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >Flexibility in aircraft type</span></h5>
                                     </div>
                                     
                                    
                                     <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/fixed-rate-of-utilization.svg" className='me-2' style={{width:"45px"}} alt="" /> Fixed rate of utilization</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/fixed-rate-of-utilization.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >Fixed rate of utilization</span></h5>
                                     </div>
                                      <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/zero-surprises.svg" className='me-2' style={{width:"45px"}} alt="" /> Zero surprises</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/zero-surprises.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >Zero surprises</span></h5>
                                     </div>
                                 </div>
                                 
@@ -57,15 +57,15 @@ const JetCardProgram = () => {
                                 <p className="charter-on-demand-about-description mt-3">A Jet Card is a prepaid block of flying hours loaded onto a single account. You purchase a defined number of hours upfront at a fixed, all-inclusive hourly rate. When you travel, you simply book, and the hours are deducted from your balance. Flexible access across aircraft categories, with a pre-defined conversion rate.</p>
                                 <div className="row">
                                     <div className="col-md-4">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/one-call.svg" className='me-2' style={{width:"45px"}} alt="" /> One Call</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/one-call.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >One Call</span></h5>
                                     </div>
                                     <div className="col-md-4">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/one-rate.svg" className='me-2' style={{width:"45px"}} alt="" /> One Rate</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/one-rate.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >One Rate</span></h5>
                                     </div>
                                     
                                    
                                     <div className="col-md-4">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/one-departure.svg" className='me-2' style={{width:"45px"}} alt="" /> One Departure</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/one-departure.svg" className='me-2' style={{width:"45px"}} alt="" /> <span >One Departure</span></h5>
                                     </div>
                                      
                                 </div>

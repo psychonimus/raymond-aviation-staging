@@ -11,9 +11,11 @@ const SocialIcons = () => {
             <>
                 
                 <div className="button-container">
-                    <button className="button flex-center">
+                    <a href="https://www.linkedin.com/company/raymond-aviation/?viewAsMember=true" target='_blank'>
+                        <button className="button flex-center">
                         <FaLinkedinIn/>
                     </button>
+                    </a>
                     <button className="button flex-center">
                         <FaFacebookF/>
                         

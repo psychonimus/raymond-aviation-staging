@@ -19,21 +19,22 @@ const CharterOnDemandAbout = () => {
                                 <p className="charter-on-demand-about-description">Your journey begins the moment you start planning. Booking your travel expereince should be as seamless and effortless as the journey iteself. </p>
                                 <div className="row">
                                     <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/travel-when-you-decide.svg" className='me-2' alt="" style={{width:"45px"}} /> Travel when you decide</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/travel-when-you-decide.svg" className='me-2' alt="" style={{width:"45px"}} /> <div>Travel when you decide</div></h5>
                                         
                                     </div>
                                     <div className="col-md-6">
-                                        <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/destination-of-your-choise.svg" className='me-2' alt="" style={{width:"40px"}} /> Destination of your choice</h5>
-                                        
-                                    </div>
-                                    <div className="col-md-6">
-                                    
-                                            <h5 className="charter-on-demand-about-tagline" ><img src="./assets/images/no-schedule.svg" className='me-2' alt="" style={{width:"45px"}} /> No schedules</h5>
+                                        <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/destination-of-your-choise.svg" className='me-2' alt="" style={{width:"40px"}} /> <div>Destination of your choice</div>
+                                        </h5>
                                         
                                     </div>
                                     <div className="col-md-6">
                                     
-                                            <h5 className="charter-on-demand-about-tagline"><img src="./assets/images/no-compromise.svg" className='me-2' alt="" style={{width:"45px"}} /> No compromise</h5>
+                                            <h5 className="charter-on-demand-about-tagline d-flex align-items-center" ><img src="./assets/images/no-schedule.svg" className='me-2' alt="" style={{width:"45px"}} /> <div>No schedules</div></h5>
+                                        
+                                    </div>
+                                    <div className="col-md-6">
+                                    
+                                            <h5 className="charter-on-demand-about-tagline d-flex align-items-center"><img src="./assets/images/no-compromise.svg" className='me-2' alt="" style={{width:"45px"}} /> <div>No compromise</div></h5>
                                         
                                     </div>
                                 </div>
