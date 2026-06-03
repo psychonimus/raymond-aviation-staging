@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './BlogStyles.css';
@@ -64,9 +65,9 @@ const EmptyLegFlights = () => {
 
       <article className="blog-post-body container" ref={contentRef}>
         <div className="back-to-blogs">
-          <a href="/blogs" onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+          <Link to="/blogs">
             ← Back to Blogs
-          </a>
+          </Link>
         </div>
         <p className="blog-post-intro">
           Luxury jets at a fraction of the price. But are empty legs right for your travel plans? If you have ever searched for “private jet deals,” you have almost certainly come across the term <strong>"empty leg flight"</strong> (also known as a “deadhead” or “ferry” flight).

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './BlogStyles.css';
@@ -64,9 +65,9 @@ const TheThirdWayJetCard = () => {
 
       <article className="blog-post-body container" ref={contentRef}>
         <div className="back-to-blogs">
-          <a href="/blogs" onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+          <Link to="/blogs">
             ← Back to Blogs
-          </a>
+          </Link>
         </div>
         <p className="blog-post-intro">
           Ditch the long-term contracts and spot-charter surprises. Welcome to guaranteed access, fixed rates, and seamless flight. For the modern business leader or frequent traveler, private aviation has traditionally felt like a choice between two extremes.

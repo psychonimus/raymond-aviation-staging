@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './BlogStyles.css';
@@ -64,9 +65,9 @@ const TheFutureOfPrivateAviation = () => {
 
       <article className="blog-post-body container" ref={contentRef}>
         <div className="back-to-blogs">
-          <a href="/blogs" onClick={(e) => { e.preventDefault(); window.history.back(); }}>
+          <Link to="/blogs">
             ← Back to Blogs
-          </a>
+          </Link>
         </div>
         <p className="blog-post-intro">
           The private aviation market was always about luxury, but now it is transforming. 
