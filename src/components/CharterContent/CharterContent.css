@@ -387,3 +387,47 @@ body {
         text-align: center;
     }
 }
+
+/* Warning Notice Modal styles */
+.warning-modal-content {
+    max-width: 480px !important;
+    padding: 40px 30px !important;
+    text-align: center;
+    border: 1px solid var(--gold) !important;
+    background: #0d0d0d !important;
+}
+
+.warning-modal-text {
+    font-family: 'secondary regular', sans-serif;
+    color: rgba(232, 232, 232, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.warning-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.warning-modal-btn {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--dark);
+    padding: 0.8rem 2.5rem;
+    font-family: 'secondary bold', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.warning-modal-btn:hover {
+    background: transparent;
+    color: var(--gold);
+    box-shadow: 0 0 15px rgba(201, 169, 110, 0.2);
+}

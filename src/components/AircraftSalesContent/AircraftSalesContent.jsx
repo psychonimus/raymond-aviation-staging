@@ -10,6 +10,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
+import "../CharterContent/CharterContent.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
 
 const tabs = [
@@ -122,6 +125,7 @@ const tabs = [
 export default function AircraftSalesContent() {
     const [active, setActive] = useState(0);
     const [animating, setAnimating] = useState(false);
+    const [showDummyWarning, setShowDummyWarning] = useState(false);
     const imagePanelRef = useRef(null);
     const contentRef = useRef(null);
     const statsRef = useRef([]);
@@ -259,7 +263,15 @@ export default function AircraftSalesContent() {
                                     <p>{para}</p>
                                     {tab.id === "private3" && (
                                         <div className="mt-4">
-                                            <Link to="/inventory" className="enquire-btn" style={{ display: 'inline-block', width: 'auto', padding: '12px 30px' }}>
+                                            <Link 
+                                                to="/inventory" 
+                                                className="enquire-btn" 
+                                                style={{ display: 'inline-block', width: 'auto', padding: '12px 30px' }}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    setShowDummyWarning(true);
+                                                }}
+                                            >
                                                 View All Inventory
                                             </Link>
                                         </div>
@@ -317,6 +329,51 @@ export default function AircraftSalesContent() {
                     <div className="deco-number">0{active + 1}</div>
                 </div>
             </section>
+
+            <AnimatePresence>
+                {showDummyWarning && (
+                    <div className="booking-modal-overlay">
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="modal-backdrop"
+                            onClick={() => setShowDummyWarning(false)}
+                        />
+                        <motion.div 
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                            className="booking-modal-content warning-modal-content"
+                            data-lenis-prevent
+                        >
+                            <button className="close-btn" onClick={() => setShowDummyWarning(false)}>
+                                <X size={24} />
+                            </button>
+                            
+                            <div className="modal-header">
+                                <h2>Notice</h2>
+                            </div>
+
+                            <div className="warning-modal-text">
+                                Dummy Page for Demonstration Only
+                            </div>
+
+                            <div className="warning-modal-actions">
+                                <Link 
+                                    to="/inventory"
+                                    className="warning-modal-btn" 
+                                    onClick={() => setShowDummyWarning(false)}
+                                    style={{ textDecoration: 'none', display: 'inline-block' }}
+                                >
+                                    Proceed to Inventory
+                                </Link>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </>
     );
 }
