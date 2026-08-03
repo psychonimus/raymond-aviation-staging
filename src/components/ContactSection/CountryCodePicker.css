@@ -1,0 +1,191 @@
+/* ── Country Code Picker ── */
+.ccp-container {
+    position: relative;
+    width: 118px;
+    flex-shrink: 0;
+}
+
+/* Trigger button — matches form-ctrl style */
+.ccp-trigger {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    height: 100%;
+    min-height: 48px;
+    padding: 0 10px 0 12px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    white-space: nowrap;
+}
+
+.ccp-trigger:hover {
+    border-color: rgba(223, 194, 143, 0.35);
+    background: rgba(15, 17, 23, 0.55);
+}
+
+.ccp-open .ccp-trigger {
+    border-color: var(--gold-light);
+    background: rgba(15, 17, 23, 0.65);
+    box-shadow: 0 0 0 1px rgba(223, 194, 143, 0.15);
+}
+
+.ccp-flag {
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: cover;
+}
+
+.ccp-dial {
+    flex: 1;
+    text-align: left;
+    font-size: 0.88rem;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.ccp-chevron {
+    color: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+    transition: transform 0.22s ease, color 0.2s ease;
+}
+
+.ccp-chevron-open {
+    transform: rotate(180deg);
+    color: var(--gold-light);
+}
+
+/* Dropdown panel */
+.ccp-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 999;
+    width: 270px;
+    background: rgba(14, 16, 22, 0.97);
+    border: 1px solid rgba(223, 194, 143, 0.22);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.04);
+    backdrop-filter: blur(18px);
+    animation: ccpFadeIn 0.18s ease;
+    
+}
+
+@keyframes ccpFadeIn {
+    from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Search bar */
+.ccp-search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ccp-search-icon {
+    color: rgba(223, 194, 143, 0.7);
+    flex-shrink: 0;
+}
+
+.ccp-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    caret-color: var(--gold-light);
+}
+
+.ccp-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.82rem;
+}
+
+/* Country list */
+.ccp-list {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    max-height: 240px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(223, 194, 143, 0.2) transparent;
+}
+
+.ccp-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.ccp-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ccp-list::-webkit-scrollbar-thumb {
+    background: rgba(223, 194, 143, 0.2);
+    border-radius: 4px;
+}
+
+/* Individual item */
+.ccp-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.ccp-item:hover {
+    background: rgba(223, 194, 143, 0.07);
+}
+
+.ccp-item-active {
+    background: rgba(223, 194, 143, 0.11);
+}
+
+.ccp-item-active .ccp-item-name,
+.ccp-item-active .ccp-item-dial {
+    color: var(--gold-light);
+}
+
+.ccp-item-name {
+    flex: 1;
+    font-size: 0.83rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ccp-item-dial {
+    font-size: 0.8rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    color: rgba(223, 194, 143, 0.7);
+    flex-shrink: 0;
+}
+
+.ccp-empty {
+    padding: 16px 12px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+}

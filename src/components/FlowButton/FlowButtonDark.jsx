@@ -7,7 +7,7 @@ export function FlowButtonDark({ text , onClick }) {
 
     const handleClick = (e) => {
         if (onClick) {
-            onClick(e);
+            window.location.href = onClick;
         } else {
             openBookingModal();
         }

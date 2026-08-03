@@ -55,11 +55,11 @@ const PowerOfOwnershipContent = () => {
         <div className="blog-post-hero-content">
           <span className="blog-post-category">Ownership Models</span>
           <h1 className="blog-post-title">The Power of Ownership, Without the Weight: Fractional Ownership Explained</h1>
-          <div className="blog-post-meta">
+          {/* <div className="blog-post-meta">
             <span className="blog-post-date">May 09, 2026</span>
             <span className="blog-post-author">By Raymond Aviation</span>
             <span className="blog-post-read-time">10 min read</span>
-          </div>
+          </div> */}
         </div>
       </header>
 

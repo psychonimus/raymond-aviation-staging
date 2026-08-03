@@ -55,11 +55,11 @@ const NavigatingAircraftAcquisition = () => {
         <div className="blog-post-hero-content">
           <span className="blog-post-category">Buyer's Guide</span>
           <h1 className="blog-post-title">Navigating Aircraft Acquisition: A Comprehensive Buyer‘s Guide</h1>
-          <div className="blog-post-meta">
+          {/* <div className="blog-post-meta">
             <span className="blog-post-date">March 10, 2026</span>
             <span className="blog-post-author">By Raymond Aviation</span>
             <span className="blog-post-read-time">15 min read</span>
-          </div>
+          </div> */}
         </div>
       </header>
 

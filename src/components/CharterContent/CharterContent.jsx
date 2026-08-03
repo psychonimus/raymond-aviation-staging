@@ -205,14 +205,14 @@ export default function CharterContent() {
               ))}
             </div>
 
-            {tab.id === "group2" && (
-              <button 
+            {/* {tab.id === "group2" && (
+              <button disabled
                 className="view-flights-btn" 
                 onClick={() => setShowDummyWarning(true)}
               >
                 View Empty Leg Flights
               </button>
-            )}
+            )} */}
           </div>
 
           {/* Decorative large number */}

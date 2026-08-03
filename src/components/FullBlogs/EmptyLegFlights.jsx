@@ -55,11 +55,11 @@ const EmptyLegFlights = () => {
         <div className="blog-post-hero-content">
           <span className="blog-post-category">Travel Strategy</span>
           <h1 className="blog-post-title">Empty Leg Flights: What You Need to Know Before You Book</h1>
-          <div className="blog-post-meta">
+          {/* <div className="blog-post-meta">
             <span className="blog-post-date">January 18, 2026</span>
             <span className="blog-post-author">By Raymond Aviation</span>
             <span className="blog-post-read-time">7 min read</span>
-          </div>
+          </div> */}
         </div>
       </header>
 

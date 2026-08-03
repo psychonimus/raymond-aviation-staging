@@ -13,6 +13,8 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { IoMdMailOpen } from "react-icons/io";
+import { FlowButton } from '../FlowButton/FlowButton';
+import { FlowButtonDark } from '../FlowButton/FlowButtonDark';
 
 gsap.registerPlugin(CustomEase);
 
@@ -113,7 +115,7 @@ const Menu = ({ isOpen, toggleMenu }) => {
                                 <div className="menu-link-bg" />
                             </Link>
                         </li> */}
-                        <li className="menu-list-item"> 
+                        <li className="menu-list-item">
                             <Link to="/blogs" className="menu-link w-inline-block">
                                 <div className="menu-link-heading">
                                     <span className="menu-link-text">Blog</span>
@@ -148,16 +150,25 @@ const Menu = ({ isOpen, toggleMenu }) => {
                         <p data-menu-fade="" className="p-small">
                             Socials
                         </p>
-                        <SocialIcons 
+                        <SocialIcons
 
-                        icon1 = {<FaLinkedinIn />}
-                        icon2 = {<FaFacebookF />}
-                        icon3 = {<RiInstagramFill />}
-                        icon4 = {<FaYoutube />}
-                        
+                            icon1={<FaLinkedinIn />}
+                            icon2={<FaFacebookF />}
+                            icon3={<RiInstagramFill />}
+                            icon4={<FaYoutube />}
+
                         />
                     </div>
-                    
+
+                    <div className='menu-details mt-auto'>
+                        <FlowButtonDark
+                            text="Employee Login"
+                            onClick="https://raymondaviation.com/Account/UserLogin"
+                        />
+                    </div>
+
+
+
                 </div>
             </nav>
         </div>

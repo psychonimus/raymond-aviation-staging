@@ -116,7 +116,7 @@ const AllBlogs = () => {
                   <img src={blog.image} alt={blog.title} className="blog-image" />
                 </div>
                 <div className="blog-content">
-                  <span className="blog-meta-date">{blog.date}</span>
+                  {/* <span className="blog-meta-date">{blog.date}</span> */}
                   <h2 className="blog-item-title">{blog.title}</h2>
                   <p className="blog-item-desc">{blog.description}</p>
                   

@@ -55,11 +55,11 @@ const MaximizingEfficiency = () => {
         <div className="blog-post-hero-content">
           <span className="blog-post-category">Efficiency & ROI</span>
           <h1 className="blog-post-title">Maximizing Efficiency: Why Chartering a Helicopter Makes Sense</h1>
-          <div className="blog-post-meta">
+          {/* <div className="blog-post-meta">
             <span className="blog-post-date">March 28, 2026</span>
             <span className="blog-post-author">By Raymond Aviation</span>
             <span className="blog-post-read-time">10 min read</span>
-          </div>
+          </div> */}
         </div>
       </header>
 

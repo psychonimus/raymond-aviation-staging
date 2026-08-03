@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { gsap } from "gsap";
 import './ContactSection.css';
 import { Phone, Mail, User, Plane, MessageSquare, Send, Lock, ChevronDown } from "lucide-react";
+import CountryCodePicker from "./CountryCodePicker";
 
 const ContactSection = () => {
     const sectionRef = useRef(null);
@@ -16,29 +17,21 @@ const ContactSection = () => {
         countryCode: "+91",
         phone: "",
         service: "",
+        heardAbout: "",
         message: "",
     });
 
     const services = [
         "Charter on Demand",
         "Fractional Ownership",
+        "Helishare",
         "Jet Card Program",
         "Aircraft Management",
         "Aircraft Sales & Acquisition",
         "Helipad Infrastructure"
     ];
 
-    const countryCodes = [
-        { code: "+91", country: "IN" },
-        { code: "+1", country: "US" },
-        { code: "+44", country: "GB" },
-        { code: "+31", country: "NL" },
-        { code: "+49", country: "DE" },
-        { code: "+33", country: "FR" },
-        { code: "+81", country: "JP" },
-        { code: "+86", country: "CN" },
-        { code: "+61", country: "AU" },
-    ];
+
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -209,23 +202,10 @@ const ContactSection = () => {
                                 <div className="mb-4">
                                     <label className="form-field-label">Phone Number</label>
                                     <div className="phone-row-wrapper d-flex gap-3">
-                                        <div className="input-icon-wrapper country-select-container">
-                                            <Phone className="input-icon" size={18} />
-                                            <select
-                                                className="form-select form-ctrl country-select"
-                                                value={formData.countryCode}
-                                                onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
-                                                onFocus={handleInputFocus}
-                                                onBlur={handleInputBlur}
-                                            >
-                                                {countryCodes.map((c) => (
-                                                    <option key={c.code} value={c.code}>
-                                                        {c.code}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                            <ChevronDown className="select-chevron-icon" size={14} />
-                                        </div>
+                                        <CountryCodePicker
+                                            value={formData.countryCode}
+                                            onChange={(dial) => setFormData({ ...formData, countryCode: dial })}
+                                        />
                                         <div className="input-icon-wrapper flex-grow-1">
                                             <input
                                                 type="tel"
@@ -262,6 +242,35 @@ const ContactSection = () => {
                                             ))}
                                         </select>
                                         <ChevronDown className="select-chevron-icon" size={14} />
+                                    </div>
+                                </div>
+
+                                {/* How did you hear about us */}
+                                <div className="mb-4">
+                                    <label className="form-field-label">How did you hear about us?</label>
+                                    <div className="input-icon-wrapper">
+                                        <ChevronDown className="select-chevron-icon" size={14} />
+                                        <select
+                                            className="form-select form-ctrl custom-select-el"
+                                            value={formData.heardAbout}
+                                            onChange={(e) => setFormData({ ...formData, heardAbout: e.target.value })}
+                                            onFocus={handleInputFocus}
+                                            onBlur={handleInputBlur}
+                                        >
+                                            <option value="" disabled hidden>Select an option</option>
+                                            {[
+                                                "Google / Search Engine",
+                                                "Social Media",
+                                                "Word of Mouth",
+                                                "News / Press",
+                                                "Event or Exhibition",
+                                                "Email Newsletter",
+                                                "Partner / Agent",
+                                                "Other",
+                                            ].map((opt) => (
+                                                <option key={opt} value={opt}>{opt}</option>
+                                            ))}
+                                        </select>
                                     </div>
                                 </div>
 

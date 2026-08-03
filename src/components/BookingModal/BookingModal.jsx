@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import './BookingModal.css';
 import { useModal } from '../../context/ModalContext';
 import AirportAutocomplete from './AirportAutocomplete';
+import CountryCodePicker from '../ContactSection/CountryCodePicker';
 
 const BookingModal = () => {
     const { isBookingModalOpen, closeBookingModal } = useModal();
@@ -17,6 +18,7 @@ const BookingModal = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        countryCode: '+91',
         phone: '',
         charterType: 'Aircraft',
         passengers: '',
@@ -53,6 +55,7 @@ const BookingModal = () => {
         "Charter on Demand",
         "Jet Card Program",
         "Fractional Ownership",
+        "Helishare",
         "Aircraft Acquisition & Sales",
         "Aircraft Management",
         "Helipad Infrastructure"
@@ -153,7 +156,13 @@ const BookingModal = () => {
 
                                         <div className="form-group span-1">
                                             <label><Phone size={14} /> Phone <span className="required-star">*</span></label>
-                                            <input type="tel" name="phone" placeholder="Phone" required value={formData.phone} onChange={handleChange} />
+                                            <div className="bm-phone-row">
+                                                <CountryCodePicker
+                                                    value={formData.countryCode}
+                                                    onChange={(dial) => setFormData(prev => ({ ...prev, countryCode: dial }))}
+                                                />
+                                                <input type="tel" name="phone" placeholder="Phone" required value={formData.phone} onChange={handleChange} className="bm-phone-input" />
+                                            </div>
                                         </div>
                                         <div className="form-group span-1">
                                             <label><Users size={14} /> Passengers</label>
@@ -306,7 +315,13 @@ const BookingModal = () => {
                                     </div>
                                     <div className="form-group span-3">
                                         <label><Phone size={14} /> Phone <span className="required-star">*</span></label>
-                                        <input type="tel" name="phone" placeholder="+1 234..." required value={formData.phone} onChange={handleChange} />
+                                        <div className="bm-phone-row">
+                                            <CountryCodePicker
+                                                value={formData.countryCode}
+                                                onChange={(dial) => setFormData(prev => ({ ...prev, countryCode: dial }))}
+                                            />
+                                            <input type="tel" name="phone" placeholder="Phone" required value={formData.phone} onChange={handleChange} className="bm-phone-input" />
+                                        </div>
                                     </div>
                                     <div className="form-group span-3">
                                         <label><ChevronDown size={14} /> Interested Service</label>

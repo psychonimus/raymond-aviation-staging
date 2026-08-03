@@ -373,3 +373,41 @@
     }
 }
 
+/* ── Phone row with country code picker ── */
+.bm-phone-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+/* Override picker width inside the modal */
+.bm-phone-row .ccp-container {
+    width: 105px;
+    flex-shrink: 0;
+}
+
+.bm-phone-row .ccp-trigger {
+    min-height: 42px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+    padding: 0 8px 0 10px;
+    gap: 5px;
+}
+
+.bm-phone-row .ccp-trigger:hover {
+    border-color: rgba(211, 169, 91, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.bm-phone-row .ccp-open .ccp-trigger {
+    border-color: rgba(211, 169, 91, 0.8);
+}
+
+.bm-phone-row .ccp-dial {
+    font-size: 0.84rem;
+}
+
+.bm-phone-input {
+    flex: 1;
+}

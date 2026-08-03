@@ -261,21 +261,23 @@ export default function AircraftSalesContent() {
                             {tab.body.map((para, pi) => (
                                 <div key={pi}>
                                     <p>{para}</p>
-                                    {tab.id === "private3" && (
+                                    {/* {tab.id === "private3" && (
                                         <div className="mt-4">
-                                            <Link 
-                                                to="/inventory" 
+                                            <button disabled style={{border:"none",background:"transparent"}}>
+                                                <Link 
+                                                to="#" 
                                                 className="enquire-btn" 
                                                 style={{ display: 'inline-block', width: 'auto', padding: '12px 30px' }}
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    setShowDummyWarning(true);
-                                                }}
+                                                // onClick={(e) => {
+                                                //     e.preventDefault();
+                                                //     setShowDummyWarning(true);
+                                                // }}
                                             >
                                                 View All Inventory
                                             </Link>
+                                            </button>
                                         </div>
-                                    )}
+                                    )} */}
                                     <h5 style={{color : "var(--primary)"}}>{tab.listHeading}</h5>
                                     <ul className="text-white">
                                         {tab.list.map((item, li) => (

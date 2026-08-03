@@ -55,11 +55,11 @@ const TheFutureOfPrivateAviation = () => {
         <div className="blog-post-hero-content">
           <span className="blog-post-category">Industry Insights</span>
           <h1 className="blog-post-title">The Future of Private Aviation: 5 Trends That Will Redefine Luxury Air Travel in 2026 and Beyond</h1>
-          <div className="blog-post-meta">
+          {/* <div className="blog-post-meta">
             <span className="blog-post-date">April 28, 2026</span>
             <span className="blog-post-author">By Raymond Aviation</span>
             <span className="blog-post-read-time">8 min read</span>
-          </div>
+          </div> */}
         </div>
       </header>
 
