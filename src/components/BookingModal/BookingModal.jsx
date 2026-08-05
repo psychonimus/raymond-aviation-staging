@@ -142,6 +142,9 @@ const BookingModal = () => {
                                     >Multi Legs</button>
                                 </div>
 
+
+                                {/* //Main Big enquiry form */}
+
                                 <form onSubmit={handleSubmit} className="booking-form mt-4">
                                     <div className="form-grid">
                                         {/* Common Top Fields */}
@@ -301,6 +304,8 @@ const BookingModal = () => {
 
                                     <button type="submit" className="modal-submit-btn">Send Quote Request <Send size={18} /></button>
                                 </form>
+
+
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="booking-form">
