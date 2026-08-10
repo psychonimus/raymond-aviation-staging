@@ -1,7 +1,7 @@
 /* ── Video Background ── */
 .ac-hero-wrapper {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
   /* background-color: red; */

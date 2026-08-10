@@ -16,6 +16,7 @@
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.9",
     "airport-codes": "^1.0.2",
+    "axios": "^1.19.0",
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.36.0",
     "fuse.js": "^7.3.0",

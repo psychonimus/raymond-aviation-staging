@@ -33,7 +33,7 @@ const fuse = new Fuse(allAirports, {
 
 const OTHER_OPTION = { isOther: true };
 
-const AirportAutocomplete = ({ value, onChange, placeholder, required = false }) => {
+const AirportAutocomplete = ({ value, onChange, placeholder, required = false, hasError = false }) => {
     const [inputValue, setInputValue] = useState(value || '');
     const [suggestions, setSuggestions] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
@@ -131,7 +131,7 @@ const AirportAutocomplete = ({ value, onChange, placeholder, required = false })
                     onFocus={handleFocus}
                     placeholder={isOtherMode ? 'Type your airport or location...' : (placeholder || 'Search airport or city...')}
                     required={required}
-                    className={`form-select-custom autocomplete-input${isOtherMode ? ' other-mode' : ''}`}
+                    className={`form-select-custom autocomplete-input${isOtherMode ? ' other-mode' : ''}${hasError ? ' bm-input-error' : ''}`}
                     autoComplete="off"
                 />
                 {isOtherMode && (

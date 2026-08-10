@@ -30,7 +30,11 @@ const EmptyLegModal = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        let newValue = value;
+        if (name === 'phone') {
+            newValue = value.replace(/\D/g, '');
+        }
+        setFormData(prev => ({ ...prev, [name]: newValue }));
     };
 
     const handleSubmit = (e) => {
@@ -122,6 +126,9 @@ const EmptyLegModal = () => {
                                         type="tel" 
                                         name="phone" 
                                         placeholder="Enter your phone number" 
+                                        inputMode="numeric"
+                                        pattern="[0-9]*"
+                                        maxLength={15}
                                         required 
                                         value={formData.phone} 
                                         onChange={handleChange} 

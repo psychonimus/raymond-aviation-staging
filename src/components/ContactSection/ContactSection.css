@@ -404,3 +404,66 @@ select.form-ctrl {
     padding: 24px 18px;
   }
 }
+
+/* Input Error & Submission Status Styling for ContactSection */
+.cs-input-error {
+  border-color: #ff4d4d !important;
+  background: rgba(255, 77, 77, 0.08) !important;
+}
+
+.cs-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2) !important;
+}
+
+.cs-error-text {
+  color: #ff4d4d;
+  font-size: 0.76rem;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.custom-submit-btn.status-sending {
+  background: rgba(223, 194, 143, 0.65) !important;
+  cursor: not-allowed !important;
+  opacity: 0.85;
+}
+
+.custom-submit-btn.status-success {
+  background: linear-gradient(135deg, #2ea043 0%, #238636 100%) !important;
+  color: #ffffff !important;
+  cursor: default !important;
+  box-shadow: 0 4px 15px rgba(46, 160, 67, 0.4) !important;
+}
+
+.custom-submit-btn.status-error {
+  background: linear-gradient(135deg, #da3633 0%, #b62324 100%) !important;
+  color: #ffffff !important;
+}
+
+.cs-status-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.cs-status-banner.success {
+  background: rgba(46, 160, 67, 0.15);
+  border: 1px solid rgba(46, 160, 67, 0.4);
+  color: #3fb950;
+}
+
+.cs-status-banner.error {
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid rgba(248, 81, 73, 0.4);
+  color: #f85149;
+}
+

@@ -200,7 +200,7 @@ export default function PilatusSection() {
 
                                 Beyond charter, we offer a comprehensive aviation ecosystem, including aircraft management and maintenance, fractional ownership, jet card programs, aircraft sales and acquisition advisory, and helipad infrastructure, covering design and consultancy to construction and management.<br/><br/>
 
-                                We are members of Helicopter Association International (HAI), USA, National Business Aviation Association (NBAA), USA, and Business Aircraft Operators Association (BAOA), India, and have been recognized with safety awards from HAI and NBAA.
+                                We are members of Helicopter Association International (HAI), USA, Business Aircraft Operators Association (BAOA), India, and have been recognized with safety awards from HAI.
 
                                 Rooted in a legacy of trust, we continue to deliver precision, performance, and value for those who expect the highest standards.
                             </p>
