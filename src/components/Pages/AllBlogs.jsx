@@ -17,14 +17,14 @@ const dummyBlogs = [
     title: 'The Future of Private Aviation: Trends to Watch in 2026',
     date: 'April 15, 2026',
     description: 'Explore the latest innovations shaping luxury air travel, from sustainable aviation fuels to revolutionary cabin designs that redefine comfort up in the air.',
-    image: '/assets/images/charter-on-demand-banner.webp'
+    image: '/assets/images/charter-on-demand-banner.jpg'
   },
   {
     id: 2,
     title: 'Maximizing Efficiency: Why Chartering a Helicopter Makes Sense',
     date: 'March 28, 2026',
     description: 'Discover how point-to-point helicopter charters can save you valuable time by bypassing traffic and accessing remote locations with unparalleled ease.',
-    image: '/assets/images/cod-helicopter.webp'
+    image: '/assets/images/cod-helicopter.jpg'
   },
   {
     id: 3,

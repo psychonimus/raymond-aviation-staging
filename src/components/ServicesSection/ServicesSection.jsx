@@ -16,7 +16,7 @@ const services = [
     description:
       "Your Schedule, Our Wings, No Compromise. Experience the ultimate in global mobility.",
     image:
-      "./assets/images/charter-on-demand.webp",
+      "./assets/images/charter-on-demand.jpg",
   },
   {
     id: "02",
@@ -25,7 +25,7 @@ const services = [
     description:
       "The Power of Ownership. The Freedom of a Fleet. Why own just one jet or one helicopter when you can have access to the world's most advanced fleet.",
     image:
-      "./assets/images/fractional-ownership.webp",
+      "./assets/images/fractional-ownership.jpg",
   },
   {
     id: "03",
@@ -34,7 +34,7 @@ const services = [
     description:
       "The Sky, Simplified. Unlock guaranteed access to a global fleet with a single card.",
     image:
-      "/assets/images/affiliation.webp",
+      "/assets/images/affiliation.jpg",
   },
   {
     id: "04",
@@ -43,7 +43,7 @@ const services = [
     description:
       "Your Asset, Our Expertise, Seamless Performance. Professional aircraft management for the modern owner.",
     image:
-      "./assets/images/aircraft-management.webp",
+      "./assets/images/aircraft-management.jpg",
   },
   {
     id: "05",
@@ -52,7 +52,7 @@ const services = [
     description:
       "Navigate the Global Skies with Certainty. Expertise in the acquisition and sale of world-class aircraft.",
     image:
-      "./assets/images/aircraft-sales.webp",
+      "./assets/images/aircraft-sales-new.jpg",
   },
   {
     id: "06",

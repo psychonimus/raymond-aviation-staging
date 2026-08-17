@@ -7,7 +7,7 @@ const tabs = [
     {
         id: "private",
         label: "How to Access Raymond Aviation Empty Legs",
-        image: "./assets/images/empty-leg-flight-2.webp",
+        image: "./assets/images/empty-leg-flight-2.jpg",
         heading: "How to Access Raymond Aviation Empty Legs",
         body: [
             "",
@@ -27,7 +27,7 @@ const tabs = [
     {
         id: "group",
         label: "Important Considerations",
-        image: "./assets/images/empty-leg-3.webp",
+        image: "./assets/images/empty-leg-3.jpg",
         heading: "Important Considerations",
         body: [
             "Empty legs, by their nature, involve some degree of scheduling dependency. Raymond Aviation is transparent about the conditions",

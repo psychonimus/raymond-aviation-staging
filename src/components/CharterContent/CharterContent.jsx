@@ -11,8 +11,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import './CharterContent.css'
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const tabs = [
   {
@@ -54,7 +53,6 @@ export default function CharterContent() {
   const navigate = useNavigate();
   const [active, setActive] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const [showDummyWarning, setShowDummyWarning] = useState(false);
   const imagePanelRef = useRef(null);
   const contentRef = useRef(null);
   const statsRef = useRef([]);
@@ -205,14 +203,14 @@ export default function CharterContent() {
               ))}
             </div>
 
-            {/* {tab.id === "group2" && (
-              <button disabled
-                className="view-flights-btn" 
-                onClick={() => setShowDummyWarning(true)}
+            {tab.id === "group2" && (
+              <button
+                className="view-flights-btn"
+                onClick={() => navigate('/empty-leg-flights')}
               >
                 View Empty Leg Flights
               </button>
-            )} */}
+            )}
           </div>
 
           {/* Decorative large number */}
@@ -220,51 +218,7 @@ export default function CharterContent() {
         </div>
       </section>
 
-      <AnimatePresence>
-        {showDummyWarning && (
-          <div className="booking-modal-overlay">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="modal-backdrop"
-              onClick={() => setShowDummyWarning(false)}
-            />
-            <motion.div 
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="booking-modal-content warning-modal-content"
-              data-lenis-prevent
-            >
-              <button className="close-btn" onClick={() => setShowDummyWarning(false)}>
-                <X size={24} />
-              </button>
-              
-              <div className="modal-header">
-                <h2>Notice</h2>
-              </div>
 
-              <div className="warning-modal-text">
-                Dummy Page for Demonstration Only
-              </div>
-
-              <div className="warning-modal-actions">
-                <button 
-                  className="warning-modal-btn" 
-                  onClick={() => {
-                    setShowDummyWarning(false);
-                    navigate('/empty-leg-flights');
-                  }}
-                >
-                  Proceed to Empty Leg Flights
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </>
   );
 }

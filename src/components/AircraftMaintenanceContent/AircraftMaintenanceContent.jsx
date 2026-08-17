@@ -65,7 +65,7 @@ const tabs = [
     {
         id: "group",
         label: "Maintenance Management",
-        image: "./assets/images/aircraft-management-2.webp",
+        image: "./assets/images/aircraft-management-2.jpg",
         heading: "Maintenance Management",
         body: [
             "",
@@ -104,7 +104,7 @@ const tabs = [
     {
         id: "group3",
         label: "Charter Revenue Generation",
-        image: "./assets/images/charter-revenue.webp",
+        image: "./assets/images/charter-revenue.jpg",
         heading: "Charter Revenue Generation",
         body: [
             "With owner consent, Raymond Aviation can place managed aircraft on the charter market during unutilised periods to generate revenue and offset ownership and management costs. This optional service operates under a transparent revenue-share agreement.",

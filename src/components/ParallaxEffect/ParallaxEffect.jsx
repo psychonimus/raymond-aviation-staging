@@ -73,7 +73,7 @@ export default function ParallaxEffect() {
         <div className="image-container">
           <img
             ref={imgRef}
-            src="../assets/images/window 3.png"
+            src="/assets/images/window 3.webp"
             alt="image"
           />
         </div>

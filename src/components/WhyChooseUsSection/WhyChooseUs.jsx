@@ -10,7 +10,7 @@ const ITEMS = [
     title: "Elevated travel experience, backed by a legacy of trust",
     icon:"./assets/images/travel-experience.svg",
     text: "India's most trusted name in private charters.",
-    image: "./assets/images/avi-experience.webp",
+    image: "./assets/images/avi-experience.jpg",
   },
   {
     id: "onboard",
@@ -38,7 +38,7 @@ const ITEMS = [
     title: "Round-the-clock coordination",
     icon:"./assets/images/round-the-clock-coordination.svg",
     text: "A real person answers, always. We aren't just a booking engine, we're your partners in making things happen. Ready to get started?",
-    image: "./assets/images/crew.webp",
+    image: "./assets/images/crew.jpg",
   },
 ];
 

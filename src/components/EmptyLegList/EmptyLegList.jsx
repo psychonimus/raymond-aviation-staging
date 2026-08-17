@@ -7,34 +7,34 @@ import './EmptyLegList.css';
 const emptyLegFlights = [
     {
         id: 1,
-        aircraft: "Bombardier Global 6000",
-        image: "./assets/images/empty-leg-1.jpg",
-        route: "BOM - DEL",
-        date: "15 MAY 2026",
+        aircraft: "Global 5500",
+        image: "./assets/images/global-5500.png",
+        route: "Delhi - Europe",
+        date: "21st / 22nd August",
         time: "Enquire",
-        price: "$15,000",
+        price: "Contact for Price",
         
     },
-    {
-        id: 2,
-        aircraft: "Gulfstream G550",
-        image: "./assets/images/charter-1.jpg",
-        route: "BLR - BOM",
-        date: "18 MAY 2026",
-        time: "Enquire",
-        price: "$12,000",
+    // {
+    //     id: 2,
+    //     aircraft: "Gulfstream G550",
+    //     image: "./assets/images/charter-1.jpg",
+    //     route: "BLR - BOM",
+    //     date: "18 MAY 2026",
+    //     time: "Enquire",
+    //     price: "$12,000",
        
-    },
-    {
-        id: 3,
-        aircraft: "Cessna Citation XLS+",
-        image: "./assets/images/fractional-banner-1.jpg",
-        route: "LON - JNB",
-        date: "20 MAY 2026",
-        time: "Enquire",
-        price: "$18,000",
+    // },
+    // {
+    //     id: 3,
+    //     aircraft: "Cessna Citation XLS+",
+    //     image: "./assets/images/fractional-banner-1.jpg",
+    //     route: "LON - JNB",
+    //     date: "20 MAY 2026",
+    //     time: "Enquire",
+    //     price: "$18,000",
         
-    }
+    // }
 ];
 
 const EmptyLegList = () => {
@@ -61,11 +61,11 @@ const EmptyLegList = () => {
     }, []);
 
     return (
-        <section className="el-list-section py-5">
+        <section className="el-list-section">
             <div className="container">
-                <div className="el-section-header text-center mb-5">
-                    <h2 className="display-4 fw-bold">Upcoming Empty Leg Flights</h2>
-                    <p className="lead text-muted">Exclusive repositioning opportunities at exceptional value.</p>
+                <div className="el-section-header text-center">
+                    <h2>Upcoming Empty Leg Flights</h2>
+                    <p>Exclusive repositioning opportunities at exceptional value.</p>
                 </div>
                 <div className="el-grid">
                     {emptyLegFlights.map((flight, index) => (
@@ -103,8 +103,9 @@ const EmptyLegList = () => {
                                         <span>{flight.date}</span>
                                     </div>
                                 </div>
+                                <div className="el-divider"></div>
                                 <h3 className="el-aircraft-name">{flight.aircraft}</h3>
-                                <div className="el-card-price">Starting From: {flight.price}</div>
+                                <div className="el-card-price">Price&#58; <strong>{flight.price}</strong></div>
                                 <button className="el-enquire-now-btn" onClick={() => openEmptyLegModal(flight)}>Enquire Now</button>
                             </div>
                         </div>

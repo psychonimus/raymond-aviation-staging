@@ -10,21 +10,21 @@ const ITEMS = [
     title: "100 Years of Raymond Group Legacy",
     icon:"./assets/images/legacy.svg",
     text: "Since 1925, the Raymond name has been a guarantee of quality. Every project bearing the Raymond name, from a suit to a skyscraper to a helipad, is built on a century of craftsmanship, ethics, and trust that no newer entrant can replicate.",
-    image: "./assets/images/avi-experience.webp",
+    image: "./assets/images/avi-experience.jpg",
   },
   {
     id: "onboard",
     title: "30 Years of General Aviation Expertise",
     icon:"./assets/images/aviation-experience.svg",
     text: "Raymond Aviation has operated in Indian skies since 1996. We understand helicopters, airspace, DGCA regulations, and operational realities at a depth that only comes from three decades of hands-on aviation experience.",
-    image: "./assets/images/avi-experience.webp",
+    image: "./assets/images/avi-experience.jpg",
   },
   {
     id: "efficient",
     title: "MMRDA Certified — Government Validated",
     icon:"./assets/images/certified.svg",
     text: "The award of the MMRDA Coastal Road Helipad project is not just a contract, it is government validation. MMRDA's rigorous tendering process selected Raymond for its technical competence, financial capability, and track record.",
-    image: "./assets/images/trusted-support.webp",
+    image: "./assets/images/trusted-support.jpg",
   },
   {
     id: "safety",
@@ -38,14 +38,14 @@ const ITEMS = [
     title: "Single-Window Accountability",
     icon:"./assets/images/accountability.svg",
     text: "Clients deal with one organisation from site assessment to post-commissioning management. Raymond Aviation eliminates the risk of fragmented responsibility between architects, engineers, regulatory consultants, and operators.",
-    image: "./assets/images/crew.webp",
+    image: "./assets/images/crew.jpg",
   },
   {
     id: "Operator",
     title: "Operator Perspective, Built In",
     icon:"./assets/images/operator.svg",
     text: "Unlike pure construction companies, Raymond Aviation operates AW 109 helicopter. Our AW109 Grand helicopter has flown into numerous helipads across India. That operational insight directly helps in  every design and construction decision we make.",
-    image: "./assets/images/crew.webp",
+    image: "./assets/images/crew.jpg",
   },
 ];
 

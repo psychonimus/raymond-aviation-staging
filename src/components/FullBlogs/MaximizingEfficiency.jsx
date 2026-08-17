@@ -46,7 +46,7 @@ const MaximizingEfficiency = () => {
     <div className="blog-post-container" ref={containerRef}>
       <header className="blog-post-hero">
         <img 
-          src="/assets/images/cod-helicopter.webp" 
+          src="/assets/images/cod-helicopter.jpg" 
           alt="Maximizing Efficiency: Helicopter Charter" 
           className="blog-post-hero-image"
           ref={heroRef}

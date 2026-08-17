@@ -46,7 +46,7 @@ const TheFutureOfPrivateAviation = () => {
     <div className="blog-post-container" ref={containerRef}>
       <header className="blog-post-hero">
         <img 
-          src="/assets/images/charter-on-demand-banner.webp" 
+          src="/assets/images/charter-on-demand-banner.jpg" 
           alt="The Future of Private Aviation" 
           className="blog-post-hero-image"
           ref={heroRef}

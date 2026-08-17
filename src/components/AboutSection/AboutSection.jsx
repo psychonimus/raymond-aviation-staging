@@ -229,7 +229,7 @@ export default function PilatusSection() {
                                     <img className="jet-image" src="/assets/images/raymond-about-3.jpg" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img className="jet-image" src="/assets/images/interior.webp" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img className="jet-image" src="/assets/images/interior.jpg" alt="Aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <img className="jet-image" src="/assets/images/raymond-about-2.png" alt="Raymond Aviation aircraft interior" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

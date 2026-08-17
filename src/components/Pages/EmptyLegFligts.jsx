@@ -64,7 +64,7 @@ const EmptyLegFligts = () => {
             </section> */}
 
             {/* <EmptyLegFlightsContent /> */}
-            <div className="mt-5">
+            <div className="">
                 <EmptyLegList />
             </div>
 

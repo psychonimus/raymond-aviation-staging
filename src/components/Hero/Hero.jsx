@@ -67,30 +67,30 @@ function SoundPopup({ onChoice }) {
 // Icon SVGs for services
 const icons = {
     charter: (
-        <img src="../assets/images/aircraft.svg" alt="" style={{ width: "50px" }} />
+        <img src="/assets/images/aircraft.svg" alt="" style={{ width: "50px" }} />
 
 
     ),
     sales: (
-        <img src="../assets/images/aircraft-2.svg" alt="" style={{ width: "45px" }} />
+        <img src="/assets/images/aircraft-2.svg" alt="" style={{ width: "45px" }} />
 
     ),
     design: (
-        <img src="../assets/images/Concierge-services.svg" alt="" style={{ width: "45px" }} />
+        <img src="/assets/images/Concierge-services.svg" alt="" style={{ width: "45px" }} />
 
     ),
     mgmt1: (
-        <img src="../assets/images/aircraft-management.svg" alt="" style={{ width: "50px" }} />
+        <img src="/assets/images/aircraft-management.svg" alt="" style={{ width: "50px" }} />
 
     ),
     mgmt2: (
-        <img src="../assets/images/aviation-consultancy.svg" alt="" style={{ width: "50px" }} />
+        <img src="/assets/images/aviation-consultancy.svg" alt="" style={{ width: "50px" }} />
     ),
     design2: (
-        <img src="../assets/images/plane-design.svg" alt="" style={{ width: "50px" }} />
+        <img src="/assets/images/plane-design.svg" alt="" style={{ width: "50px" }} />
     ),
     partnership: (
-        <img src="../assets/images/helipad-infra.svg" alt="" style={{ width: "50px" }} />
+        <img src="/assets/images/helipad-infra.svg" alt="" style={{ width: "50px" }} />
     ),
 };
 

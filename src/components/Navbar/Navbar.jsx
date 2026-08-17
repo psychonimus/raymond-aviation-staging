@@ -61,7 +61,7 @@ export default function Navbar({ toggleMenu }) {
         {/* Left */}
         <div className="ac-nav-left">
           <Link to="/" className="ac-nav-brand ">
-          <img src="../assets/images/raymond-aviation-logo.svg" alt="" style={{ width: "110px" }} />
+          <img src="/assets/images/raymond-aviation-logo.svg" alt="" style={{ width: "110px" }} />
         </Link>
           
         </div>
@@ -75,7 +75,7 @@ export default function Navbar({ toggleMenu }) {
           <Link to="/contact" className="ac-nav-contact d-none d-md-block">Contact Us</Link>
 
           <button onClick={toggleMenu} className="ac-hamburger" aria-label="Menu">
-            <img src="../assets/images/menu-icon.svg" alt="" style={{width:"40px", height:"40px"}} />
+            <img src="/assets/images/menu-icon.svg" alt="" style={{width:"40px", height:"40px"}} />
           </button>
         </div>
       </nav>
