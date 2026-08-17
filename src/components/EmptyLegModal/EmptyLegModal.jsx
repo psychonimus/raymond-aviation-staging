@@ -108,7 +108,7 @@ const EmptyLegModal = () => {
                             <X size={24} />
                         </button>
 
-                        <div className="modal-header">
+                        <div className="modal-header d-flex flex-column align-items-start">
                             <h2>Empty Leg Enquiry</h2>
                             <p>{selectedEmptyLeg ? `Requesting details for ${selectedEmptyLeg.route} flight` : "Enquire about upcoming empty leg opportunities"}</p>
                         </div>

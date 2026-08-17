@@ -15,16 +15,16 @@ const emptyLegFlights = [
         price: "Contact for Price",
         
     },
-    // {
-    //     id: 2,
-    //     aircraft: "Gulfstream G550",
-    //     image: "./assets/images/charter-1.jpg",
-    //     route: "BLR - BOM",
-    //     date: "18 MAY 2026",
-    //     time: "Enquire",
-    //     price: "$12,000",
+    {
+        id: 2,
+        aircraft: "Gulfstream G450",
+        image: "./assets/images/gulfstream-g450.png",
+        route: "Dubai/India - Europe",
+        date: "27th / 29th August",
+        time: "Enquire",
+        price: "Contact for Price",
        
-    // },
+    },
     // {
     //     id: 3,
     //     aircraft: "Cessna Citation XLS+",
