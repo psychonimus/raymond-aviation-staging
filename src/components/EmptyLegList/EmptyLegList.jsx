@@ -5,26 +5,38 @@ import { useModal } from '../../context/ModalContext';
 import './EmptyLegList.css';
 
 const emptyLegFlights = [
+    // {
+    //     id: 1,
+    //     aircraft: "Boeing Business Jet (BBJ)",
+    //     image: "./assets/images/bbj.png",
+    //     route: "Dubai - Harare",
+    //     belowRoute : 'Harare - Dubai',
+    //     date: "06 Sep | 18 Sep 2026",
+    //     time: "Enquire",
+    //     price: "Contact for Price",
+        
+    // },
     {
-        id: 1,
-        aircraft: "Global 5500",
-        image: "./assets/images/global-5500.png",
-        route: "Delhi - Europe",
-        date: "21st / 22nd August",
+        id: 2,
+        aircraft: "Global 6000 || 09 pax",
+        image: "./assets/images/global-6000.png",
+        route: "Dubai - Mumbai",
+        belowRoute : '',
+        date: "30 Sep 2026",
         time: "Enquire",
         price: "Contact for Price",
         
     },
-    {
-        id: 2,
-        aircraft: "Gulfstream G450",
-        image: "./assets/images/gulfstream-g450.png",
-        route: "Dubai/India - Europe",
-        date: "27th / 29th August",
-        time: "Enquire",
-        price: "Contact for Price",
+    // {
+    //     id: 2,
+    //     aircraft: "Gulfstream G450",
+    //     image: "./assets/images/gulfstream-g450.png",
+    //     route: "Dubai/India - Europe",
+    //     date: "27th / 29th August",
+    //     time: "Enquire",
+    //     price: "Contact for Price",
        
-    },
+    // },
     // {
     //     id: 3,
     //     aircraft: "Cessna Citation XLS+",
@@ -96,6 +108,40 @@ const EmptyLegList = () => {
                                             <span className="el-city-code">{flight.route.split(' - ')[1]}</span>
                                         </div>
                                     </div>
+
+
+
+                                    <div className="el-route-display">
+                                        {
+                                            flight?.belowRoute && 
+                                            ( <>
+                                            <div className="el-location">
+                                            <span className="el-city-code">{flight.belowRoute.split(' - ')[0]}</span>
+                                        </div>
+                                        <div className="el-flight-path">
+                                            <div className="el-path-line"></div>
+                                            <div className="el-plane-icon" >
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M6.428 1.151C6.708.527 7.265 0 8 0s1.292.527 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="el-location">
+                                            <span className="el-city-code">{flight.belowRoute.split(' - ')[1]}</span>
+                                        </div>
+                                            </>
+                                            )
+                                        }
+                                    </div>
+
+
+
+
+
+
+
+
+
                                     <div className="el-date-display">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
