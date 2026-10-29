@@ -1,18 +1,18 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import Footer from '../Footer/Footer'
 import ServiceHero from '../ServiceHero/ServiceHero'
 import ServicesSection from '../ServicesSection/ServicesSection'
 
-
-
 const Services = () => {
   return (
     <>
-    <Helmet>
-        <title>Aviation Services | Raymond Aviation</title>
-        <meta name="description" content="Explore our comprehensive suite of aviation services, including on-demand charter, aircraft management, fractional ownership, and more." />
-    </Helmet>
+    <SEO
+        title="Aviation Services | Raymond Aviation"
+        description="Explore our comprehensive suite of aviation services, including on-demand charter, aircraft management, fractional ownership, and more."
+        keywords="aviation services, luxury jet charter, aircraft fleet management, jet card program, aircraft acquisition"
+        path="/services"
+    />
     {/* <ServiceHero /> */}
     <ServicesSection />
     <Footer 

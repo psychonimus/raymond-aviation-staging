@@ -8,6 +8,7 @@ import SmoothScroll from './components/SmoothScroll/SmoothScroll.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Contact from './components/Pages/Contact.jsx'
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton.jsx'
+import EmptyLegNotification from './components/EmptyLegNotification/EmptyLegNotification.jsx'
 import Skeleton from "@mui/material/Skeleton";
 import { ModalProvider } from './context/ModalContext.jsx';
 import BookingModal from './components/BookingModal/BookingModal.jsx';
@@ -93,6 +94,7 @@ const MainApp = () => {
         </AnimatePresence>
       </Suspense>
       <WhatsAppButton />
+      <EmptyLegNotification />
       <BookingModal />
       <EmptyLegModal />
     </SmoothScroll>

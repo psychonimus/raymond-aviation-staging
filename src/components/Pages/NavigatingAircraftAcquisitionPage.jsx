@@ -1,15 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import NavigatingAircraftAcquisition from '../FullBlogs/NavigatingAircraftAcquisition';
 import Footer from '../Footer/Footer';
 
 const NavigatingAircraftAcquisitionPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Navigating Aircraft Acquisition: Buyer's Guide | Raymond Aviation Blog</title>
-        <meta name="description" content="Expert tips on selecting the right private aircraft, from pre-owned vs new to maintenance and financing options." />
-      </Helmet>
+      <SEO
+        title="Navigating Aircraft Acquisition: Buyer's Guide | Raymond Aviation Blog"
+        description="Expert tips on selecting the right private aircraft, from pre-owned vs new to maintenance and financing options."
+        path="/blogs/navigating-aircraft-acquisition"
+        image="/assets/images/aircraft-blog-3.jpg"
+        type="article"
+      />
       <NavigatingAircraftAcquisition />
       <Footer 
         FooterHeader="PARTNER WITH EXPERTS FOR YOUR NEXT ACQUISITION"

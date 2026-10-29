@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import HeroBanner from '../Herobanner/HeroBanner';
 import CharterOnDemandAbout from '../CharterOnDemandAbout/CharterOnDemandAbout';
 import CharterContent from '../CharterContent/CharterContent';
@@ -9,10 +9,12 @@ import Footer from '../Footer/Footer';
 const CharterOnDemand = () => {
   return (
     <>
-        <Helmet>
-            <title>Private Jet Charter on Demand | Raymond Aviation</title>
-            <meta name="description" content="Book your private jet with Raymond Aviation. Our on-demand charter service provides flexible, reliable, and luxurious travel tailored to your schedule." />
-        </Helmet>
+        <SEO
+            title="Private Jet Charter on Demand | Raymond Aviation"
+            description="Book your private jet with Raymond Aviation. Our on-demand charter service provides flexible, reliable, and luxurious travel tailored to your schedule."
+            keywords="charter on demand, private jet booking, business jet charter, luxury private flights"
+            path="/charter-on-demand"
+        />
         <HeroBanner 
             headlineUp="Charter" 
             headlineDown="On-Demand" 

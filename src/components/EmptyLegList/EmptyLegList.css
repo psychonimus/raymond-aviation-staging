@@ -4,6 +4,7 @@
 
 .el-list-section {
     background-color: #f5f4f0;
+    /* 140px top = space below fixed navbar (no hero banner on this page) */
     padding: 140px 0 100px;
 }
 
@@ -236,32 +237,216 @@
     box-shadow: 0 8px 24px rgba(211, 169, 91, 0.25);
 }
 
+/* ---- Empty State ---- */
+.el-empty-state {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    padding: 60px 30px;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    position: relative;
+    border-top: 3px solid var(--primary);
+}
+
+.el-empty-icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(211, 169, 91, 0.1);
+    color: var(--primary);
+}
+
+.el-empty-icon svg {
+    transform: rotate(45deg);
+}
+
+.el-empty-title {
+    font-family: 'primary bold', serif;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.el-empty-description {
+    font-family: 'secondary regular', sans-serif;
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+.el-empty-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.el-empty-btn {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 14px 32px;
+    border-radius: 2px;
+    font-family: 'secondary bold', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.el-empty-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(211, 169, 91, 0.25);
+}
+
 /* ---- Responsive ---- */
+
+/* ── Tablet (≤ 992px) ── */
 @media (max-width: 992px) {
     .el-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 28px;
     }
 }
 
+/* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
     .el-list-section {
-        padding: 60px 0;
+        /* reduce from 140px — navbar is still ~70-80px on mobile */
+        padding: 100px 0 60px;
     }
 
-    .el-grid {
-        grid-template-columns: 1fr;
+    .el-section-header {
+        margin-bottom: 36px;
+        padding: 0 8px;
     }
 
     .el-section-header h2 {
-        font-size: 1.9rem;
+        font-size: 1.75rem;
+        letter-spacing: 2px;
     }
 
-    .el-aircraft-name {
-        font-size: 1.2rem;
+    .el-section-header p {
+        font-size: 0.88rem;
+    }
+
+    .el-grid {
+        /* force single column; min 0px prevents any possible overflow */
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 0 4px;
+    }
+
+    .el-card-content {
+        padding: 20px 20px 18px;
     }
 
     .el-city-code {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+    }
+
+    .el-aircraft-name {
+        font-size: 1.1rem;
+    }
+
+    .el-enquire-now-btn {
+        padding: 12px 20px;
+    }
+
+    .el-empty-state {
+        padding: 40px 20px;
+        margin: 0 4px;
+    }
+
+    .el-empty-title {
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+    }
+
+    .el-empty-description {
+        font-size: 0.88rem;
+    }
+}
+
+/* ── Small phones (≤ 480px) ── */
+@media (max-width: 480px) {
+    .el-list-section {
+        padding: 90px 0 48px;
+    }
+
+    .el-section-header h2 {
+        font-size: 1.45rem;
+        letter-spacing: 1.5px;
+    }
+
+    .el-section-header {
+        margin-bottom: 28px;
+    }
+
+    .el-grid {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .el-card-image-wrapper {
+        height: 200px;
+    }
+
+    .el-card-content {
+        padding: 16px 16px 16px;
+    }
+
+    .el-city-code {
+        font-size: 1.1rem;
+    }
+
+    .el-aircraft-name {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .el-card-price {
+        font-size: 0.75rem;
+        margin-bottom: 16px;
+    }
+
+    .el-flight-path {
+        margin: 0 8px;
+    }
+
+    .el-enquire-now-btn {
+        padding: 12px 16px;
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+    }
+
+    .el-empty-state {
+        padding: 32px 16px;
+    }
+
+    .el-empty-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 18px;
+    }
+
+    .el-empty-title {
+        font-size: 1.05rem;
+    }
+
+    .el-empty-btn {
+        padding: 12px 24px;
+        font-size: 0.7rem;
     }
 }

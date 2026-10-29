@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import { useParams, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { inventoryData } from '../../data/inventoryData';
@@ -54,10 +54,13 @@ const InventoryDetail = () => {
 
     return (
         <div className="inventory-detail">
-            <Helmet>
-                <title>{`${item.name} | ${item.category} for Sale | Raymond Aviation`}</title>
-                <meta name="description" content={`View details for the ${item.year} ${item.name}. ${item.description.substring(0, 150)}...`} />
-            </Helmet>
+            <SEO
+                title={`${item.name} | ${item.category} for Sale | Raymond Aviation`}
+                description={`View details, specifications, and pricing for the ${item.year} ${item.name}. ${item.description}`}
+                path={`/inventory/${item.id}`}
+                image={item.image}
+                keywords={`${item.name}, ${item.category} for sale, pre-owned ${item.name}, Raymond Aviation inventory`}
+            />
             <section className="detail-hero" onClick={() => setSelectedImage(item.image)}>
                 <img src={item.image} alt={item.name} />
                 <div className="detail-hero-overlay">

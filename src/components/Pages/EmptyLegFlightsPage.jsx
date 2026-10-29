@@ -1,15 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import EmptyLegFlights from '../FullBlogs/EmptyLegFlights';
 import Footer from '../Footer/Footer';
 
 const EmptyLegFlightsPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Empty Leg Flights: What You Need to Know | Raymond Aviation Blog</title>
-        <meta name="description" content="Unlock incredible value in private aviation by taking advantage of empty leg flights. Understand how to find the best deals." />
-      </Helmet>
+      <SEO
+        title="Empty Leg Flights: What You Need to Know | Raymond Aviation Blog"
+        description="Unlock incredible value in private aviation by taking advantage of empty leg flights. Understand how to find the best deals."
+        path="/blogs/empty-leg-flights"
+        image="/assets/images/banner-blog-6.jpg"
+        type="article"
+      />
       <EmptyLegFlights />
       <Footer 
         FooterHeader="UNLOCK EXTRAORDINARY VALUE"

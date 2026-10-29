@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -94,10 +94,12 @@ const AllBlogs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Aviation Insights & News | Raymond Aviation Blog</title>
-        <meta name="description" content="Stay updated with the latest trends, news, and insights from the world of private aviation on the Raymond Aviation blog." />
-      </Helmet>
+      <SEO
+        title="Aviation Insights & News | Raymond Aviation Blog"
+        description="Stay updated with the latest trends, news, and insights from the world of private aviation on the Raymond Aviation blog."
+        keywords="aviation blog, private jet trends, aircraft acquisition guide, jet card benefits, fractional ownership"
+        path="/blogs"
+      />
       <div className="all-blogs-page" ref={pageRef}>
         <div className="all-blogs-container">
           <div className="all-blogs-header" ref={titleRef}>

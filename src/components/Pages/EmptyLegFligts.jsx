@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import EmptyLegFlightsContent from '../EmptyLegFlightsContent/EmptyLegFlightsContent'
@@ -12,10 +12,12 @@ const EmptyLegFligts = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Empty Leg Flight Deals | Raymond Aviation</title>
-                <meta name="description" content="Find exclusive deals on empty leg flights. Experience private jet travel at a fraction of the cost with our last-minute opportunities." />
-            </Helmet>
+            <SEO
+                title="Empty Leg Flight Deals | Raymond Aviation"
+                description="Find exclusive deals on empty leg flights. Experience private jet travel at a fraction of the cost with our last-minute opportunities."
+                keywords="empty leg flights, empty legs private jet, discounted private jet, empty leg charter deals"
+                path="/empty-leg-flights"
+            />
             {/* <HeroBanner
                 headlineUp="Empty Leg Flights"
                 headlineDown=""

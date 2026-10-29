@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 
 import Footer from '../Footer/Footer'
 import HeroBanner from '../Herobanner/HeroBanner'
@@ -8,10 +8,12 @@ import FractionalOwnershipContent from '../FractionalOwnershipContent/Fractional
 const FractionalOwnership = () => {
     return (
         <>
-            <Helmet>
-                <title>Fractional Aircraft Ownership | Raymond Aviation</title>
-                <meta name="description" content="Enjoy the benefits of private jet ownership without the full cost. Discover our fractional ownership programs designed for frequent travelers." />
-            </Helmet>
+            <SEO
+                title="Fractional Aircraft Ownership | Raymond Aviation"
+                description="Enjoy the benefits of private jet ownership without the full cost. Discover our fractional ownership programs designed for frequent travelers."
+                keywords="fractional jet ownership, aircraft shared ownership, private jet co-ownership, aviation investment"
+                path="/fractional-ownership"
+            />
             <HeroBanner 
                 headlineUp="Fractional Ownership" 
                 btnTxt="Enquire Now"

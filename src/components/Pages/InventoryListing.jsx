@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { inventoryData } from '../../data/inventoryData';
@@ -31,10 +31,12 @@ const InventoryListing = () => {
 
     return (
         <div className="inventory-page">
-            <Helmet>
-                <title>Aircraft Inventory | Raymond Aviation</title>
-                <meta name="description" content="Browse our current inventory of premium aircraft available for sale. Find your next asset with Raymond Aviation." />
-            </Helmet>
+            <SEO
+                title="Aircraft Inventory | Raymond Aviation"
+                description="Browse our current inventory of premium aircraft, luxury helicopters, and yachts available for sale. Find your next asset with Raymond Aviation."
+                keywords="aircraft inventory, private jets for sale, helicopters for sale, luxury yachts for sale"
+                path="/inventory"
+            />
             {/* <HeroBanner
                 headlineUp="Inventory On Offers"
                 headlineDown=""

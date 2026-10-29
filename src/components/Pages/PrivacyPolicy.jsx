@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../SEO/SEO';
 import { gsap } from 'gsap';
 import Footer from '../Footer/Footer';
 import '../LegalContent/LegalContent.css';
@@ -23,10 +23,11 @@ const PrivacyPolicy = () => {
 
     return (
         <div className="legal-page">
-            <Helmet>
-                <title>Privacy Policy & Terms | Raymond Aviation</title>
-                <meta name="description" content="Read the Privacy Policy and Terms and Conditions of Raymond Aviation." />
-            </Helmet>
+            <SEO
+                title="Privacy Policy & Terms | Raymond Aviation"
+                description="Read the Privacy Policy and Terms and Conditions of Raymond Aviation."
+                path="/privacy-policy"
+            />
 
             <header className="legal-hero">
                 <div className="container">

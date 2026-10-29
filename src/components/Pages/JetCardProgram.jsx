@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import WhyChooseUs from '../WhyChooseUsSection/WhyChooseUs'
 import ContactSection from '../ContactSection/ContactSection'
 import HeroBanner from '../Herobanner/HeroBanner'
@@ -9,10 +9,12 @@ import Footer from '../Footer/Footer'
 const JetCardProgram = () => {
   return (
     <>
-        <Helmet>
-            <title>Jet Card Program | Raymond Aviation</title>
-            <meta name="description" content="The Raymond Aviation Jet Card offers a smarter way to fly. Enjoy fixed hourly rates, guaranteed availability, and premium service." />
-        </Helmet>
+        <SEO
+            title="Jet Card Program | Raymond Aviation"
+            description="The Raymond Aviation Jet Card offers a smarter way to fly. Enjoy fixed hourly rates, guaranteed availability, and premium service."
+            keywords="jet card program, private jet membership, 25 hour jet card, fixed hourly rate jet charter"
+            path="/jet-card-program"
+        />
         <HeroBanner
             headlineUp="Jet Card Program"
             headlineDown=""

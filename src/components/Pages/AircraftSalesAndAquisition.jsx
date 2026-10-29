@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import AircraftSalesContent from '../AircraftSalesContent/AircraftSalesContent'
@@ -7,10 +7,12 @@ import AircraftSalesContent from '../AircraftSalesContent/AircraftSalesContent'
 const AircraftSalesAndAquisition = () => {
   return (
     <>
-        <Helmet>
-            <title>Aircraft Sales & Acquisition | Raymond Aviation</title>
-            <meta name="description" content="Expert guidance for buying or selling private aircraft. Raymond Aviation provides comprehensive market analysis and seamless transaction management." />
-        </Helmet>
+        <SEO
+            title="Aircraft Sales & Acquisition | Raymond Aviation"
+            description="Expert guidance for buying or selling private aircraft. Raymond Aviation provides comprehensive market analysis and seamless transaction management."
+            keywords="aircraft sales, private jet acquisition, buy private jet, sell business jet, aircraft broker"
+            path="/aircraft-sales-and-aquisition"
+        />
         <HeroBanner
             headlineUp="Aircraft Sales & Acquisition"
             headlineDown=""

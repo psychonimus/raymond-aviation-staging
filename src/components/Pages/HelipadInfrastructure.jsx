@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import HeroBanner from '../Herobanner/HeroBanner'
 import Footer from '../Footer/Footer'
 import HelipadInfrastructureContent from '../HelipadInfrastructureContent/HelipadInfrastructureContent'
@@ -10,10 +10,12 @@ import HelipadCommitment from '../HelipadCommitment/HelipadCommitment'
 const HelipadInfrastructure = () => {
   return (
     <>
-        <Helmet>
-            <title>Helipad Infrastructure & Consulting | Raymond Aviation</title>
-            <meta name="description" content="Specialized consulting and infrastructure services for helipad development, licensing, and management." />
-        </Helmet>
+        <SEO
+            title="Helipad Infrastructure & Consulting | Raymond Aviation"
+            description="Specialized consulting and turnkey infrastructure services for helipad development, licensing, and management."
+            keywords="helipad infrastructure, helipad design, DGCA helipad licensing, helipad construction India"
+            path="/helipad-infrastructure"
+        />
         <HeroBanner
             headlineUp="Helipad Infrastructure"
             btnTxt="Enquire Now"

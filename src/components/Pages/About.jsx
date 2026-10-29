@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import AboutHero from '../AboutHero/AboutHero'
 import AboutSection from '../AboutSection/AboutSection'
 
@@ -11,10 +11,12 @@ import Testimonials from '../Testimonials/Testimonials'
 const About = () => {
   return (
     <>
-        <Helmet>
-            <title>About Us | Raymond Aviation</title>
-            <meta name="description" content="Learn about Raymond Aviation's vision, mission, and commitment to excellence in private aviation. Our legacy of trust and expertise makes us a leader in luxury air travel." />
-        </Helmet>
+        <SEO
+            title="About Us | Raymond Aviation"
+            description="Learn about Raymond Aviation's vision, mission, and commitment to excellence in private aviation. Our legacy of trust and expertise makes us a leader in luxury air travel."
+            keywords="about Raymond Aviation, private jet company, luxury aviation leader, business aviation India"
+            path="/about"
+        />
         <AboutSection />
         <VisionMissionValues />
         {/* <Testimonials /> */}

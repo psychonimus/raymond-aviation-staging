@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../SEO/SEO'
 import WhyChooseUs from '../WhyChooseUsSection/WhyChooseUs'
 import ContactSection from '../ContactSection/ContactSection'
 import HeroBanner from '../Herobanner/HeroBanner'
@@ -9,10 +9,12 @@ import Footer from '../Footer/Footer'
 const AircraftManagement = () => {
   return (
     <>
-        <Helmet>
-            <title>Professional Aircraft Management | Raymond Aviation</title>
-            <meta name="description" content="Let Raymond Aviation handle the complexities of aircraft ownership. From maintenance to crew management, we ensure your asset is always flight-ready." />
-        </Helmet>
+        <SEO
+            title="Professional Aircraft Management | Raymond Aviation"
+            description="Let Raymond Aviation handle the complexities of aircraft ownership. From maintenance to crew management, we ensure your asset is always flight-ready."
+            keywords="aircraft management, private jet maintenance, aircraft operations management, aviation safety management"
+            path="/aircraft-management"
+        />
         <HeroBanner
             headlineUp="Aircraft Management"
             headlineDown=""

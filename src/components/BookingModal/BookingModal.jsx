@@ -7,6 +7,7 @@ import { useModal } from '../../context/ModalContext';
 import AirportAutocomplete from './AirportAutocomplete';
 import CountryCodePicker from '../ContactSection/CountryCodePicker';
 import { SendFormData } from '../../services/sendFormData/SendFormData';
+import { trackEvent } from '../../utils/analytics';
 
 // Helper function to get today's date in YYYY-MM-DD format (local timezone)
 const getTodayString = () => {
@@ -353,6 +354,10 @@ const BookingModal = () => {
 
         SendFormData(formData)
             .then(() => {
+                // GA4 - Track successful flight enquiry
+                trackEvent("generate_lead", {
+                    lead_type: "flight_enquiry"
+                });
                 setSubmissionStatus('success');
                 setTimeout(() => {
                     closeBookingModal();
