@@ -82,75 +82,195 @@ const InventoryDetail = () => {
                         </div>
 
                         <div className="detail-specs">
-                            <h2>Specifications</h2>
+                            <h2>General Specifications</h2>
                             <div className="specs-grid">
+                                {item.details?.manufacturer && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Manufacturer</span>
+                                        <span className="spec-value">{item.details.manufacturer}</span>
+                                    </div>
+                                )}
+                                {item.details?.model && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Model</span>
+                                        <span className="spec-value">{item.details.model}</span>
+                                    </div>
+                                )}
                                 <div className="spec-item">
                                     <span className="spec-label">Year</span>
                                     <span className="spec-value">{item.year}</span>
                                 </div>
-                                {item.details.range && (
+                                {item.details?.hours && (
                                     <div className="spec-item">
-                                        <span className="spec-label">Max Range</span>
-                                        <span className="spec-value">{item.details.range}</span>
+                                        <span className="spec-label">Total Time</span>
+                                        <span className="spec-value">{item.details.hours}</span>
                                     </div>
                                 )}
-                                {item.details.speed && (
+                                {item.details?.location && (
                                     <div className="spec-item">
-                                        <span className="spec-label">Cruise Speed</span>
-                                        <span className="spec-value">{item.details.speed}</span>
+                                        <span className="spec-label">Location</span>
+                                        <span className="spec-value">{item.details.location}</span>
                                     </div>
                                 )}
-                                {item.details.capacity && (
+                                {item.details?.configuration && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Configuration</span>
+                                        <span className="spec-value">{item.details.configuration}</span>
+                                    </div>
+                                )}
+                                {item.details?.capacity && (
                                     <div className="spec-item">
                                         <span className="spec-label">Capacity</span>
                                         <span className="spec-value">{item.details.capacity}</span>
                                     </div>
                                 )}
-                                {item.details.hours && (
-                                    <div className="spec-item">
-                                        <span className="spec-label">Total Hours</span>
-                                        <span className="spec-value">{item.details.hours}</span>
-                                    </div>
-                                )}
-                                {item.details.length && (
-                                    <div className="spec-item">
-                                        <span className="spec-label">Length</span>
-                                        <span className="spec-value">{item.details.length}</span>
-                                    </div>
-                                )}
-                                {item.details.engine && (
+                                {item.details?.engine && (
                                     <div className="spec-item">
                                         <span className="spec-label">Engines</span>
                                         <span className="spec-value">{item.details.engine}</span>
                                     </div>
                                 )}
+                                {item.details?.range && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Max Range</span>
+                                        <span className="spec-value">{item.details.range}</span>
+                                    </div>
+                                )}
+                                {item.details?.speed && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Cruise Speed</span>
+                                        <span className="spec-value">{item.details.speed}</span>
+                                    </div>
+                                )}
+                                {item.details?.length && (
+                                    <div className="spec-item">
+                                        <span className="spec-label">Length</span>
+                                        <span className="spec-value">{item.details.length}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
-                        <div className="detail-features">
-                            <h2>Key Features</h2>
-                            <ul className="features-list">
-                                {item.details.features.map((feature, idx) => (
-                                    <li key={idx}>{feature}</li>
-                                ))}
-                            </ul>
-                        </div>
+                        {/* Detailed Technical Specification Sections */}
+                        {item.specSections && item.specSections.length > 0 && (
+                            <div className="detail-spec-sections">
+                                <h2>Technical Overview & Equipment</h2>
+                                <div className="spec-sections-list">
+                                    {item.specSections.map((section, sIdx) => (
+                                        <div key={sIdx} className="spec-section-card">
+                                            <div className="spec-section-header">
+                                                <h3 className="spec-section-title">{section.title}</h3>
+                                            </div>
 
-                        <div className="image-gallery">
-                            {item.images.slice(1).map((img, idx) => (
-                                <div className="gallery-img" key={idx} onClick={() => setSelectedImage(img)}>
-                                    <img src={img} alt={`${item.name} gallery ${idx}`} />
+                                            {section.type === 'key-value' && (
+                                                <div className="section-kv-grid">
+                                                    {section.items.map((kv, kIdx) => (
+                                                        <div key={kIdx} className="section-kv-item">
+                                                            <span className="kv-label">{kv.label}</span>
+                                                            <span className="kv-value">{kv.value}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+
+                                            {section.type === 'avionics' && (
+                                                <div className="section-avionics-content">
+                                                    {section.package && (
+                                                        <div className="avionics-package-box">
+                                                            <div className="package-title">
+                                                                <span className="package-badge">Package</span>
+                                                                <span className="package-name">{section.package.name}</span>
+                                                            </div>
+                                                            <ul className="package-list">
+                                                                {section.package.features.map((feat, fIdx) => (
+                                                                    <li key={fIdx}>{feat}</li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                    {section.items && (
+                                                        <ul className="section-bullet-list">
+                                                            {section.items.map((it, iIdx) => (
+                                                                <li key={iIdx}>{it}</li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>
+                                            )}
+
+                                            {section.type === 'list' && (
+                                                <ul className="section-bullet-list">
+                                                    {section.items.map((it, iIdx) => (
+                                                        <li key={iIdx}>{it}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        )}
+
+                        {item.details?.features && (
+                            <div className="detail-features">
+                                <h2>Key Highlights</h2>
+                                <ul className="features-list">
+                                    {item.details.features.map((feature, idx) => (
+                                        <li key={idx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+
+                        {item.images && item.images.length > 1 && (
+                            <div className="detail-gallery-section">
+                                <h2>Aircraft Gallery</h2>
+                                <div className="image-gallery">
+                                    {item.images.slice(1).map((img, idx) => (
+                                        <div className="gallery-img" key={idx} onClick={() => setSelectedImage(img)}>
+                                            <img src={img} alt={`${item.name} gallery ${idx + 1}`} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     <div className="detail-sidebar" ref={sidebarRef}>
                         <div className="sidebar-price">Asking Price</div>
                         <span className="sidebar-amount">{item.price}</span>
 
-                        <p style={{ color: 'var(--para)', fontSize: '0.9rem', marginBottom: '20px' }}>
-                            Our experts are available for a private consultation and to arrange a viewing of this {item.category.toLowerCase()}.
+                        <div className="sidebar-quick-summary">
+                            <div className="quick-summary-item">
+                                <span className="quick-label">Category</span>
+                                <span className="quick-val">{item.category}</span>
+                            </div>
+                            <div className="quick-summary-item">
+                                <span className="quick-label">Year</span>
+                                <span className="quick-val">{item.year}</span>
+                            </div>
+                            {item.details?.hours && (
+                                <div className="quick-summary-item">
+                                    <span className="quick-label">Total Time</span>
+                                    <span className="quick-val">{item.details.hours}</span>
+                                </div>
+                            )}
+                            {item.details?.location && (
+                                <div className="quick-summary-item">
+                                    <span className="quick-label">Location</span>
+                                    <span className="quick-val">{item.details.location}</span>
+                                </div>
+                            )}
+                            {item.details?.configuration && (
+                                <div className="quick-summary-item">
+                                    <span className="quick-label">Status</span>
+                                    <span className="quick-val">{item.details.configuration}</span>
+                                </div>
+                            )}
+                        </div>
+
+                        <p style={{ color: 'var(--para)', fontSize: '0.9rem', marginBottom: '20px', lineHeight: '1.6' }}>
+                            Our aviation acquisition specialists are available for a private consultation, technical review, and to arrange an inspection of this {item.category.toLowerCase()}.
                         </p>
 
                         <a href="/contact" className="enquire-btn">Enquire Now</a>

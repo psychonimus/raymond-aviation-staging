@@ -44,7 +44,7 @@ const InventoryListing = () => {
                 btnTxt="Enquire Now"
             /> */}
 
-            <section className="inventory-listing">
+            <section className="inventory-listing mt-5">
                 <div className="container">
                     <div className="inventory-header">
                         <h1>Current Inventory</h1>
@@ -78,6 +78,14 @@ const InventoryListing = () => {
                                                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                                                 </svg>
                                                 Hours: {item.details.hours}
+                                            </span>
+                                        )}
+                                        {item.details.location && (
+                                            <span className="highlight-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" className="spec-icon">
+                                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                                </svg>
+                                                {item.details.location}
                                             </span>
                                         )}
                                         {item.details.length && (

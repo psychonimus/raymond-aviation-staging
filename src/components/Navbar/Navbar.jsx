@@ -12,7 +12,7 @@ export default function Navbar({ toggleMenu }) {
   const lastScrollY = useRef(0);
   const location = useLocation();
 
-  const isLightBgPage = ["/about", "/blogs", "/services", "/empty-leg-flights"].includes(location.pathname);
+  const isLightBgPage = ["/about", "/blogs", "/services", "/empty-leg-flights", "/inventory"].includes(location.pathname);
 
   useEffect(() => {
     let idleTimeout;
