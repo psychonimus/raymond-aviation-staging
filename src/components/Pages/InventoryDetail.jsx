@@ -82,7 +82,7 @@ const InventoryDetail = () => {
                         </div>
 
                         <div className="detail-specs">
-                            <h2>General Specifications</h2>
+                            <h2>Airframe & identity</h2>
                             <div className="specs-grid">
                                 {item.details?.manufacturer && (
                                     <div className="spec-item">
