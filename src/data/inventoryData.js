@@ -62,13 +62,7 @@ export const inventoryData = [
           "Two (2) cabin loudspeakers",
           "Reading Lights advisory lights",
           "Upper and lower air vents",
-          "Six (6) headsets H10-13H David Clark (6)"
-        ]
-      },
-      {
-        title: "Cockpit Equipment",
-        type: "list",
-        items: [
+          "Six (6) headsets H10-13H David Clark (6)",
           "Standard cockpit interior",
           "H10-13H David Clark headsets (pilot and co-pilot)",
           "Crash-resistant pilot seat, fore and aft adjustable, with lap belts and headrest",
@@ -82,21 +76,24 @@ export const inventoryData = [
           "Portable fire extinguisher"
         ]
       },
+      // {
+      //   title: "Cockpit Equipment",
+      //   type: "list",
+      //   items: [
+          
+      //   ]
+      // },
       {
         title: "Avionics",
         type: "avionics",
-        package: {
-          name: "0T-K-004-5CM Dual Pilot IFR Package",
-          features: [
-            "2nd VHF/AM",
+        
+        items: [
+          "2nd VHF/AM",
             "2nd VOR/ILS",
             "2nd GPS",
             "DME (Distance Measuring Equipment)",
             "Marker Beacon",
-            "Digital Clock"
-          ]
-        },
-        items: [
+            "Digital Clock",
           "0T-K-172-5CM - Emergency Locator Transmitter (ELT)",
         ]
       },
@@ -174,6 +171,14 @@ export const inventoryData = [
         type: "list",
         items: [ 
           "Dual zone air conditioning system",
+          "Full ACH configuration – Stylence «Line» interior",
+          // "Dual zone air conditioning system",
+          "Emergency flotation gear fixed parts",
+          "HEEL, IBF, CVFDR, ADELT, Full HMS",
+          "4 axis DAFCS with auto hover and recovery modes",
+          "HTAWS, SVS, Digital map, FDCR for HFDM, UMS Helionix",
+          "Multifunction transponder ADS-B out/TCAS II",
+          "Weather/search radar RDR1600"
         ]
       },
       
@@ -243,20 +248,20 @@ export const inventoryData = [
           "Tail fin video camera"
         ]
       },
-      {
-        title: "Additional reviewed details",
-        type: "list",
-        items: [
-          "Full ACH configuration – Stylence «Line» interior",
-          "Dual zone air conditioning system",
-          "Emergency flotation gear fixed parts",
-          "HEEL, IBF, CVFDR, ADELT, Full HMS",
-          "4 axis DAFCS with auto hover and recovery modes",
-          "HTAWS, SVS, Digital map, FDCR for HFDM, UMS Helionix",
-          "Multifunction transponder ADS-B out/TCAS II",
-          "Weather/search radar RDR1600"
-        ]
-      },
+      // {
+      //   title: "Additional reviewed details",
+      //   type: "list",
+      //   items: [
+      //     "Full ACH configuration – Stylence «Line» interior",
+      //     "Dual zone air conditioning system",
+      //     "Emergency flotation gear fixed parts",
+      //     "HEEL, IBF, CVFDR, ADELT, Full HMS",
+      //     "4 axis DAFCS with auto hover and recovery modes",
+      //     "HTAWS, SVS, Digital map, FDCR for HFDM, UMS Helionix",
+      //     "Multifunction transponder ADS-B out/TCAS II",
+      //     "Weather/search radar RDR1600"
+      //   ]
+      // },
     ],
     description: "The 2025 Airbus H160 represents the next generation of medium twin-engine rotary aviation. Featuring only 190 total airframe hours, this aircraft is appointed with the ultra-luxurious Full ACH Stylence «Line» interior, dual zone climate control, and the industry-leading Helionix avionics suite with 4-axis DAFCS auto-hover, SVS, HTAWS, weather/search radar, and comprehensive offshore-ready safety equipment."
   },
@@ -345,7 +350,12 @@ export const inventoryData = [
           "Cockpit Door Pockets",
           "Pilot / Co-pilot headset holders",
           "Cockpit Access Handles",
-          "Interior Completion Utility Transport"
+          "Interior Completion Utility Transport",
+          "Engines make and model: Pratt & Whitney",
+          "Canada PW210A1 HP",
+          "TBO - 4.000 Hrs",
+          "Engine #1 Cycles- 27:08 Hrs",
+          "Engine #2 Cycles- 27:08 Hrs",
         ]
       },
       // {
@@ -441,18 +451,14 @@ export const inventoryData = [
           "headpad, safety harness, rescue triangle"
         ]
       },
-      {
-        title: "Engine",
-        type: "list",
-        items: [
-          "Engines make and model: Pratt & Whitney",
-          "Canada PW210A1 HP",
-          "TBO - 4.000 Hrs",
-          "Engine #1 Cycles- 27:08 Hrs",
-          "Engine #2 Cycles- 27:08 Hrs",
+      // {
+      //   title: "Engine",
+      //   type: "list",
+      //   items: [
           
-        ]
-      },
+          
+      //   ]
+      // },
     ],
     description: "The 2023 Leonardo AW169 is a premier light-intermediate twin-engine helicopter with only 50 total airframe hours and 27:08 engine cycles. Equipped with the Enhanced Performance Pack (4,800 kg MTOW), Rockwell Collins Cockpit Display System (CDS), 4-axis digital AFCS with SVS/HTAWS, and a flexible 10 PAX utility transport interior with full Medevac Aerolite single-stretcher provisions, this European-based asset offers extraordinary operational versatility across utility, VIP transport, and aeromedical missions."
   },
@@ -864,7 +870,15 @@ export const inventoryData = [
           "Ventilation ram air inlets",
           "Anti reflection instrument panel",
           "Primer finished cabin walls",
-          "Portable fire extinguishe"
+          "Portable fire extinguishe",
+          "YOM - 2018",
+          "Low hours – Over 95% of remaining potential",
+          "Air conditioning",
+          "Hoist provisions",
+          "Customizable interior configuration",
+          "Max cruise speed (@5,000 FT, ISA, MGW, MCP) at 274 KM/H 148 KTAS",
+          "Max range (@5,000 FT, ISA, MGW) at 828 KM 447 NM",
+          "Single or dual pilot, VFR or IFR"
         ]
       },
       {
@@ -947,20 +961,20 @@ export const inventoryData = [
           "Flapping and droop restraint mechanism"
         ]
       },
-      {
-        title: "Additional reviewed details",
-        type: "list",
-        items: [
-          "YOM - 2018",
-          "Low hours – Over 95% of remaining potential",
-          "Air conditioning",
-          "Hoist provisions",
-          "Customizable interior configuration",
-          "Max cruise speed (@5,000 FT, ISA, MGW, MCP) at 274 KM/H 148 KTAS",
-          "Max range (@5,000 FT, ISA, MGW) at 828 KM 447 NM",
-          "Single or dual pilot, VFR or IFR"
-        ]
-      }
+      // {
+      //   title: "Additional reviewed details",
+      //   type: "list",
+      //   items: [
+      //     "YOM - 2018",
+      //     "Low hours – Over 95% of remaining potential",
+      //     "Air conditioning",
+      //     "Hoist provisions",
+      //     "Customizable interior configuration",
+      //     "Max cruise speed (@5,000 FT, ISA, MGW, MCP) at 274 KM/H 148 KTAS",
+      //     "Max range (@5,000 FT, ISA, MGW) at 828 KM 447 NM",
+      //     "Single or dual pilot, VFR or IFR"
+      //   ]
+      // }
     ],
     description: "The 2018 Leonardo AW109 Trekker is a rugged, high-performance light twin-engine helicopter featuring fixed skid landing gear and exceptional utility flexibility. With only 167 total airframe hours since new (over 95% remaining potential), this Turkey-based aircraft is equipped with a comprehensive Dual Pilot IFR package, glass cockpit embedding Synthetic Vision (SVS), Highway In The Sky (HITS), HTAWS, dual ADAHRS, and a Flight Director. Outfitted with factory air conditioning, hoist provisions, and wide 1.40-meter dual sliding doors, it represents a versatile platform for VIP transport, utility, or EMS missions."
   },
@@ -1171,6 +1185,10 @@ export const inventoryData = [
           "VIP configuration for 9 passengers + 1 pilot.",
           "No accident or incident history.",
           "Always kept in hangar",
+          "ENGINE MODEL: SAFRAN ARRIEL 1E2",
+          "TOTAL TIME: 1,900 Hours",
+          "REMAINING HOURS: 1,700 Hours",
+          "ENGINE PROGRAM: Not enrolled on program"
           
         ]
       },
@@ -1214,16 +1232,16 @@ export const inventoryData = [
           "Air Conditioning"
         ]
       },
-      {
-        title: "Engine",
-        type: "list",
-        items: [
-          "ENGINE MODEL: SAFRAN ARRIEL 1E2",
-          "TOTAL TIME: 1,900 Hours",
-          "REMAINING HOURS: 1,700 Hours",
-          "ENGINE PROGRAM: Not enrolled on program"
-        ]
-      },
+      // {
+      //   title: "Engine",
+      //   type: "list",
+      //   items: [
+      //     "ENGINE MODEL: SAFRAN ARRIEL 1E2",
+      //     "TOTAL TIME: 1,900 Hours",
+      //     "REMAINING HOURS: 1,700 Hours",
+      //     "ENGINE PROGRAM: Not enrolled on program"
+      //   ]
+      // },
     ],
     description: "The 2014 Airbus EC145 Mercedes-Benz Edition is an ultra-exclusive luxury twin-engine helicopter created in partnership with Mercedes-Benz Style. Based and registered in Brazil with 1,900 total airframe hours, this pristine aircraft features a bespoke Mercedes-Benz exterior and interior configured for 9 passengers plus pilot. Powered by twin Safran Arriel 1E2 engines with 1,700 hours remaining, it comes fully equipped with Thales EFIS, dual Garmin GNS 430, Sfim autopilot, factory air conditioning, Inlet Barrier Filter, and rotor brake with an immaculate, incident-free hangar-kept pedigree."
   },
@@ -1423,6 +1441,10 @@ export const inventoryData = [
           "Exterior: metallic paint Taupe Frost (AgustaWestland M106)",
           "Reinforced pilot / co-pilot windshields, windshield wipers, and retractable landing light",
           "Extended baggage compartment",
+           "2 × Pratt & Whitney Canada PW207C",
+          "Engine programme Enrolled in the Pratt & Whitney Canada ESP engine maintenance programme",
+          "Engine S/N PCE-BH0310 696:49 h remaining to TBO (3,500 h)",
+          "Engine S/N PCE-BH0326 712:09 h remaining to TBO (3,500 h)",
         ]
       },
       {
@@ -1467,16 +1489,13 @@ export const inventoryData = [
           "Dual controls, single / dual pilot IFR configuration"
         ]
       },
-      {
-        title: "Engine",
-        type: "list",
-        items: [
-          "2 × Pratt & Whitney Canada PW207C",
-          "Engine programme Enrolled in the Pratt & Whitney Canada ESP engine maintenance programme",
-          "Engine S/N PCE-BH0310 696:49 h remaining to TBO (3,500 h)",
-          "Engine S/N PCE-BH0326 712:09 h remaining to TBO (3,500 h)",
-        ]
-      }
+      // {
+      //   title: "Engine",
+      //   type: "list",
+      //   items: [
+         
+      //   ]
+      // }
     ],
     description: "The 2009 Leonardo A109 Grand VIP is an exquisite light twin-engine helicopter based in Monaco with 2,803 total airframe hours. Finished in sophisticated metallic Taupe Frost with a factory VIP 6-seat club cabin in leather 2213 and Paulstra soundproofing, this aircraft is fully enrolled on the Pratt & Whitney Canada ESP engine maintenance programme. Complete with dual pilot EFIS, Honeywell SP-711 3-axis AFCS with FZ-702 flight director, Garmin GNS 530/430, weather radar, TAS, air conditioning, rotor brake, and DART emergency floats, it delivers the ultimate executive travel experience."
   }

@@ -118,7 +118,9 @@ const InventoryListing = () => {
                                         <div className="category-badge">{item.category}</div>
                                         <img src={item.image} alt={item.name} />
                                     </div>
+                                    
                                     <div className="list-card-content">
+                                        <h3>{item.name}</h3>
                                         <div className="card-specs">
                                             <span className="highlight-spec">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" className="spec-icon">
@@ -135,14 +137,14 @@ const InventoryListing = () => {
                                                     Hours: {item.details.hours}
                                                 </span>
                                             )}
-                                            {item.details.location && (
+                                            {/* {item.details.location && (
                                                 <span className="highlight-spec">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" className="spec-icon">
                                                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                                                     </svg>
                                                     {item.details.location}
                                                 </span>
-                                            )}
+                                            )} */}
                                             {item.details.length && (
                                                 <span className="highlight-spec">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" className="spec-icon">
@@ -152,8 +154,8 @@ const InventoryListing = () => {
                                                 </span>
                                             )}
                                         </div>
-                                        <h3>{item.name}</h3>
-                                        <div className="card-price">{item.price}</div>
+                                        
+                                        <div className="card-price">Price: {item.price}</div>
                                         <button className="view-details-btn">View Details</button>
                                     </div>
                                 </div>

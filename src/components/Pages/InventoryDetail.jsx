@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { inventoryData } from '../../data/inventoryData';
 import Footer from '../Footer/Footer';
+import InventoryEnquiryModal from '../Inventory/InventoryEnquiryModal';
 import '../Inventory/Inventory.css';
 
 const InventoryDetail = () => {
@@ -13,9 +14,10 @@ const InventoryDetail = () => {
     const contentRef = useRef(null);
     const sidebarRef = useRef(null);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
     useEffect(() => {
-        if (selectedImage) {
+        if (selectedImage || isEnquiryModalOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
@@ -23,7 +25,7 @@ const InventoryDetail = () => {
         return () => {
             document.body.style.overflow = 'auto';
         };
-    }, [selectedImage]);
+    }, [selectedImage, isEnquiryModalOpen]);
 
     useEffect(() => {
         if (!item) {
@@ -234,13 +236,16 @@ const InventoryDetail = () => {
                                 </div>
                             </div>
                         )}
+
+                        
+                        
                     </div>
 
-                    <div className="detail-sidebar" ref={sidebarRef}>
+                    <div className="detail-sidebar text-center" ref={sidebarRef}>
                         <div className="sidebar-price">Asking Price</div>
                         <span className="sidebar-amount">{item.price}</span>
 
-                        <div className="sidebar-quick-summary">
+                        {/* <div className="sidebar-quick-summary">
                             <div className="quick-summary-item">
                                 <span className="quick-label">Category</span>
                                 <span className="quick-val">{item.category}</span>
@@ -267,13 +272,19 @@ const InventoryDetail = () => {
                                     <span className="quick-val">{item.details.configuration}</span>
                                 </div>
                             )}
-                        </div>
+                        </div> */}
 
                         <p style={{ color: 'var(--para)', fontSize: '0.9rem', marginBottom: '20px', lineHeight: '1.6' }}>
                             Our aviation acquisition specialists are available for a private consultation, technical review, and to arrange an inspection of this {item.category.toLowerCase()}.
                         </p>
 
-                        <a href="/contact" className="enquire-btn">Enquire Now</a>
+                        <button 
+                            type="button" 
+                            className="enquire-btn mx-auto" style={{width:"200px"}}
+                            onClick={() => setIsEnquiryModalOpen(true)}
+                        >
+                            Enquire Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -284,6 +295,13 @@ const InventoryDetail = () => {
                 FooterTaglineTwo="Title Search & Clearance"
                 FooterTaglineThree="Post-Sale Management"
                 btnTxt="Enquire Now"
+            />
+
+            {/* Helicopter Acquisition Enquiry Modal */}
+            <InventoryEnquiryModal
+                isOpen={isEnquiryModalOpen}
+                onClose={() => setIsEnquiryModalOpen(false)}
+                item={item}
             />
 
             {/* Image Preview Modal */}
