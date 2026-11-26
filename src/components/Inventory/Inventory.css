@@ -109,19 +109,19 @@
 }
 
 .card-specs span.highlight-spec {
-    background: rgba(211, 169, 91, 0.1) !important;
+    
     color: var(--primary) !important;
-    border: 1px solid rgba(211, 169, 91, 0.3) !important;
-    padding: 6px 12px !important;
+    
+    
     border-radius: 6px !important;
     font-family: 'secondary bold' !important;
-    font-size: 0.75rem !important;
+    font-size: 12px !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important; */
 }
 
 .spec-icon {
